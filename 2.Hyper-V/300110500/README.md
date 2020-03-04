@@ -3,6 +3,7 @@
 ## :one: SUPPRESSION 
 ```
 PS C:\Users\Administrator> docker-machine rm CB-HYPERV2
+
 About to remove CB-HYPERV2
 WARNING: This action will delete both local reference and remote instance.
 Are you sure? (y/n): yes
@@ -18,6 +19,7 @@ PS C:\Users\Administrator> $HYPERV_CPU_COUNT = 2
 ## :three: CREATION DE LA MACHINE VIRTUELLLE 
 ```
 PS C:\Users\Administrator> docker-machine create --driver hyperv --hyperv-memory $HYPERV_MEMORY --hyperv-cpu-count $HYPERV_CPU_COUNT  CB-HYPERV2
+```
 Running pre-create checks...
 Creating machine...
 (CB-HYPERV2) Copying C:\Users\Administrator\.docker\machine\cache\boot2docker.iso to C:\Users\Administrator\.docker\machine\machines\CB-HYPERV2\boot2docker.iso...
