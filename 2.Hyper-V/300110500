@@ -1,5 +1,0 @@
-# HYPERV TEST
-
-:ONE:
-
-PS C:\Users\Administrator> docker-machine rm CB-HYPERV2
