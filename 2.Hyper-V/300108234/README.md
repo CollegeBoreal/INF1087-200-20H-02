@@ -1,11 +1,19 @@
-> Set-VMProcessor
-> Set-VMProcessor CB-HYPERV1 -Count 2 -Reserve 10
+# Create 3 virtual machines
 
- > New-VM -Name Win10VM -MemoryStartupBytes 4GB -BootDevice VHD -VHDPath .\VMs\Win10.vhdx -Path .\VMData -Generation 2 -Cpu 2
+## 💡:one: regular virtual machine
+```
+docker-machine create --driver hyperv CB-HYPER1
+```
+## 💡:two: virtual machine with VHDx volume 
 
-> get-vm cpu count hyper-v
 
-> Get-VMProcessor CB-HYPERV2
-
-
-> Select @{n='TotalPhysicalProcessors';e={(,( gwmi Win32_Processor)).count}}, @{n='TotalPhysicalProcessorCores'; e={ (gwmi Win32_Processor | measure -Property NumberOfLogicalProcessors -sum).sum}}, @{n='TotalVirtualCPUs'; e={ (Get-VM | Get-VMProcessor | measure -Property Count -sum).sum }}, @{n='TotalVirtualCPUsInUse'; e={ (Get-VM | Where { $_.State -eq 'Running'} | Get-VMProcessor | measure -Property Count -sum).sum }}, @{n='TotalMSVMProcessors'; e={ (gwmi -ns root\virtualization\v2 MSVM_Processor).count }}, @{n='TotalMSVMProcessorsForVMs'; e={ (gwmi -ns root\virtualization\v2 MSVM_Processor -Filter "Description='Microsoft Virtual Processor'").count }}
+## 💡:three: virtual machine with 2 CPU et 4Gb in the memory
+```
+PS C:\Users\Administrator> $HYPERV_MEMORY = 4096
+```
+```
+PS C:\Users\Administrator> $HYPERV_CPU_COUNT = 2
+```
+```
+PS C:\Users\Administrator> docker-machine create --driver hyperv --hyperv-memory $HYPERV_MEMORY --hyperv-cpu-count $HYPERV_CPU_COUNT  CB-HYPERV3
+```
