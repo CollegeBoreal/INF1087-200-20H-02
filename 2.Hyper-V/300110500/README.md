@@ -10,8 +10,10 @@ Are you sure? (y/n): yes
 Successfully removed CB-HYPERV2
 ```
 ## :two: AJOUT D'UNE MEMOIRE DE 4G ET 2 CPU
+``
 PS C:\Users\Administrator> $HYPERV_MEMORY = 4096
 PS C:\Users\Administrator> $HYPERV_CPU_COUNT = 2
+``
 
 ## :three:CREATION DE LA MACHINE VIRTUELLLE 
 ```
