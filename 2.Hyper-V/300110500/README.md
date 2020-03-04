@@ -1,14 +1,15 @@
 # HYPERV TEST
 
-# :one: 
+## :one: SUPPRESSION 
+```
 PS C:\Users\Administrator> docker-machine rm CB-HYPERV2
 About to remove CB-HYPERV2
 WARNING: This action will delete both local reference and remote instance.
 Are you sure? (y/n): yes
 (CB-HYPERV2) Waiting for host to stop...
 Successfully removed CB-HYPERV2
-
-# :two:
+```
+## :two:
 PS C:\Users\Administrator> docker-machine create --driver hyperv CB-HYPERV
 Docker machine "CB-HYPERV" already exists
 
@@ -16,11 +17,11 @@ PS C:\Users\Administrator> docker-machine ls
 NAME        ACTIVE   DRIVER   STATE     URL                     SWARM   DOCKER     ERRORS
 CB-HYPERV   -        hyperv   Running   tcp://10.13.2.66:2376           v19.03.5
 
-# :three: AJOUT D'UNE MEMOIRE DE 4G ET 2 CPU
+## :three: AJOUT D'UNE MEMOIRE DE 4G ET 2 CPU
 PS C:\Users\Administrator> $HYPERV_MEMORY = 4096
 PS C:\Users\Administrator> $HYPERV_CPU_COUNT = 2
 
-# :four:CREATION DE LA MACHINE VIRTUELLLE 
+## :four:CREATION DE LA MACHINE VIRTUELLLE 
 PS C:\Users\Administrator> docker-machine create --driver hyperv --hyperv-memory $HYPERV_MEMORY --hyperv-cpu-count $HYPERV_CPU_COUNT  CB-HYPERV2
 Running pre-create checks...
 Creating machine...
