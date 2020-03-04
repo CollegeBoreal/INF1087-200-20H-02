@@ -34,6 +34,9 @@ docker-machine create --driver hyperv CB-HYPERV2
 
 ### :two: Une des machines doit avoir 2 CPU et 4Gb de memoire
 
-:©:
+© 
+```
+docker-machine create --driver hyperv CB-HYPERV --hyperv-memory 4 Gb --hyperv-cpu-count 2
+```
 
 ### :three: Rajouter un volume VHDx a une des machines
