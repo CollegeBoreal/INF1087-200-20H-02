@@ -63,3 +63,5 @@ PS> Get-Command -Module Hyper-V
 # References
 
 https://www.altaro.com/hyper-v/install-hyper-v-powershell-module/
+
+https://techthoughts.info/home-lab-setup/
