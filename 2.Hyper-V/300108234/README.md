@@ -1,12 +1,15 @@
 # Create 3 virtual machines
 
 ### 💡 :one: Regular virtual machine
+
 ```
 docker-machine create --driver hyperv CB-HYPER1
 ```
 ### 💡 :two: Virtual machine with VHDx volume 
 
-
+```
+docker-machine create --driver hyperv CB-HYPER2
+```
 ### 💡 :three: Virtual machine with 2 CPU et 4Gb in the memory
 
 ```
