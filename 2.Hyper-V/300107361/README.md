@@ -41,7 +41,7 @@ docker-machine create --driver hyperv CB-HYPERV2
 
 :m: 
 ```
-docker-machine create --driver hyperv CB-HYPERV --hyperv-memory 4096 --hyperv-cpu-count 2
+docker-machine create --driver hyperv CB-HYPERV --hyperv-memory HYPERV_MEMORY 4096 --hyperv-cpu-count HYPERV_CPU_COUNT 2
 ```
 
 ### :three: Rajouter un volume VHDx a une des machines
