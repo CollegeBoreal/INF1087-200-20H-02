@@ -4,7 +4,7 @@
 
 Sur la meme switch virtuelle
 
-:one: Creation des deux premieres machines virtuelles avec:
+:a: Creation des deux premieres machines virtuelles avec:
 
 ```
 docker-machine create --driver hyperv CB-HYPERV
