@@ -15,7 +15,7 @@ PS C:\Users\Administrator> $HYPERV_MEMORY = 4096
 PS C:\Users\Administrator> $HYPERV_CPU_COUNT = 2
 ``
 
-## :three:CREATION DE LA MACHINE VIRTUELLLE 
+## :three: CREATION DE LA MACHINE VIRTUELLLE 
 ```
 PS C:\Users\Administrator> docker-machine create --driver hyperv --hyperv-memory $HYPERV_MEMORY --hyperv-cpu-count $HYPERV_CPU_COUNT  CB-HYPERV2
 Running pre-create checks...
