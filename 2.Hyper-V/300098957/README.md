@@ -84,7 +84,18 @@ done
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
+$ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0  19.5G  0 disk
+|-sda1   8:1    0  18.6G  0 part /mnt/sda1
+`-sda2   8:2    0  1000M  0 part [SWAP]
+sdb      8:16   0    60G  0 disk
+`-sdb1   8:17   0    60G  0 part /mnt/sdb1
+sr0     11:0    1    57M  0 rom
+zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
+
+# References
 
 ```
 PS > get-command -module HYPERV
