@@ -95,6 +95,19 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
+
+```
+PS > $SRC = '/mnt/sdb1'
+PS > docker container run `
+         --name some-mysqlds `
+         --env MYSQL_ROOT_PASSWORD=password `
+         --publish 3306:3306 `
+         --publish 33060:33060 `
+         --volume ${SRC}:/var/lib/mysql-files `
+         --detach `
+         mysql/mysql-server:latest
+```
+
 # References
 
 ```
