@@ -22,7 +22,7 @@ PS C:\Users\Administrator> docker-machine create --driver hyperv --hyperv-memory
 docker-machine create --driver hyperv CB-HYPER2
 ```
 
-####📌Create and prepare a new VHDX
+#### 📌Create and prepare a new VHDX
 ```
 PS > $vm = 'CB-HYPERV3'
 ```
@@ -41,19 +41,19 @@ PS > ADD-VMHardDiskDrive -VMName $vm -Path "$VMLOC\$vm\$vm.vhdx"
 ```
 PS > docker-machine start $vm
 ```
-####📌 Se connecter à la machine virtuelle
+#### 📌 Se connecter à la machine virtuelle
 ```
 PS > docker-machine ssh CB-HYPERV3
 ```
-####📌Create partition table
+#### 📌Create partition table
 
 
-####📌Attach the VHDX
+#### 📌Attach the VHDX
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
 ```
-####📌Create a partition for the Windows files, format it, and assign it a drive letter
+#### 📌Create a partition for the Windows files, format it, and assign it a drive letter
 ```
 create partition primary
 format quick label=vhdx
