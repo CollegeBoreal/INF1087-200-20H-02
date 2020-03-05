@@ -1,6 +1,6 @@
-# HYPERV TEST
+## HYPERV TEST
 
-## :one: SUPPRESSION 
+### :one: SUPPRESSION 
 ```
 PS C:\Users\Administrator> docker-machine rm CB-HYPERV2
 
@@ -10,13 +10,13 @@ Are you sure? (y/n): yes
 (CB-HYPERV2) Waiting for host to stop...
 Successfully removed CB-HYPERV2
 ```
-## :two: AJOUT D'UNE MEMOIRE DE 4G ET 2 CPU
+### :two: AJOUT D'UNE MEMOIRE DE 4G ET 2 CPU
 ``
 PS C:\Users\Administrator> $HYPERV_MEMORY = 4096
 PS C:\Users\Administrator> $HYPERV_CPU_COUNT = 2
 ``
 
-## :three: CREATION DE LA MACHINE VIRTUELLLE 
+### :three: CREATION DE LA MACHINE VIRTUELLLE 
 ```
 PS C:\Users\Administrator> docker-machine create --driver hyperv --hyperv-memory $HYPERV_MEMORY --hyperv-cpu-count $HYPERV_CPU_COUNT  CB-HYPERV2
 Running pre-create checks...
@@ -41,7 +41,7 @@ Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env CB-HYPERV2
 ```
 
-## VERIFICATION DES DISCS ET DES MEMOIRES CREES
+### :four: VERIFICATION DES DISCS ET DES MEMOIRES CREES
 
 PS C:\Users\Administrator> docker-machine inspect CB-HYPERV2
 
