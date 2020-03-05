@@ -1,7 +1,9 @@
 # 300098957
 
 
-## :one: Créer le disque virtuel
+## :m: CB-HYPERV3
+
+### :one: Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
@@ -15,7 +17,7 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
 
-## :two: Créer la table de partition 
+### :two: Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
@@ -76,7 +78,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
-## :three: Formater la nouvelle partition en format Linux ext4
+### :three: Formater la nouvelle partition en format Linux ext4
 
 :pushpin: You still need to create a file system
 
@@ -122,7 +124,7 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-## :four: Créer un conteneur pour tester le volume 
+### :four: Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
