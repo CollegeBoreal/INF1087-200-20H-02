@@ -15,7 +15,9 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
 
-# :two: Créer la table de partition (i.e. panser à GPT - GUID Partition Table)
+## :two: Créer la table de partition 
+
+:bulb: Penser à `GPT - GUID Partition Table`
 
 :pushpin: Se connecter à la machine virtuelle
 
@@ -48,7 +50,7 @@ Device       Start      End  Sectors  Size Type
 Partition table entries are not in disk order.
 ```
 
-:pushpin: Créer la table de partition avec l'utilitaire Linux `fdisk` du nouveau disque
+:pushpin: Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
 ```
 $ sudo fdisk /dev/sdb
@@ -74,6 +76,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
+## :three: Formater la nouvelle partition en format Linux ext4
 
 :pushpin: You still need to create a file system
 
@@ -96,9 +99,18 @@ Writing superblocks and filesystem accounting information:
 done
 ```
 
+:pushpin: Attacher (Monter) le système de fichier à l'arborescence de fichiers
+
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
+```
+
+:pushpin: S'assurer que le répertoire est visible
+
+* Faire la liste des appareils (devices) de type `block storage`
+
+```
 $ lsblk
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda      8:0    0  19.5G  0 disk
@@ -110,9 +122,15 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
+## :four: Créer un conteneur pour tester le volume 
+
+:pushpin: Pointer le container engine sur la machine virtuelle
+
 ```
 PS> docker-machine env CB-HYPERV | Invoke-Expression
 ```
+
+:pushpin: Créer le conteneur avec le nouveau volume
 
 ```
 PS > $SRC = '/mnt/sdb1'
