@@ -1,8 +1,12 @@
 # 300098957
 
 
+## :one: Créer le disque virtuel
+
+:bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
+
 ```
-PS > $vm = 'CB-HYPERV'
+PS > $vm = 'CB-HYPERV3'
 PS > $VMLOC = $HOME + '\.docker\machine\machines\'
 PS > New-VHD -Path "$VMLOC\$vm\$vm.vhdx" -Dynamic -SizeBytes 60GB
 PS > docker-machine stop $vm
@@ -10,6 +14,16 @@ PS > ADD-VMHardDiskDrive -VMName $vm -Path "$VMLOC\$vm\$vm.vhdx"
 PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
+
+# :two: Créer la table de partition (i.e. panser à GPT - GUID Partition Table)
+
+:pushpin: Se connecter à la machine virtuelle
+
+```
+PS > docker-machine ssh CB-HYPERV3
+```
+
+:pushpin: Localiser le disque dans la table de partition avec l'utilitaire Linux `fdisk`
 
 ```
 $ fdisk --list
@@ -34,6 +48,7 @@ Device       Start      End  Sectors  Size Type
 Partition table entries are not in disk order.
 ```
 
+:pushpin: Créer la table de partition avec l'utilitaire Linux `fdisk` du nouveau disque
 
 ```
 $ sudo fdisk /dev/sdb
