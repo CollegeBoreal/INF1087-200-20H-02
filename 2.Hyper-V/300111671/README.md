@@ -1,6 +1,6 @@
 
 
-## :m: CB-HYPERV3
+## :m: CB-HYPERV2
 
 ### :one: Créer le disque virtuel
 
@@ -23,7 +23,7 @@ PS > docker-machine start $vm
 :pushpin: Se connecter à la machine virtuelle
 
 ```
-PS > docker-machine ssh CB-HYPERV3
+PS > docker-machine ssh CB-HYPERV2
 ```
 
 :pushpin: Localiser le disque dans la table de partition avec l'utilitaire Linux `fdisk`
