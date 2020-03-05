@@ -1,5 +1,8 @@
 # Hyper V
 
+## :x: Utiliser uniquement les shells appris en cours
+
+    Powershell et sh (incluant Bash ou zsh)
 
 ## :o: Prérequis
 
