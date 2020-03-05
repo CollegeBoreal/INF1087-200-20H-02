@@ -58,8 +58,9 @@ Syncing disks.
 ```
 
 ```
-$ sudo mkdir /mnt/usb
-$ sudo mount /dev/sdb1 /mnt/sb1
+$ sudo mkdir /mnt/sdb1
+$ sudo mount /dev/sdb1 /mnt/sdb1
+mount: /mnt/sdb1: wrong fs type, bad option, bad superblock on /dev/sdb1, missing codepage or helper program, or other error.
 ```
 
 ```
