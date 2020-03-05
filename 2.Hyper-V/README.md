@@ -59,3 +59,5 @@ PS> docker-machine env CB-HYPERV | Invoke-Expression
 # References
 
 https://docs.docker.com/machine/drivers/hyper-v/
+
+http://www.theservergeeks.com/creating-multiple-vms-using-hyper-v-powershell/
