@@ -40,3 +40,28 @@ Checking connection to Docker...
 Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env CB-HYPERV2
 ```
+
+## VERIFICATION DES DISCS ET DES MEMOIRES CREES
+
+PS C:\Users\Administrator> docker-machine inspect CB-HYPERV2
+
+```
+{
+    "ConfigVersion": 3,
+    "Driver": {
+        "IPAddress": "10.13.5.17",
+        "MachineName": "CB-HYPERV2",
+        "SSHUser": "docker",
+        "SSHPort": 22,
+        "SSHKeyPath": "C:\\Users\\Administrator\\.docker\\machine\\machines\\CB-HYPERV2\\id_rsa",
+        "StorePath": "C:\\Users\\Administrator\\.docker\\machine",
+        "SwarmMaster": false,
+        "SwarmHost": "tcp://0.0.0.0:3376",
+        "SwarmDiscovery": "",
+        "Boot2DockerURL": "",
+        "VSwitch": "",
+        "DiskSize": 20000,
+        "MemSize": 4096,
+        "CPU": 2,
+        
+    ```
