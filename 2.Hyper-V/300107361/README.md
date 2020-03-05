@@ -32,10 +32,6 @@ Checking connection to Docker...
 Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env CB-HYPERV
 ```
-:ab: 
-```
-docker-machine create --driver hyperv CB-HYPERV2
-```
 
 ### :two: Une des machines doit avoir 2 CPU et 4Gb de memoire
 
@@ -43,7 +39,7 @@ docker-machine create --driver hyperv CB-HYPERV2
 ```
 PS C:\Windows\system32> $HYPERV_MEMORY = 4096
 PS C:\Windows\system32> $HYPERV_CPU_COUNT = 2
-PS C:\Windows\system32> docker-machine create --driver hyperv --hyperv-memory $HYPERV_MEMORY --hyperv-cpu-count $HYPERV_CPU_COUNT  CB-HYPERV3
+PS C:\Windows\system32> docker-machine create --driver hyperv --hyperv-memory $HYPERV_MEMORY --hyperv-cpu-count $HYPERV_CPU_COUNT  CB-HYPERV2
 Running pre-create checks...
 Creating machine...
 (CB-HYPERV3) Copying C:\Users\Administrator\.docker\machine\cache\boot2docker.iso to C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3\boot2docker.iso...
