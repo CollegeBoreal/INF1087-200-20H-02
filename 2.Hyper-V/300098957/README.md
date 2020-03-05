@@ -44,12 +44,15 @@ Be careful before using the write command.
 
 
 Command (m for help): n
-All space for primary partitions is in use.
-Adding logical partition 5
-First sector (4096-125829119, default 4096):
-Last sector, +sectors or +size{K,M,G,T,P} (4096-125829119, default 125829119):
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): p
+Partition number (1-4, default 1):
+First sector (2048-125829119, default 2048):
+Last sector, +sectors or +size{K,M,G,T,P} (2048-125829119, default 125829119):
 
-Created a new partition 5 of type 'Linux' and of size 60 GiB.
+Created a new partition 1 of type 'Linux' and of size 60 GiB.
 
 Command (m for help): w
 The partition table has been altered.
@@ -57,10 +60,30 @@ Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
 
+:pushpin: You still need to create a file system
+
+```
+$ mkfs.ext4 /dev/sdb1
+mke2fs 1.44.4 (18-Aug-2018)
+Found a dos partition table in /dev/sdb1
+Proceed anyway? (y,N) y
+Discarding device blocks: done
+Creating filesystem with 15728384 4k blocks and 3932160 inodes
+Filesystem UUID: 3bebf011-f169-4f52-b928-a436d0fd730e
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+        4096000, 7962624, 11239424
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (65536 blocks): done
+Writing superblocks and filesystem accounting information:
+done
+```
+
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
-mount: /mnt/sdb1: wrong fs type, bad option, bad superblock on /dev/sdb1, missing codepage or helper program, or other error.
 ```
 
 ```
