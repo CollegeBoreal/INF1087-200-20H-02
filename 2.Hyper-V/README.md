@@ -63,3 +63,5 @@ https://docs.docker.com/machine/drivers/hyper-v/
 http://www.theservergeeks.com/creating-multiple-vms-using-hyper-v-powershell/
 
 https://docs.sevenbridges.com/docs/mount-a-usb-drive-in-a-docker-container
+
+https://www.tecmint.com/fdisk-commands-to-manage-linux-disk-partitions/
