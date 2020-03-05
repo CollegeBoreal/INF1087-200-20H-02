@@ -95,6 +95,9 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
+```
+PS> docker-machine env CB-HYPERV | Invoke-Expression
+```
 
 ```
 PS > $SRC = '/mnt/sdb1'
@@ -106,6 +109,7 @@ PS > docker container run `
          --volume ${SRC}:/var/lib/mysql-files `
          --detach `
          mysql/mysql-server:latest
+PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
 ```
 
 # References
