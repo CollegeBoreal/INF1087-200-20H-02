@@ -66,11 +66,11 @@ To see how to connect your Docker Client to the Docker Engine running on this vi
 :a: D'abord creer la machine virtuel avec les valeurs par defauts avec `powershell`
 
 ```
-docker-machine create --driver hyperv CB-HYPERV3
+PS C:\Windows\system32> docker-machine create --driver hyperv CB-HYPERV3
 ```
 * Lancer la commande suivante pour verifier le volume des diques existantes sur la machine et leurs `Paths`
 ```
-Get-VM -VMName CB-HYPERV3 | Select-Object VMId | Get-VHD | `
+PS C:\Windows\system32> Get-VM -VMName CB-HYPERV3 | Select-Object VMId | Get-VHD | `
 >> Format-List Path,VhdFormat,VhdType,Size
 
 
@@ -82,7 +82,7 @@ Size      : 20971520000
 
 * Creer un nouvel disque virtuel utilisant la `commandlet` `New-VHD` 
 ```
-New-VHD -SizeBytes 60GB `
+PS C:\Windows\system32> New-VHD -SizeBytes 60GB `
 >> -Path "C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3-data.vhdx"
 
 
@@ -109,7 +109,7 @@ Number                  :
 
 * Stoper La virtuelle machine 
 ```
- docker-machine stop CB-HYPERV3
+PS C:\Windows\system32> docker-machine stop CB-HYPERV3
 Stopping "CB-HYPERV3"...
 (CB-HYPERV3) Waiting for host to stop...
 Machine "CB-HYPERV3" was stopped.
@@ -117,14 +117,14 @@ Machine "CB-HYPERV3" was stopped.
 
 * Attacher le disque virtuel a la machine virtuelle
 ```
-Add-VMHardDiskDrive -VMName CB-HYPERV3 `
+PS C:\Windows\system32> Add-VMHardDiskDrive -VMName CB-HYPERV3 `
 >> -Path "C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3-data.vhdx" `
 >> -ControllerType IDE -ControllerNumber 0 -ControllerLocation 1
 ```
 
 * Verifier que le disque est attache
 ```
- Get-VM -VMName CB-HYPERV3 | Select-Object VMId | Get-VHD | `
+PS C:\Windows\system32> Get-VM -VMName CB-HYPERV3 | Select-Object VMId | Get-VHD | `
 >> Format-List Path,VhdFormat,VhdType,Size
 
 
