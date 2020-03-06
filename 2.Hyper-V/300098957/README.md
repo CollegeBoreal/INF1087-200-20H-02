@@ -7,8 +7,8 @@
 
 ```
 PS > docker-machine create --driver hyperv `
-                           --hyperv-cpu-count "2" `
-                           --hyperv-memory "4096" 
+                           --hyperv-cpu-count 2 `
+                           --hyperv-memory 4096 `
                            CB-HYPERV2
 ```
 
