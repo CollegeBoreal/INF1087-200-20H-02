@@ -1,6 +1,20 @@
 # 300098957
 
 
+## :m: CB-HYPERV2
+
+:bulb: Ajouter de la mémoire 4Gb et du CPU 2
+
+```
+PS > docker-machine create `
+              --driver hyperv `
+              --hyperv-cpu-count "2" ` 
+              --hyperv-memory "4096" `
+              CB-HYPERV2
+```
+
+
+
 ## :m: CB-HYPERV3
 
 ### :one: Créer le disque virtuel
