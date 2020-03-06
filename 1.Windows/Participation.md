@@ -30,9 +30,9 @@
 | 03   | 300106918 | Brice@10.13.5.42        |:heavy_check_mark: Datacenter                   |:keyboard:|:heavy_check_mark:|
 | 04   | 300107361 | Brice@10.13.5.46        |:heavy_check_mark: Datacenter                   |:keyboard:|:heavy_check_mark:|
 | 05   | 300108234 | Brice@10.13.4.245       |:heavy_check_mark: Datacenter                   |:keyboard:|:heavy_check_mark:|
-| 06   | 300110500 | Brice@10.13.5.50        |:heavy_check_mark: Datacenter                   |:keyboard:|:heavy_check_mark:|
+| 06   | 300110500 | Brice@10.13.5.54        |:heavy_check_mark: Datacenter                   |:keyboard:|:heavy_check_mark:|
 | 07   | 300110529 | Brice@10.13.2.26        |:heavy_check_mark: Datacenter                   |  :desktop_computer:|:x:|
-| 08   | 300111671 | Brice@10.13.:x:.63      |:heavy_check_mark: Datacenter                   |:keyboard:|:heavy_check_mark:|
+| 08   | 300111671 | Brice@10.13:5.55        |:heavy_check_mark: Datacenter                   |:keyboard:|:heavy_check_mark:|
 | 09   | 300111766 | Brice@10.13.5.44        |:heavy_check_mark: Datacenter                   |:keyboard:|:heavy_check_mark:|
 | 10   | 300112017 | Brice@10.13.2.68        |:heavy_check_mark: Datacenter         |  :desktop_computer:|:x:|
 | 11   | 300112917 | Brice@10.13.2.63        |:heavy_check_mark: Datacenter         |  :desktop_computer:|:x:|
