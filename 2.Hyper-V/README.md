@@ -72,3 +72,5 @@ https://www.tecmint.com/fdisk-commands-to-manage-linux-disk-partitions/
 https://www.gnu.org/software/parted/manual/html_node/mkpart.html
 
 https://www.tecmint.com/how-to-check-disk-space-in-linux/
+
+https://github.com/katjuell/compose-wordpress-ssl/blob/master/docker-compose.yml
