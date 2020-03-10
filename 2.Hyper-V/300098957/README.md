@@ -161,10 +161,15 @@ PS > docker container run `
 PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
 ```
 
-# References
+## Autres commandes pour Hyper-V module
 
 ```
 PS > Get-Command -module HYPERV
 PS > Get-Command -module HYPER-V | Select-String 'VHD'
 PS > Get-Command -Module NetTCPIP
 ```
+
+# References
+
+
+https://github.com/nezhar/wordpress-docker-compose/
