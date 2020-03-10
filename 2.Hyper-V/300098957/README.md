@@ -17,7 +17,7 @@ PS > docker-machine create `
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-:two: Installer WordPress (modifier son adress IP dans `.env`)
+:two: Installer WordPress (`changer-mon-adresse-ip` IP dans votre fichier `.env`)
 
 ```
 PS > docker-compose up --detach
@@ -25,11 +25,11 @@ PS > docker-compose up --detach
 
 :three: Initialiser WordPress
 
-http://<IP>/wp-admin
+http://`changer-mon-adresse-ip`/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://<IP>:8080
+http://`changer-mon-adresse-ip`:8080
 
 ## :m: CB-HYPERV2
 
