@@ -8,7 +8,7 @@ https://github.com/dhiltgen/docker-machine-kvm
 :pushpin: Installer Docker-Machine
 
 ```
-$ yam install docker-machine
+$ yum install docker-machine
 ```
 
 :pushpin: Installer KVM
