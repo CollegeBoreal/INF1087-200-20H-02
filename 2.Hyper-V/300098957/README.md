@@ -23,7 +23,7 @@ PS > docker-machine env CB-HYPERV | Invoke-Expression
 PS > docker-compose up --detach
 ```
 
-:pushpin: Initialiser WordPress
+:three: Initialiser WordPress
 
 http://<IP>/wp-admin
       
