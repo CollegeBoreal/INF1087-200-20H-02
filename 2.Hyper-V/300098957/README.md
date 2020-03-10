@@ -3,7 +3,7 @@
 
 ## :m: CB-HYPERV2
 
-:pushpin: Creer une machine virtuelle
+:one: Creer une machine virtuelle
 
 ```
 PS > docker-machine create `
@@ -17,7 +17,7 @@ PS > docker-machine create `
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-:pushpin: Installer WordPress (modifier son adress IP dans `.env`)
+:two: Installer WordPress (modifier son adress IP dans `.env`)
 
 ```
 PS > docker-compose up --detach
