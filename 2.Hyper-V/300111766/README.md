@@ -29,6 +29,7 @@ PS > docker-machine create `
       --hyperv-cpu-count 2 `
       --hyperv-memory 4096 `
       CB-HYPERV2
+      
 Ⓜ️ CB-HYPERV3
 
 1️⃣ Créer le disque virtuel
@@ -53,7 +54,7 @@ PS > docker-machine start $vm
 
 ✔ Penser à GPT - GUID Partition Table
 
-📌 Se connecter à la machine virtuelle
+✔ Se connecter à la machine virtuelle
 
 PS > docker-machine ssh CB-HYPERV3
 
@@ -70,12 +71,16 @@ Sector size (logical/physical): 512 bytes / 4096 bytes
 
 I/O size (minimum/optimal): 4096 bytes / 4096 bytes
 
-
 Disk /dev/sda: 19.5 GiB, 20971520000 bytes, 40960000 sectors
+
 Units: sectors of 1 * 512 = 512 bytes
+
 Sector size (logical/physical): 512 bytes / 512 bytes
+
 I/O size (minimum/optimal): 512 bytes / 512 bytes
+
 Disklabel type: gpt
+
 Disk identifier: F61EC56C-A59A-2E41-B6E4-95DCB3D7A5B7
 
 Device       Start      End  Sectors  Size Type
@@ -105,9 +110,13 @@ Last sector, +sectors or +size{K,M,G,T,P} (2048-125829119, default 125829119):
 Created a new partition 1 of type 'Linux' and of size 60 GiB.
 
 Command (m for help): w
+
 The partition table has been altered.
+
 Calling ioctl() to re-read partition table.
+
 Syncing disks.
+
 3️⃣ Formater la nouvelle partition en format Linux ext4
 
 ✔ You still need to create a file system
