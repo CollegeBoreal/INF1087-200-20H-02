@@ -2,11 +2,11 @@
 
 ## :o: Création de votre répertoire de travail dans `git bash`
 
-### :one: Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
+- [ ] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-### :two: Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
+- [ ] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
 
       * incluant le fichier `docker-compose.yml` 
 
@@ -18,7 +18,7 @@
 
 ### :three: Envoyer vers github
 
-* soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Dans votre Serveur Windows du laboratoire
 
