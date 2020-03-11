@@ -151,7 +151,7 @@ Device       Start      End  Sectors  Size Type
 Partition table entries are not in disk order.
 ```
 
-- [x ]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
+- [x]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
 ```
 $ sudo fdisk /dev/sdb
