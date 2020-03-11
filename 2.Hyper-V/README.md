@@ -30,7 +30,7 @@ PS > docker-machine create `
       CB-HYPERV
 ```
 
-:pushpin: pointer vers la machine virtuelle
+:pushpin: Pointer le `container engine` sur la machine virtuelle
 
 ```
 PS > docker-machine env CB-HYPERV | Invoke-Expression
@@ -192,7 +192,7 @@ zram0  252:0    0 122.1M  0 disk [SWAP]
 :pushpin: Pointer le container engine sur la machine virtuelle
 
 ```
-PS> docker-machine env CB-HYPERV | Invoke-Expression
+PS> docker-machine env CB-HYPERV3 | Invoke-Expression
 ```
 
 :pushpin: Créer le conteneur avec le nouveau volume
