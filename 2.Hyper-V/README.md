@@ -6,23 +6,23 @@
 
 ## :o: Prérequis
 
-:pushpin: Installer Docker-Machine
+- [ ] Installer Docker-Machine
 
 ```
 PS> choco install docker-machine
 ```
 
-:pushpin: Installer Hyper-V
+- [ ] Installer Hyper-V
 
 Voir [HyperV](../H.HyperV)
 
-:pushpin: Create Virtual Switch par défaut
+- [ ] Create Virtual Switch par défaut
 
 Voir [vSwitch](../H.HyperV/vSwitch.md)
 
 ## :m: CB-HYPERV
 
-:one: Creer une machine virtuelle
+- [ ]  Creer une machine virtuelle
 
 ```
 PS > docker-machine create `
@@ -36,7 +36,7 @@ PS > docker-machine create `
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-:two: Installer WordPress (`changer-mon-adresse-ip` IP dans votre fichier `.env`)
+- [ ] Installer WordPress (`changer-mon-adresse-ip` IP dans votre fichier `.env`)
 
 ```
 PS > docker-compose up --detach
