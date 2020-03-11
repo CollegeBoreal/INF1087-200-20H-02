@@ -1,6 +1,6 @@
 # Hyper V
 
-## :o: Création de votre répertoire de travail dans `git bash`
+## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
 - [ ] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
 
