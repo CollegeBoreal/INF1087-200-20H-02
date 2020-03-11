@@ -253,6 +253,12 @@ PS > Get-Command -module HYPER-V | Select-String 'VHD'
 PS > Get-Command -Module NetTCPIP
 ```
 
+## :bulb: Desactiver toutes les machines virtuelles
+
+```
+PS > docker-machine env --unset | Invoke-Expression
+```
+
 # References
 
 
