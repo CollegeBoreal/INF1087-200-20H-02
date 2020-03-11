@@ -9,11 +9,11 @@ Le but de ce laboratoire est de créer trois machines virtuelles sur une machine
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
+- [ x] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ ] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
+- [ x] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
 
       * incluant le fichier `docker-compose.yml` 
 
@@ -23,35 +23,35 @@ Le but de ce laboratoire est de créer trois machines virtuelles sur une machine
 
 `$ cp -r .src/* `:id:` `
 
-- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [ x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Dans votre Serveur Windows du laboratoire
 
 ## :star: Prérequis
 
-- [ ] Installer Docker-Machine
+- [ x] Installer Docker-Machine
 
 ```
 PS> choco install docker-machine
 ```
-- [ ] Installer Docker-Compose
+- [ x] Installer Docker-Compose
 
 ```
 PS> choco install docker-compose
 ```
 
 
-- [ ] Installer Hyper-V
+- [ x] Installer Hyper-V
 
 Voir [HyperV](../H.HyperV)
 
-- [ ] Créer `Virtual Switch` par défaut
+- [ x] Créer `Virtual Switch` par défaut
 
 Voir [vSwitch](../H.HyperV/vSwitch.md)
 
 ## :m: CB-HYPERV
 
-- [ ]  Créer une machine virtuelle
+- [ x]  Créer une machine virtuelle
 
 ```
 PS > docker-machine create `
@@ -65,7 +65,7 @@ PS > docker-machine create `
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-- [ ] Cloner le cours et aller dans son répertoire de travail :id:
+- [ x] Cloner le cours et aller dans son répertoire de travail :id:
 
 ```
 PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
@@ -77,17 +77,17 @@ PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git
 PS > docker-compose up --detach
 ```
 
-- [ ] Initialiser WordPress
+- [x ] Initialiser WordPress
 
 :pushpin: Administrer votre site `Wordpress`
 
-http://`changer-mon-adresse-ip`/wp-admin
+http://`10.13.5.20`/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://`changer-mon-adresse-ip`:8080
+http://`10.13.5.20`:8080
 
-## :m: CB-HYPERV2
+## :m: CB-HYPERV1
 
 :bulb: Ajouter de la mémoire 4Gb et du CPU 2
 
@@ -100,14 +100,14 @@ PS > docker-machine create `
 ```
 
 
-## :m: CB-HYPERV3
+## :m: CB-HYPERV2
 
-- [ ] Créer le disque virtuel
+- [ x] Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
 ```
-PS > $vm = 'CB-HYPERV3'
+PS > $vm = 'CB-HYPERV2'
 PS > $VMLOC = $HOME + '\.docker\machine\machines\'
 PS > New-VHD -Path "$VMLOC\$vm\$vm.vhdx" -Dynamic -SizeBytes 60GB
 PS > docker-machine stop $vm
@@ -116,14 +116,14 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
 
-- [ ]  Créer la table de partition 
+- [ x]  Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
 :pushpin: Se connecter à la machine virtuelle
 
 ```
-PS > docker-machine ssh CB-HYPERV3
+PS > docker-machine ssh CB-HYPERV2
 ```
 
 :pushpin: Localiser le disque dans la table de partition avec l'utilitaire Linux `fdisk`
@@ -151,7 +151,7 @@ Device       Start      End  Sectors  Size Type
 Partition table entries are not in disk order.
 ```
 
-- [ ]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
+- [x ]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
 ```
 $ sudo fdisk /dev/sdb
@@ -177,7 +177,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
-- [ ]  Formater la nouvelle partition en format Linux ext4
+- [ x]  Formater la nouvelle partition en format Linux ext4
 
 :pushpin: You still need to create a file system
 
@@ -200,14 +200,14 @@ Writing superblocks and filesystem accounting information:
 done
 ```
 
-- [ ]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
+- [ x]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
 ```
 
-- [ ]  S'assurer que le répertoire est visible
+- [ x]  S'assurer que le répertoire est visible
 
 * Faire la liste des appareils (devices) de type `block storage`
 
@@ -223,12 +223,12 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-- [ ]  Créer un conteneur pour tester le volume 
+- [ x]  Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
 ```
-PS> docker-machine env CB-HYPERV3 | Invoke-Expression
+PS> docker-machine env CB-HYPERV2 | Invoke-Expression
 ```
 
 :pushpin: Créer le conteneur avec le nouveau volume
