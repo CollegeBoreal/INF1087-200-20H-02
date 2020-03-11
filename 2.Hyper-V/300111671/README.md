@@ -125,7 +125,7 @@ sda      8:0    0  19.5G  0 disk
 sdb      8:16   0    60G  0 disk
 `-sdb1   8:17   0    60G  0 part /mnt/sdb1
 sr0     11:0    1    57M  0 rom
-zram0  252:0    0 122.1M  0 disk [SWAP]
+zram0  252:0    0 120.8M  0 disk [SWAP]
 ```
 
 ### :four: Créer un conteneur pour tester le volume 
