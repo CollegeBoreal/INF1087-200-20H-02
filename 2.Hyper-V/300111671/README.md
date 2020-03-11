@@ -7,7 +7,7 @@
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
 ```
-PS > $vm = 'CB-HYPERV3'
+PS > $vm = 'CB-HYPERV2'
 PS > $VMLOC = $HOME + '\.docker\machine\machines\'
 PS > New-VHD -Path "$VMLOC\$vm\$vm.vhdx" -Dynamic -SizeBytes 60GB
 PS > docker-machine stop $vm
@@ -31,24 +31,29 @@ PS > docker-machine ssh CB-HYPERV2
 ```
 $ fdisk --list
 fdisk: cannot open /dev/zram0: Permission denied
-Disk /dev/sdb: 60 GiB, 64424509440 bytes, 125829120 sectors
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 4096 bytes
-I/O size (minimum/optimal): 4096 bytes / 4096 bytes
-
-
 Disk /dev/sda: 19.5 GiB, 20971520000 bytes, 40960000 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disklabel type: gpt
-Disk identifier: F61EC56C-A59A-2E41-B6E4-95DCB3D7A5B7
+Disk identifier: 10A70F20-5F53-E341-8E6C-1D99192F59BF
 
 Device       Start      End  Sectors  Size Type
 /dev/sda1  2050048 40959966 38909919 18.6G Linux filesystem
 /dev/sda2     2048  2050047  2048000 1000M Linux swap
 
 Partition table entries are not in disk order.
+
+
+Disk /dev/sdb: 60 GiB, 64424509440 bytes, 125829120 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: dos
+Disk identifier: 0x5e9e8882
+
+Device     Boot Start       End   Sectors Size Id Type
+/dev/sdb1        2048 125829119 125827072
 ```
 
 :pushpin: Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
