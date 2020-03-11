@@ -89,7 +89,7 @@ PS > docker-machine create `
 
 ## :m: CB-HYPERV3
 
-### :one: Créer le disque virtuel
+- [ ] Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
@@ -103,7 +103,7 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
 
-### :two: Créer la table de partition 
+- [ ]  Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
@@ -138,7 +138,7 @@ Device       Start      End  Sectors  Size Type
 Partition table entries are not in disk order.
 ```
 
-:pushpin: Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
+- [ ]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
 ```
 $ sudo fdisk /dev/sdb
@@ -164,7 +164,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
-### :three: Formater la nouvelle partition en format Linux ext4
+- [ ]  Formater la nouvelle partition en format Linux ext4
 
 :pushpin: You still need to create a file system
 
@@ -187,14 +187,14 @@ Writing superblocks and filesystem accounting information:
 done
 ```
 
-:pushpin: Attacher (Monter) le système de fichier à l'arborescence de fichiers
+- [ ]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
 ```
 
-:pushpin: S'assurer que le répertoire est visible
+- [ ]  S'assurer que le répertoire est visible
 
 * Faire la liste des appareils (devices) de type `block storage`
 
@@ -210,7 +210,7 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-### :four: Créer un conteneur pour tester le volume 
+- [ ]  Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
