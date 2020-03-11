@@ -9,11 +9,11 @@ Le but de ce laboratoire est de créer trois machines virtuelles sur une machine
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ x] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
+- [x] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ x] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
+- [x] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
 
       * incluant le fichier `docker-compose.yml` 
 
@@ -45,13 +45,13 @@ PS> choco install docker-compose
 
 Voir [HyperV](../H.HyperV)
 
-- [ x] Créer `Virtual Switch` par défaut
+- [x] Créer `Virtual Switch` par défaut
 
 Voir [vSwitch](../H.HyperV/vSwitch.md)
 
 ## :m: CB-HYPERV
 
-- [ x]  Créer une machine virtuelle
+- [x]  Créer une machine virtuelle
 
 ```
 PS > docker-machine create `
@@ -65,7 +65,7 @@ PS > docker-machine create `
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-- [ x] Cloner le cours et aller dans son répertoire de travail :id:
+- [x] Cloner le cours et aller dans son répertoire de travail :id:
 
 ```
 PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
