@@ -33,6 +33,12 @@ Le but de ce laboratoire est de créer trois machines virtuelles sur une machine
 ```
 PS> choco install docker-machine
 ```
+- [ ] Installer Docker-Compose
+
+```
+PS> choco install docker-compose
+```
+
 
 - [ ] Installer Hyper-V
 
