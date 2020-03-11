@@ -4,6 +4,8 @@ Le but de ce laboratoire est de créer trois machines virtuelles sur une machine
 
 Le laboratoire sera noter dans la section `Hyper-V`
 
+:closed_book: Copiez le `README.md` dans votre répertoire et cocher les sections `- [x]` au fur et à mesure de votre progression.
+
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
 - [ ] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
