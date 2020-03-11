@@ -36,11 +36,17 @@ PS > docker-machine create `
 ✔ Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
 PS > $vm = 'CB-HYPERV3'
+
 PS > $VMLOC = $HOME + '\.docker\machine\machines\'
+
 PS > New-VHD -Path "$VMLOC\$vm\$vm.vhdx" -Dynamic -SizeBytes 60GB
+
 PS > docker-machine stop $vm
+
 PS > ADD-VMHardDiskDrive -VMName $vm -Path "$VMLOC\$vm\$vm.vhdx"
+
 PS > (Get-VMHardDiskDrive -VMName $vm).Path
+
 PS > docker-machine start $vm
 
 2️⃣ Créer la table de partition
@@ -55,9 +61,13 @@ PS > docker-machine ssh CB-HYPERV3
 
 $ fdisk --list
 fdisk: cannot open /dev/zram0: Permission denied
+
 Disk /dev/sdb: 60 GiB, 64424509440 bytes, 125829120 sectors
+
 Units: sectors of 1 * 512 = 512 bytes
+
 Sector size (logical/physical): 512 bytes / 4096 bytes
+
 I/O size (minimum/optimal): 4096 bytes / 4096 bytes
 
 
@@ -103,31 +113,45 @@ Syncing disks.
 ✔ You still need to create a file system
 
 $ mkfs.ext4 /dev/sdb1
+
 mke2fs 1.44.4 (18-Aug-2018)
+
 Found a dos partition table in /dev/sdb1
+
 Proceed anyway? (y,N) y
+
 Discarding device blocks: done
+
 Creating filesystem with 15728384 4k blocks and 3932160 inodes
+
 Filesystem UUID: 3bebf011-f169-4f52-b928-a436d0fd730e
+
 Superblock backups stored on blocks:
+
         32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+        
         4096000, 7962624, 11239424
 
 Allocating group tables: done
+
 Writing inode tables: done
+
 Creating journal (65536 blocks): done
+
 Writing superblocks and filesystem accounting information:
 done
 
 ✔ Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 $ sudo mkdir /mnt/sdb1
+
 $ sudo mount /dev/sdb1 /mnt/sdb1
 
 📌 S'assurer que le répertoire est visible
 
 Faire la liste des appareils (devices) de type block storage
 $ lsblk
+
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda      8:0    0  19.5G  0 disk
 |-sda1   8:1    0  18.6G  0 part /mnt/sda1
@@ -136,6 +160,7 @@ sdb      8:16   0    60G  0 disk
 `-sdb1   8:17   0    60G  0 part /mnt/sdb1
 sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
+
 4️⃣ Créer un conteneur pour tester le volume
 
 ✔ Pointer le container engine sur la machine virtuelle
@@ -145,6 +170,7 @@ PS> docker-machine env CB-HYPERV | Invoke-Expression
 ✔ Créer le conteneur avec le nouveau volume
 
 PS > $SRC = '/mnt/sdb1'
+
 PS > docker container run `
          --name some-mysqlds `
          --env MYSQL_ROOT_PASSWORD=password `
