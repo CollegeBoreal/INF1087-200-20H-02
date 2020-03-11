@@ -4,19 +4,19 @@ PS > docker-machine create `
       --driver hyperv `
       CB-HYPERV
       
-📌 pointer vers la machine virtuelle
+✔ pointer vers la machine virtuelle
 
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 
-2️⃣ Installer WordPress (changer-mon-adresse-ip IP dans votre fichier .env)
+✔ Installer WordPress (changer-mon-adresse-ip IP dans votre fichier .env)
 
 PS > docker-compose up --detach
 
-3️⃣ Initialiser WordPress
+✔ Initialiser WordPress
 
 http://10.10.2.82/wp-admin
 
-📌 Visualiser MySQL avec PHPMyAdmin
+✔ Visualiser MySQL avec PHPMyAdmin
 
 http://10.13.2.82:8080
 
@@ -30,9 +30,9 @@ PS > docker-machine create `
       --hyperv-memory 4096 `
       CB-HYPERV2
       
-Ⓜ️ CB-HYPERV3
+📗 CB-HYPERV3
 
-1️⃣ Créer le disque virtuel
+✏ Créer le disque virtuel
 
 ✔ Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
@@ -50,7 +50,7 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 
 PS > docker-machine start $vm
 
-2️⃣ Créer la table de partition
+✏ Créer la table de partition
 
 ✔ Penser à GPT - GUID Partition Table
 
@@ -58,9 +58,10 @@ PS > docker-machine start $vm
 
 PS > docker-machine ssh CB-HYPERV3
 
-📌 Localiser le disque dans la table de partition avec l'utilitaire Linux fdisk
+✔ Localiser le disque dans la table de partition avec l'utilitaire Linux fdisk
 
 $ fdisk --list
+
 fdisk: cannot open /dev/zram0: Permission denied
 
 Disk /dev/sdb: 60 GiB, 64424509440 bytes, 125829120 sectors
@@ -84,7 +85,9 @@ Disklabel type: gpt
 Disk identifier: F61EC56C-A59A-2E41-B6E4-95DCB3D7A5B7
 
 Device       Start      End  Sectors  Size Type
+
 /dev/sda1  2050048 40959966 38909919 18.6G Linux filesystem
+
 /dev/sda2     2048  2050047  2048000 1000M Linux swap
 
 Partition table entries are not in disk order.
@@ -94,17 +97,25 @@ Partition table entries are not in disk order.
 $ sudo fdisk /dev/sdb
 
 Welcome to fdisk (util-linux 2.32.1).
+
 Changes will remain in memory only, until you decide to write them.
+
 Be careful before using the write command.
 
 
 Command (m for help): n
+
 Partition type
    p   primary (0 primary, 0 extended, 4 free)
+   
    e   extended (container for logical partitions)
+   
 Select (default p): p
+
 Partition number (1-4, default 1):
+
 First sector (2048-125829119, default 2048):
+
 Last sector, +sectors or +size{K,M,G,T,P} (2048-125829119, default 125829119):
 
 Created a new partition 1 of type 'Linux' and of size 60 GiB.
@@ -117,7 +128,7 @@ Calling ioctl() to re-read partition table.
 
 Syncing disks.
 
-3️⃣ Formater la nouvelle partition en format Linux ext4
+✏ Formater la nouvelle partition en format Linux ext4
 
 ✔ You still need to create a file system
 
@@ -177,7 +188,7 @@ sr0     11:0    1    57M  0 rom
 
 zram0  252:0    0 122.1M  0 disk [SWAP]
 
-4️⃣ Créer un conteneur pour tester le volume
+✏ Créer un conteneur pour tester le volume
 
 ✔ Pointer le container engine sur la machine virtuelle
 
