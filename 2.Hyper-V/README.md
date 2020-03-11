@@ -34,13 +34,13 @@ PS> choco install docker-machine
 
 Voir [HyperV](../H.HyperV)
 
-- [ ] Create Virtual Switch par défaut
+- [ ] Créer `Virtual Switch` par défaut
 
 Voir [vSwitch](../H.HyperV/vSwitch.md)
 
 ## :m: CB-HYPERV
 
-- [ ]  Creer une machine virtuelle
+- [ ]  Créer une machine virtuelle
 
 ```
 PS > docker-machine create `
@@ -54,13 +54,21 @@ PS > docker-machine create `
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-- [ ] Installer WordPress (`changer-mon-adresse-ip` IP dans votre fichier `.env`)
+- [ ] Cloner le cours et aller dans votre répertoire de travail :id:
+
+```
+PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
+```
+
+- [ ] Installer WordPress
 
 ```
 PS > docker-compose up --detach
 ```
 
-:three: Initialiser WordPress
+- [ ] Initialiser WordPress
+
+:pushpin: Administrer votre site `Wordpress`
 
 http://`changer-mon-adresse-ip`/wp-admin
       
@@ -79,7 +87,6 @@ PS > docker-machine create `
       --hyperv-memory 4096 `
       CB-HYPERV2
 ```
-
 
 
 ## :m: CB-HYPERV3
