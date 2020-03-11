@@ -52,7 +52,7 @@ PS > docker-machine create `
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-- [ ] Cloner le cours et aller dans votre répertoire de travail :id:
+- [ ] Cloner le cours et aller dans son répertoire de travail :id:
 
 ```
 PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
