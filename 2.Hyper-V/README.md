@@ -2,7 +2,7 @@
 
 Le but de ce laboratoire est de créer trois machines virtuelles sur une machine métale. Sur la première machine virtuelle, il faudra installer le fameux `CMS` Wordpress. Sur la deuxième machine, il faudra démontrer la création d'une machine utilisant deux CPUs et 4Gb de mémoire. Sur la troisième machine, il faudra créer et rajouter un disque virtuel `VHDx` qui sera `monté` sur la machine virtuelle et visible dans un conteneur.
 
-:star: Le laboratoire sera noté dans la section `Hyper-V`
+:woman_student: Le laboratoire sera noté dans la section `Hyper-V` :man_student:
 
 :closed_book: Copiez le `README.md` dans votre répertoire et cocher les sections `- [x]` au fur et à mesure de votre progression.
 
