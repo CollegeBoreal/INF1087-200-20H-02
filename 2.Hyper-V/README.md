@@ -245,6 +245,8 @@ PS > docker container run `
 PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
 ```
 
+## :b: Commandes utiles
+
 ## :bulb: Autres commandes pour Hyper-V module
 
 ```
