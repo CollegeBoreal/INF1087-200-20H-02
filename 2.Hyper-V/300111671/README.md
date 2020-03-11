@@ -23,25 +23,25 @@ Le but de ce laboratoire est de créer trois machines virtuelles sur une machine
 
 `$ cp -r .src/* `:id:` `
 
-- [ x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Dans votre Serveur Windows du laboratoire
 
 ## :star: Prérequis
 
-- [ x] Installer Docker-Machine
+- [x] Installer Docker-Machine
 
 ```
 PS> choco install docker-machine
 ```
-- [ x] Installer Docker-Compose
+- [x] Installer Docker-Compose
 
 ```
 PS> choco install docker-compose
 ```
 
 
-- [ x] Installer Hyper-V
+- [x] Installer Hyper-V
 
 Voir [HyperV](../H.HyperV)
 
@@ -71,13 +71,13 @@ PS > docker-machine env CB-HYPERV | Invoke-Expression
 PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
 ```
 
-- [ ] Installer WordPress
+- [x] Installer WordPress
 
 ```
 PS > docker-compose up --detach
 ```
 
-- [x ] Initialiser WordPress
+- [x] Initialiser WordPress
 
 :pushpin: Administrer votre site `Wordpress`
 
@@ -102,7 +102,7 @@ PS > docker-machine create `
 
 ## :m: CB-HYPERV2
 
-- [ x] Créer le disque virtuel
+- [x] Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
@@ -116,7 +116,7 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
 
-- [ x]  Créer la table de partition 
+- [x]  Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
@@ -177,7 +177,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
-- [ x]  Formater la nouvelle partition en format Linux ext4
+- [x]  Formater la nouvelle partition en format Linux ext4
 
 :pushpin: You still need to create a file system
 
@@ -200,14 +200,14 @@ Writing superblocks and filesystem accounting information:
 done
 ```
 
-- [ x]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
+- [x]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
 ```
 
-- [ x]  S'assurer que le répertoire est visible
+- [x]  S'assurer que le répertoire est visible
 
 * Faire la liste des appareils (devices) de type `block storage`
 
@@ -223,7 +223,7 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-- [ x]  Créer un conteneur pour tester le volume 
+- [x]  Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
