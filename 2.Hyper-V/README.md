@@ -6,7 +6,13 @@
 
 `$ mkdir ` :id:
 
-### :two: Copier les fichiers incluant `docker-compose.yml` se trouvant dans le repretoire `.src` dans votre répertoire
+### :two: Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
+
+      * incluant le fichier `docker-compose.yml` 
+
+      * incluant le fichier `.env` 
+
+      * incluant le repertoire `config` 
 
 `$ cp -r .src/* `:id:` `
 
