@@ -210,7 +210,7 @@ PS > docker container run `
 PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
 ```
 
-## Autres commandes pour Hyper-V module
+## :bulb: Autres commandes pour Hyper-V module
 
 ```
 PS > Get-Command -module HYPERV
