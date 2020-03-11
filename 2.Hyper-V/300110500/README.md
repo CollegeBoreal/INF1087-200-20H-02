@@ -6,7 +6,7 @@
 
 - [ ] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
 
-`$ mkdir ` :300110500:
+`$ mkdir 300110500
 
 - [ ] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
 
