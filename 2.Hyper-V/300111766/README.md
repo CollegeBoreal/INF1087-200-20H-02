@@ -13,11 +13,11 @@ PS > docker-compose up --detach
 
 3️⃣ Initialiser WordPress
 
-http://10.10.2.87/wp-admin
+http://10.10.2.82/wp-admin
 
 📌 Visualiser MySQL avec PHPMyAdmin
 
-http://10.13.2.87:8080
+http://10.13.2.82:8080
 
 Ⓜ️ CB-HYPERV2
 💡 Ajouter de la mémoire 4Gb et du CPU 2
