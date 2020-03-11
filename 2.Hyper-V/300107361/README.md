@@ -1,140 +1,270 @@
-# Devoir Hyper-V
+# Hyper V
 
-### :one: Creer trois Machines Virtuelles
+:man_student: Le laboratoire sera noté dans la section `Hyper-V` :man_student:
 
-Sur la meme switch virtuelle
+:closed_book: Copiez le `README.md` dans votre répertoire et cocher les sections `- [x]` au fur et à mesure de votre progression.
 
-:a: Creation des deux premieres machines virtuelles avec:
+## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-```
-docker-machine create --driver hyperv CB-HYPERV
+- [x] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
 
+`$ mkdir ` :id:
 
-PS C:\Users\Administrator> docker-machine create --driver hyperv CB-HYPERV
-Running pre-create checks...
-Creating machine...
-(CB-HYPERV) Copying C:\Users\Administrator\.docker\machine\cache\boot2docker.iso to C:\Users\Administrator\.docker\machine\machines\CB-HYPERV\boot2docker.iso...
-(CB-HYPERV) Creating SSH key...
-(CB-HYPERV) Creating VM...
-(CB-HYPERV) Using switch "Primary Virtual Switch"
-(CB-HYPERV) Creating VHD
-(CB-HYPERV) Starting VM...
-(CB-HYPERV) Waiting for host to start...
-Waiting for machine to be running, this may take a few minutes...
-Detecting operating system of created instance...
-Waiting for SSH to be available...
-Detecting the provisioner...
-Provisioning with boot2docker...
-Copying certs to the local machine directory...
-Copying certs to the remote machine...
-Setting Docker configuration on the remote daemon...
-Checking connection to Docker...
-Docker is up and running!
-To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env CB-HYPERV
-```
+- [x] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
 
-### :two: Une des machines doit avoir 2 CPU et 4Gb de memoire
+      * incluant le fichier `docker-compose.yml` 
 
-:m: 
-```
-PS C:\Windows\system32> $HYPERV_MEMORY = 4096
-PS C:\Windows\system32> $HYPERV_CPU_COUNT = 2
-PS C:\Windows\system32> docker-machine create --driver hyperv --hyperv-memory $HYPERV_MEMORY --hyperv-cpu-count $HYPERV_CPU_COUNT  CB-HYPERV2
-Running pre-create checks...
-Creating machine...
-(CB-HYPERV3) Copying C:\Users\Administrator\.docker\machine\cache\boot2docker.iso to C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3\boot2docker.iso...
-(CB-HYPERV3) Creating SSH key...
-(CB-HYPERV3) Creating VM...
-(CB-HYPERV3) Using switch "Primary Virtual Switch"
-(CB-HYPERV3) Creating VHD
-(CB-HYPERV3) Starting VM...
-(CB-HYPERV3) Waiting for host to start...
-Waiting for machine to be running, this may take a few minutes...
-Detecting operating system of created instance...
-Waiting for SSH to be available...
-Detecting the provisioner...
-Provisioning with boot2docker...
-Copying certs to the local machine directory...
-Copying certs to the remote machine...
-Setting Docker configuration on the remote daemon...
-Checking connection to Docker...
-Docker is up and running!
-To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env CB-HYPERV3
-```
+      * incluant le fichier `.env` 
 
-### :three: Rajouter un volume VHDx a une des machines
-:a: D'abord creer la machine virtuel avec les valeurs par defauts avec `powershell`
+      * incluant le repertoire `config` 
+
+`$ cp -r .src/* `:id:` `
+
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+
+## :a: Dans votre Serveur Windows du laboratoire
+
+## :star: Prérequis
+
+- [x] Installer Docker-Machine
 
 ```
-PS C:\Windows\system32> docker-machine create --driver hyperv CB-HYPERV3
-```
-* Lancer la commande suivante pour verifier le volume des diques existantes sur la machine et leurs `Paths`
-```
-PS C:\Windows\system32> Get-VM -VMName CB-HYPERV3 | Select-Object VMId | Get-VHD | `
->> Format-List Path,VhdFormat,VhdType,Size
-
-
-Path      : C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3\disk.vhd
-VhdFormat : VHD
-VhdType   : Dynamic
-Size      : 20971520000
+PS> choco install docker-machine
 ```
 
-* Creer un nouvel disque virtuel utilisant la `commandlet` `New-VHD` 
+- [x] Installer Hyper-V
+
+Voir [HyperV](../H.HyperV)
+
+- [x] Créer `Virtual Switch` par défaut
+
+Voir [vSwitch](../H.HyperV/vSwitch.md)
+
+## :m: CB-HYPERV
+
+- [x]  Créer une machine virtuelle
+
 ```
-PS C:\Windows\system32> New-VHD -SizeBytes 60GB `
->> -Path "C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3-data.vhdx"
-
-
-ComputerName            : WIN-H3UTITEA3H7
-Path                    : C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3-data.vhdx
-VhdFormat               : VHDX
-VhdType                 : Dynamic
-FileSize                : 4194304
-Size                    : 64424509440
-MinimumSize             :
-LogicalSectorSize       : 512
-PhysicalSectorSize      : 4096
-BlockSize               : 33554432
-ParentPath              :
-DiskIdentifier          : 5420BE80-A1A9-4058-B519-3CC8FAFA9447
-FragmentationPercentage : 0
-Alignment               : 1
-Attached                : False
-DiskNumber              :
-IsPMEMCompatible        : False
-AddressAbstractionType  : None
-Number                  :
+PS > docker-machine create `
+      --driver hyperv `
+      CB-HYPERV
 ```
 
-* Stoper La virtuelle machine 
+:pushpin: Pointer le `container engine` sur la machine virtuelle
+
 ```
-PS C:\Windows\system32> docker-machine stop CB-HYPERV3
-Stopping "CB-HYPERV3"...
-(CB-HYPERV3) Waiting for host to stop...
-Machine "CB-HYPERV3" was stopped.
+PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-* Attacher le disque virtuel a la machine virtuelle
+- [] Cloner le cours et aller dans son répertoire de travail :id:
+
 ```
-PS C:\Windows\system32> Add-VMHardDiskDrive -VMName CB-HYPERV3 `
->> -Path "C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3-data.vhdx" `
->> -ControllerType IDE -ControllerNumber 0 -ControllerLocation 1
+PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
 ```
 
-* Verifier que le disque est attache
+- [ ] Installer WordPress
+
 ```
-PS C:\Windows\system32> Get-VM -VMName CB-HYPERV3 | Select-Object VMId | Get-VHD | `
->> Format-List Path,VhdFormat,VhdType,Size
-
-
-Path      : C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3\disk.vhd
-VhdFormat : VHD
-VhdType   : Dynamic
-Size      : 20971520000
-
-Path      : C:\Users\Administrator\.docker\machine\machines\CB-HYPERV3-data.vhdx
-VhdFormat : VHDX
-VhdType   : Dynamic
-Size      : 64424509440
+PS > docker-compose up --detach
 ```
+
+- [ ] Initialiser WordPress
+
+:pushpin: Administrer votre site `Wordpress`
+
+http://`changer-mon-adresse-ip`/wp-admin
+      
+:pushpin: Visualiser MySQL avec PHPMyAdmin
+
+http://`changer-mon-adresse-ip`:8080
+
+## :m: CB-HYPERV2
+
+:bulb: Ajouter de la mémoire 4Gb et du CPU 2
+
+```
+PS > docker-machine create `
+      --driver hyperv `
+      --hyperv-cpu-count 2 `
+      --hyperv-memory 4096 `
+      CB-HYPERV2
+```
+
+
+## :m: CB-HYPERV3
+
+- [ ] Créer le disque virtuel
+
+:bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
+
+```
+PS > $vm = 'CB-HYPERV3'
+PS > $VMLOC = $HOME + '\.docker\machine\machines\'
+PS > New-VHD -Path "$VMLOC\$vm\$vm.vhdx" -Dynamic -SizeBytes 60GB
+PS > docker-machine stop $vm
+PS > ADD-VMHardDiskDrive -VMName $vm -Path "$VMLOC\$vm\$vm.vhdx"
+PS > (Get-VMHardDiskDrive -VMName $vm).Path
+PS > docker-machine start $vm
+```
+
+- [ ]  Créer la table de partition 
+
+:bulb: Penser à `GPT - GUID Partition Table`
+
+:pushpin: Se connecter à la machine virtuelle
+
+```
+PS > docker-machine ssh CB-HYPERV3
+```
+
+:pushpin: Localiser le disque dans la table de partition avec l'utilitaire Linux `fdisk`
+
+```
+$ fdisk --list
+fdisk: cannot open /dev/zram0: Permission denied
+Disk /dev/sdb: 60 GiB, 64424509440 bytes, 125829120 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+Disk /dev/sda: 19.5 GiB, 20971520000 bytes, 40960000 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: F61EC56C-A59A-2E41-B6E4-95DCB3D7A5B7
+
+Device       Start      End  Sectors  Size Type
+/dev/sda1  2050048 40959966 38909919 18.6G Linux filesystem
+/dev/sda2     2048  2050047  2048000 1000M Linux swap
+
+Partition table entries are not in disk order.
+```
+
+- [ ]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
+
+```
+$ sudo fdisk /dev/sdb
+
+Welcome to fdisk (util-linux 2.32.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): p
+Partition number (1-4, default 1):
+First sector (2048-125829119, default 2048):
+Last sector, +sectors or +size{K,M,G,T,P} (2048-125829119, default 125829119):
+
+Created a new partition 1 of type 'Linux' and of size 60 GiB.
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+```
+- [ ]  Formater la nouvelle partition en format Linux ext4
+
+:pushpin: You still need to create a file system
+
+```
+$ mkfs.ext4 /dev/sdb1
+mke2fs 1.44.4 (18-Aug-2018)
+Found a dos partition table in /dev/sdb1
+Proceed anyway? (y,N) y
+Discarding device blocks: done
+Creating filesystem with 15728384 4k blocks and 3932160 inodes
+Filesystem UUID: 3bebf011-f169-4f52-b928-a436d0fd730e
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+        4096000, 7962624, 11239424
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (65536 blocks): done
+Writing superblocks and filesystem accounting information:
+done
+```
+
+- [ ]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
+
+```
+$ sudo mkdir /mnt/sdb1
+$ sudo mount /dev/sdb1 /mnt/sdb1
+```
+
+- [ ]  S'assurer que le répertoire est visible
+
+* Faire la liste des appareils (devices) de type `block storage`
+
+```
+$ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0  19.5G  0 disk
+|-sda1   8:1    0  18.6G  0 part /mnt/sda1
+`-sda2   8:2    0  1000M  0 part [SWAP]
+sdb      8:16   0    60G  0 disk
+`-sdb1   8:17   0    60G  0 part /mnt/sdb1
+sr0     11:0    1    57M  0 rom
+zram0  252:0    0 122.1M  0 disk [SWAP]
+```
+
+- [ ]  Créer un conteneur pour tester le volume 
+
+:pushpin: Pointer le container engine sur la machine virtuelle
+
+```
+PS> docker-machine env CB-HYPERV3 | Invoke-Expression
+```
+
+:pushpin: Créer le conteneur avec le nouveau volume
+
+```
+PS > $SRC = '/mnt/sdb1'
+PS > docker container run `
+         --name some-mysqlds `
+         --env MYSQL_ROOT_PASSWORD=password `
+         --publish 3306:3306 `
+         --publish 33060:33060 `
+         --volume ${SRC}:/var/lib/mysql-files `
+         --detach `
+         mysql/mysql-server:latest
+PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
+```
+
+## :bulb: Autres commandes pour Hyper-V module
+
+```
+PS > Get-Command -module HYPERV
+PS > Get-Command -module HYPER-V | Select-String 'VHD'
+PS > Get-Command -Module NetTCPIP
+```
+
+# References
+
+
+https://github.com/nezhar/wordpress-docker-compose/
+
+https://docs.docker.com/machine/drivers/hyper-v/
+
+http://www.theservergeeks.com/creating-multiple-vms-using-hyper-v-powershell/
+
+https://docs.sevenbridges.com/docs/mount-a-usb-drive-in-a-docker-container
+
+https://www.tecmint.com/fdisk-commands-to-manage-linux-disk-partitions/
+
+https://www.gnu.org/software/parted/manual/html_node/mkpart.html
+
+https://www.tecmint.com/how-to-check-disk-space-in-linux/
+
+https://github.com/katjuell/compose-wordpress-ssl/blob/master/docker-compose.yml
+
+
+
+
+
