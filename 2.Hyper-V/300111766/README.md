@@ -3,6 +3,7 @@ Creer une machine virtuelle
 PS > docker-machine create `
       --driver hyperv `
       CB-HYPERV
+      
 📌 pointer vers la machine virtuelle
 
 PS > docker-machine env CB-HYPERV | Invoke-Expression
@@ -19,8 +20,9 @@ http://10.10.2.82/wp-admin
 
 http://10.13.2.82:8080
 
-Ⓜ️ CB-HYPERV2
-💡 Ajouter de la mémoire 4Gb et du CPU 2
+📗 CB-HYPERV2
+
+✔ Ajouter de la mémoire 4Gb et du CPU 2
 
 PS > docker-machine create `
       --driver hyperv `
@@ -28,8 +30,10 @@ PS > docker-machine create `
       --hyperv-memory 4096 `
       CB-HYPERV2
 Ⓜ️ CB-HYPERV3
+
 1️⃣ Créer le disque virtuel
-💡 Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
+
+✔ Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
 PS > $vm = 'CB-HYPERV3'
 PS > $VMLOC = $HOME + '\.docker\machine\machines\'
@@ -38,12 +42,15 @@ PS > docker-machine stop $vm
 PS > ADD-VMHardDiskDrive -VMName $vm -Path "$VMLOC\$vm\$vm.vhdx"
 PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
+
 2️⃣ Créer la table de partition
-💡 Penser à GPT - GUID Partition Table
+
+✔ Penser à GPT - GUID Partition Table
 
 📌 Se connecter à la machine virtuelle
 
 PS > docker-machine ssh CB-HYPERV3
+
 📌 Localiser le disque dans la table de partition avec l'utilitaire Linux fdisk
 
 $ fdisk --list
@@ -66,6 +73,7 @@ Device       Start      End  Sectors  Size Type
 /dev/sda2     2048  2050047  2048000 1000M Linux swap
 
 Partition table entries are not in disk order.
+
 📌 Créer la table de partition du nouveau disque avec l'utilitaire Linux fdisk
 
 $ sudo fdisk /dev/sdb
@@ -91,7 +99,8 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 3️⃣ Formater la nouvelle partition en format Linux ext4
-📌 You still need to create a file system
+
+✔ You still need to create a file system
 
 $ mkfs.ext4 /dev/sdb1
 mke2fs 1.44.4 (18-Aug-2018)
@@ -109,10 +118,12 @@ Writing inode tables: done
 Creating journal (65536 blocks): done
 Writing superblocks and filesystem accounting information:
 done
-📌 Attacher (Monter) le système de fichier à l'arborescence de fichiers
+
+✔ Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
+
 📌 S'assurer que le répertoire est visible
 
 Faire la liste des appareils (devices) de type block storage
@@ -126,10 +137,12 @@ sdb      8:16   0    60G  0 disk
 sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 4️⃣ Créer un conteneur pour tester le volume
-📌 Pointer le container engine sur la machine virtuelle
+
+✔ Pointer le container engine sur la machine virtuelle
 
 PS> docker-machine env CB-HYPERV | Invoke-Expression
-📌 Créer le conteneur avec le nouveau volume
+
+✔ Créer le conteneur avec le nouveau volume
 
 PS > $SRC = '/mnt/sdb1'
 PS > docker container run `
@@ -140,8 +153,13 @@ PS > docker container run `
          --volume ${SRC}:/var/lib/mysql-files `
          --detach `
          mysql/mysql-server:latest
+         
 PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
+
 Autres commandes pour Hyper-V module
+
 PS > Get-Command -module HYPERV
+
 PS > Get-Command -module HYPER-V | Select-String 'VHD'
+
 PS > Get-Command -Module NetTCPIP
