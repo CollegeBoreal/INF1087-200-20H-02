@@ -56,13 +56,13 @@ PS > docker-machine create `
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-- [] Cloner le cours et aller dans son répertoire de travail :id:
+- [x] Cloner le cours et aller dans son répertoire de travail :id:
 
 ```
 PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
 ```
 
-- [ ] Installer WordPress
+- [x] Installer WordPress
 
 ```
 PS > docker-compose up --detach
@@ -72,13 +72,13 @@ PS > docker-compose up --detach
 
 :pushpin: Administrer votre site `Wordpress`
 
-http://`changer-mon-adresse-ip`/wp-admin
+http://10.13.2.27/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://`changer-mon-adresse-ip`:8080
+http://10.13.2.27:8080
 
-## :m: CB-HYPERV2
+##  [x] :m: CB-HYPERV2
 
 :bulb: Ajouter de la mémoire 4Gb et du CPU 2
 
@@ -93,7 +93,7 @@ PS > docker-machine create `
 
 ## :m: CB-HYPERV3
 
-- [ ] Créer le disque virtuel
+- [x] Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
@@ -245,24 +245,6 @@ PS > Get-Command -module HYPER-V | Select-String 'VHD'
 PS > Get-Command -Module NetTCPIP
 ```
 
-# References
-
-
-https://github.com/nezhar/wordpress-docker-compose/
-
-https://docs.docker.com/machine/drivers/hyper-v/
-
-http://www.theservergeeks.com/creating-multiple-vms-using-hyper-v-powershell/
-
-https://docs.sevenbridges.com/docs/mount-a-usb-drive-in-a-docker-container
-
-https://www.tecmint.com/fdisk-commands-to-manage-linux-disk-partitions/
-
-https://www.gnu.org/software/parted/manual/html_node/mkpart.html
-
-https://www.tecmint.com/how-to-check-disk-space-in-linux/
-
-https://github.com/katjuell/compose-wordpress-ssl/blob/master/docker-compose.yml
 
 
 
