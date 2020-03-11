@@ -6,16 +6,18 @@ PS > docker-machine create `
 📌 pointer vers la machine virtuelle
 
 PS > docker-machine env CB-HYPERV | Invoke-Expression
+
 2️⃣ Installer WordPress (changer-mon-adresse-ip IP dans votre fichier .env)
 
 PS > docker-compose up --detach
+
 3️⃣ Initialiser WordPress
 
-http://changer-mon-adresse-ip/wp-admin
+http://10.10.2.87/wp-admin
 
 📌 Visualiser MySQL avec PHPMyAdmin
 
-http://changer-mon-adresse-ip:8080
+http://10.13.2.87:8080
 
 Ⓜ️ CB-HYPERV2
 💡 Ajouter de la mémoire 4Gb et du CPU 2
