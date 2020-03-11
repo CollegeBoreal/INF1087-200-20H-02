@@ -62,15 +62,15 @@ PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git
 PS > docker-compose up --detach
 ```
 
-- [ ] Initialiser WordPress
+- [x] Initialiser WordPress
 
 :pushpin: Administrer votre site `Wordpress`
 
-http://`changer-mon-adresse-ip`/wp-admin
+http://10.13.5.41/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://`changer-mon-adresse-ip`:8080
+http://10.13.5.41:8080
 
 ## :m: CB-HYPERV2
 
@@ -238,3 +238,4 @@ PS > Get-Command -module HYPERV
 PS > Get-Command -module HYPER-V | Select-String 'VHD'
 PS > Get-Command -Module NetTCPIP
 ```
+✔
