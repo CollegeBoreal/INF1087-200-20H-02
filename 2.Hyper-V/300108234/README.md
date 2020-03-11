@@ -30,7 +30,7 @@ PS> choco install docker-machine
 
 Voir [HyperV](../H.HyperV)
 
-- [ ] Créer `Virtual Switch` par défaut
+- [x] Créer `Virtual Switch` par défaut
 
 Voir [vSwitch](../H.HyperV/vSwitch.md)
 
