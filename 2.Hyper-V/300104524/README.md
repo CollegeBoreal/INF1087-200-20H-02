@@ -1,9 +1,51 @@
-# 300111766
+# Hyper V
 
+
+## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
+
+- [x] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
+
+`$ mkdir ` :id:
+
+- [x] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
+
+      * incluant le fichier `docker-compose.yml` 
+
+      * incluant le fichier `.env` 
+
+      * incluant le repertoire `config` 
+
+`$ cp -r .src/* `:id:` `
+
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+
+## :a: Dans votre Serveur Windows du laboratoire
+
+## :star: Prérequis
+
+- [x] Installer Docker-Machine
+
+```
+PS> choco install docker-machine
+```
+- [x] Installer Docker-Compose
+
+```
+PS> choco install docker-compose
+```
+
+
+- [x] Installer Hyper-V
+
+Voir [HyperV](../H.HyperV)
+
+- [x] Créer `Virtual Switch` par défaut
+
+Voir [vSwitch](../H.HyperV/vSwitch.md)
 
 ## :m: CB-HYPERV
 
-✔:one: Creer une machine virtuelle
+- [x]  Créer une machine virtuelle
 
 ```
 PS > docker-machine create `
@@ -11,25 +53,33 @@ PS > docker-machine create `
       CB-HYPERV
 ```
 
-:pushpin: pointer vers la machine virtuelle
+:pushpin: Pointer le `container engine` sur la machine virtuelle
 
 ```
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-:two: Installer WordPress (`changer-mon-adresse-ip` IP dans votre fichier `.env`)
+- [x] Cloner le cours et aller dans son répertoire de travail :id:
+
+```
+PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
+```
+
+- [x] Installer WordPress
 
 ```
 PS > docker-compose up --detach
 ```
 
-:three: Initialiser WordPress
+- [x] Initialiser WordPress
 
-http://`changer-mon-adresse-ip`/wp-admin
+:pushpin: Administrer votre site `Wordpress`
+
+http://10.13.2.31/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://`changer-mon-adresse-ip`:8080
+http://10.13.2.31:8080
 
 ## :m: CB-HYPERV2
 
@@ -44,10 +94,9 @@ PS > docker-machine create `
 ```
 
 
-
 ## :m: CB-HYPERV3
 
-### :one: Créer le disque virtuel
+- [x] Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
@@ -61,7 +110,7 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
 
-### :two: Créer la table de partition 
+- [x]  Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
@@ -96,7 +145,7 @@ Device       Start      End  Sectors  Size Type
 Partition table entries are not in disk order.
 ```
 
-:pushpin: Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
+- [x]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
 ```
 $ sudo fdisk /dev/sdb
@@ -122,7 +171,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
-### :three: Formater la nouvelle partition en format Linux ext4
+- [x]  Formater la nouvelle partition en format Linux ext4
 
 :pushpin: You still need to create a file system
 
@@ -145,14 +194,14 @@ Writing superblocks and filesystem accounting information:
 done
 ```
 
-:pushpin: Attacher (Monter) le système de fichier à l'arborescence de fichiers
+- [x]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
 ```
 
-:pushpin: S'assurer que le répertoire est visible
+- [x]  S'assurer que le répertoire est visible
 
 * Faire la liste des appareils (devices) de type `block storage`
 
@@ -168,12 +217,12 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-### :four: Créer un conteneur pour tester le volume 
+- [x]  Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
 ```
-PS> docker-machine env CB-HYPERV | Invoke-Expression
+PS> docker-machine env CB-HYPERV3 | Invoke-Expression
 ```
 
 :pushpin: Créer le conteneur avec le nouveau volume
@@ -191,7 +240,9 @@ PS > docker container run `
 PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
 ```
 
-## Autres commandes pour Hyper-V module
+## :b: Commandes utiles
+
+## :bulb: Autres commandes pour Hyper-V module
 
 ```
 PS > Get-Command -module HYPERV
@@ -199,7 +250,12 @@ PS > Get-Command -module HYPER-V | Select-String 'VHD'
 PS > Get-Command -Module NetTCPIP
 ```
 
-# References
+## :bulb: Desactiver toutes les machines virtuelles
+
+```
+PS > docker-machine env --unset | Invoke-Expression
+```
 
 
-https://github.com/nezhar/wordpress-docker-compose/
+
+
