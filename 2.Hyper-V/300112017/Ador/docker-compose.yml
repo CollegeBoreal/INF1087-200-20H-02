@@ -1,52 +1,38 @@
 version: '2'
 
-services:
-  postgresql:
-    restart: always
-    image: sameersbn/postgresql:9.5-4
-    environment:
-    - DB_USER=nextcloud
-    - DB_PASS=password
-    - DB_NAME=nextcloud_db
-    volumes:
-    - /srv/docker/nextcloud/postgresql:/var/lib/postgresql
-
+volumes:
   nextcloud:
+  db:
+
+services:
+  db:
+    image: mariadb
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
-    image: sameersbn/nextcloud:9.0.55
-    command: app:nextcloud
-    environment:
-    - DEBUG=false
-    - TZ=Asia/Kolkata
-
-    - DB_TYPE=pgsql
-    - DB_HOST=postgresql
-    - DB_USER=nextcloud
-    - DB_PASS=password
-    - DB_NAME=nextcloud_db
-
-    - NEXTCLOUD_URL=http://cloud.example.com:10080
-
-    - NEXTCLOUD_ADMIN_USER=
-    - NEXTCLOUD_ADMIN_PASSWORD=
-
-    - NEXTCLOUD_UPLOAD_MAX_FILESIZE=4G
-    - NEXTCLOUD_MAX_FILE_UPLOADS=20
-
-    - NEXTCLOUD_BACKUPS_EXPIRY=0
-    depends_on:
-    - postgresql
     volumes:
-    - /srv/docker/nextcloud/nextcloud:/var/lib/nextcloud
-
-  nginx:
-    restart: always
-    image: sameersbn/nextcloud:9.0.55
-    command: app:nginx
+      - db:/var/lib/mysql
     environment:
-    - NEXTCLOUD_PHP_FPM_HOST=nextcloud
-    - NEXTCLOUD_PHP_FPM_PORT=9000
-    depends_on:
-    - nextcloud
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_PASSWORD=
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+
+  app:
+    image: nextcloud:fpm
+    links:
+      - db
+    volumes:
+      - nextcloud:/var/www/html
+    restart: always
+
+  web:
+    image: nginx
     ports:
-    - "10080:80"
+      - 8080:80
+    links:
+      - app
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    volumes_from:
+      - app
+    restart: always
