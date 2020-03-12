@@ -72,11 +72,11 @@ PS > docker-compose up --detach
 
 :pushpin: Administrer votre site `Wordpress`
 
-http://10.13.2.27/wp-admin
+http://10.13.5.20/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://10.13.2.27:8080
+http://10.13.5.20:8080
 
 ##  :m: CB-HYPERV2
 
