@@ -80,7 +80,7 @@ http://10.13.2.27:8080
 
 ##  :m: CB-HYPERV2
 
-:bulb: [x] Ajouter de la mémoire 4Gb et du CPU 2
+[x] Ajouter de la mémoire 4Gb et du CPU 2
 
 ```
 PS > docker-machine create `
@@ -107,7 +107,7 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
 
-- [ ]  Créer la table de partition 
+- [x]  Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
