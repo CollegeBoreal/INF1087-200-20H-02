@@ -1,5 +1,47 @@
 # 300098957
 
+<<<<<<< HEAD
+=======
+:man_student: Le laboratoire sera noté dans la section `Hyper-V` :man_student:
+
+:closed_book: Copiez le `README.md` dans votre répertoire et cocher les sections `- [x]` au fur et à mesure de votre progression.
+
+## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
+
+- [x] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
+
+`$ mkdir ` :id:
+
+- [x] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
+
+      * incluant le fichier `docker-compose.yml` 
+
+      * incluant le fichier `.env` 
+
+      * incluant le repertoire `config` 
+
+`$ cp -r ./300098957/* 300113775` `
+
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+
+## :a: Dans votre Serveur Windows du laboratoire
+
+## :star: Prérequis
+
+- [x] Installer Docker-Machine
+
+```
+PS> choco install docker-machine
+```
+
+- [x] Installer Hyper-V
+
+Voir [HyperV](../H.HyperV)
+
+- [x] Créer `Virtual Switch` par défaut
+
+Voir [vSwitch](../H.HyperV/vSwitch.md)
+>>>>>>> a2485d439910347d4872b96a58a42d692cbe9045
 
 ## :m: CB-HYPERV
 
