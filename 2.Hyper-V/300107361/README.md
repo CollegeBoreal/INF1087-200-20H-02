@@ -68,7 +68,7 @@ PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git
 PS > docker-compose up --detach
 ```
 
-- [ ] Initialiser WordPress
+- [x] Initialiser WordPress
 
 :pushpin: Administrer votre site `Wordpress`
 
@@ -78,9 +78,9 @@ http://10.13.2.27/wp-admin
 
 http://10.13.2.27:8080
 
-##  [x] :m: CB-HYPERV2
+##  :m: CB-HYPERV2
 
-:bulb: Ajouter de la mémoire 4Gb et du CPU 2
+:bulb: [x] Ajouter de la mémoire 4Gb et du CPU 2
 
 ```
 PS > docker-machine create `
@@ -142,7 +142,7 @@ Device       Start      End  Sectors  Size Type
 Partition table entries are not in disk order.
 ```
 
-- [ ]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
+- [x]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
 ```
 $ sudo fdisk /dev/sdb
@@ -168,7 +168,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
-- [ ]  Formater la nouvelle partition en format Linux ext4
+- [x]  Formater la nouvelle partition en format Linux ext4
 
 :pushpin: You still need to create a file system
 
@@ -191,14 +191,14 @@ Writing superblocks and filesystem accounting information:
 done
 ```
 
-- [ ]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
+- [x]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
 ```
 
-- [ ]  S'assurer que le répertoire est visible
+- [x]  S'assurer que le répertoire est visible
 
 * Faire la liste des appareils (devices) de type `block storage`
 
@@ -214,7 +214,7 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-- [ ]  Créer un conteneur pour tester le volume 
+- [x]  Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
