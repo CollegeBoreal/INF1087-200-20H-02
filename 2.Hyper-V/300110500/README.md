@@ -4,11 +4,11 @@
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
+- [x] Dans le répertoire `2.Hyper-V` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir 300110500
 
-- [ ] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
+- [x] Copier les fichiers se trouvant dans le repretoire `.src` dans votre répertoire
 
       * incluant le fichier `docker-compose.yml` 
 
@@ -18,29 +18,29 @@
 
 `$ cp -r .src/* `:300110500:` `
 
-- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Dans votre Serveur Windows du laboratoire
 
 ## :star: Prérequis
 
-- [ ] Installer Docker-Machine
+- [x] Installer Docker-Machine
 
 ```
 PS> choco install docker-machine
 ```
 
-- [ ] Installer Hyper-V
+- [x] Installer Hyper-V
 
 Voir [HyperV](../H.HyperV)
 
-- [ ] Créer `Virtual Switch` par défaut
+- [x] Créer `Virtual Switch` par défaut
 
 Voir [vSwitch](../H.HyperV/vSwitch.md)
 
 ## :m: CB-HYPERV
 
-- [ ]  Créer une machine virtuelle
+- [x]  Créer une machine virtuelle
 
 ```
 PS > docker-machine create `
@@ -54,13 +54,13 @@ PS > docker-machine create `
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-- [ ] Cloner le cours et aller dans son répertoire de travail :id:
+- [x] Cloner le cours et aller dans son répertoire de travail :id:
 
 ```
 PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
 ```
 
-- [ ] Installer WordPress
+- [x] Installer WordPress
 
 ```
 PS > docker-compose up --detach
@@ -69,7 +69,7 @@ Creating 300110500_wp_1  ... done
 Creating 300110500_pma_1 ... done
 Creating 300110500_wpcli_1 ... done
 ```
-- [ ] Initialiser WordPress
+- [x] Initialiser WordPress
 
 :pushpin: Administrer votre site `Wordpress`
 
@@ -94,7 +94,7 @@ PS > docker-machine create `
 
 ## :m: CB-HYPERV3
 
-- [ ] Créer le disque virtuel
+- [x] Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
@@ -108,7 +108,7 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
 
-- [ ]  Créer la table de partition 
+- [x]  Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
@@ -143,7 +143,7 @@ Device       Start      End  Sectors  Size Type
 Partition table entries are not in disk order.
 ```
 
-- [ ]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
+- [x]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
 ```
 $ sudo fdisk /dev/sdb
@@ -169,7 +169,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
-- [ ]  Formater la nouvelle partition en format Linux ext4
+- [x]  Formater la nouvelle partition en format Linux ext4
 
 :pushpin: You still need to create a file system
 
@@ -192,14 +192,14 @@ Writing superblocks and filesystem accounting information:
 done
 ```
 
-- [ ]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
+- [x]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
 ```
 
-- [ ]  S'assurer que le répertoire est visible
+- [x]  S'assurer que le répertoire est visible
 
 * Faire la liste des appareils (devices) de type `block storage`
 
@@ -215,7 +215,7 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-- [ ]  Créer un conteneur pour tester le volume 
+- [x]  Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
