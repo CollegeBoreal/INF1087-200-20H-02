@@ -64,8 +64,11 @@ PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git
 
 ```
 PS > docker-compose up --detach
+Starting 300110500_db_1 ... done
+Creating 300110500_wp_1  ... done
+Creating 300110500_pma_1 ... done
+Creating 300110500_wpcli_1 ... done
 ```
-
 - [ ] Initialiser WordPress
 
 :pushpin: Administrer votre site `Wordpress`

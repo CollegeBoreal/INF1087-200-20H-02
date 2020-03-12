@@ -245,12 +245,20 @@ PS > docker container run `
 PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
 ```
 
+## :b: Commandes utiles
+
 ## :bulb: Autres commandes pour Hyper-V module
 
 ```
 PS > Get-Command -module HYPERV
 PS > Get-Command -module HYPER-V | Select-String 'VHD'
 PS > Get-Command -Module NetTCPIP
+```
+
+## :bulb: Desactiver toutes les machines virtuelles
+
+```
+PS > docker-machine env --unset | Invoke-Expression
 ```
 
 # References
@@ -271,3 +279,5 @@ https://www.gnu.org/software/parted/manual/html_node/mkpart.html
 https://www.tecmint.com/how-to-check-disk-space-in-linux/
 
 https://github.com/katjuell/compose-wordpress-ssl/blob/master/docker-compose.yml
+
+http://wiki.tinycorelinux.net/
