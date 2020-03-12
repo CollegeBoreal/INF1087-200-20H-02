@@ -18,7 +18,7 @@
 
       * incluant le repertoire `config` 
 
-`$ cp -r .src/* `:id:` `
+` $cp -r ./300098957/* 300113775` `
 
 - [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
