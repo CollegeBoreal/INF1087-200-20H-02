@@ -3,7 +3,7 @@
 
 ## :m: CB-HYPERV
 
-:one: Creer une machine virtuelle
+✔:one: Creer une machine virtuelle
 
 ```
 PS > docker-machine create `
