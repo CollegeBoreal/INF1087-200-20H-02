@@ -234,7 +234,19 @@ PS > docker container run `
          --volume ${SRC}:/var/lib/mysql-files `
          --detach `
          mysql/mysql-server:latest
+Unable to find image 'mysql/mysql-server:latest' locally
+latest: Pulling from mysql/mysql-server
+c7127dfa6d78: Pull complete
+530b30ab10d9: Pull complete
+59c6388c2493: Pull complete
+cca3f8362bb0: Pull complete
+Digest: sha256:7cd104d6ff11f7e6a16087f88b1ce538bcb0126c048a60cd28632e7cf3dbe1b7
+Status: Downloaded newer image for mysql/mysql-server:latest
+11436df68fa1cdb289677b2ddf4f4dfde3414e133b06e3d7eb91c669b33c975b
+```
+```
 PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
+lost+found
 ```
 
 ## :bulb: Autres commandes pour Hyper-V module
