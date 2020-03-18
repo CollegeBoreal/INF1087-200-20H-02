@@ -11,27 +11,27 @@ PS > docker-machine create `
       CB-HYPERV
 ```
 
-:pushpin: pointer vers la machine virtuelle
+✔:pushpin: pointer vers la machine virtuelle
 
 ```
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-:two: Installer WordPress (`changer-mon-adresse-ip` IP dans votre fichier `.env`)
+ ✔:two: Installer WordPress (`changer-mon-adresse-ip` IP dans votre fichier `.env`)
 
 ```
 PS > docker-compose up --detach
 ```
 
-:three: Initialiser WordPress
+✔:three: Initialiser WordPress
 
 http://`changer-mon-adresse-ip`/wp-admin
       
-:pushpin: Visualiser MySQL avec PHPMyAdmin
+✔:pushpin: Visualiser MySQL avec PHPMyAdmin
 
 http://`changer-mon-adresse-ip`:8080
 
-## :m: CB-HYPERV2
+✔ ## :m: CB-HYPERV2
 
 :bulb: Ajouter de la mémoire 4Gb et du CPU 2
 
@@ -45,36 +45,36 @@ PS > docker-machine create `
 
 
 
-## :m: CB-HYPERV3
+✔ ## :m: CB-HYPERV3
 
-### :one: Créer le disque virtuel
+✔ ### :one: Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
 ```
-PS > $vm = 'CB-HYPERV3'
-PS > $VMLOC = $HOME + '\.docker\machine\machines\'
-PS > New-VHD -Path "$VMLOC\$vm\$vm.vhdx" -Dynamic -SizeBytes 60GB
-PS > docker-machine stop $vm
-PS > ADD-VMHardDiskDrive -VMName $vm -Path "$VMLOC\$vm\$vm.vhdx"
-PS > (Get-VMHardDiskDrive -VMName $vm).Path
-PS > docker-machine start $vm
+✔PS > $vm = 'CB-HYPERV3'
+✔PS > $VMLOC = $HOME + '\.docker\machine\machines\'
+✔PS > New-VHD -Path "$VMLOC\$vm\$vm.vhdx" -Dynamic -SizeBytes 60GB
+✔PS > docker-machine stop $vm
+✔PS > ADD-VMHardDiskDrive -VMName $vm -Path "$VMLOC\$vm\$vm.vhdx"
+✔PS > (Get-VMHardDiskDrive -VMName $vm).Path
+✔PS > docker-machine start $vm
 ```
 
-### :two: Créer la table de partition 
+✔### :two: Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
 :pushpin: Se connecter à la machine virtuelle
 
 ```
-PS > docker-machine ssh CB-HYPERV3
+✔PS > docker-machine ssh CB-HYPERV3
 ```
 
-:pushpin: Localiser le disque dans la table de partition avec l'utilitaire Linux `fdisk`
+✔:pushpin: Localiser le disque dans la table de partition avec l'utilitaire Linux `fdisk`
 
 ```
-$ fdisk --list
+✔$ fdisk --list
 fdisk: cannot open /dev/zram0: Permission denied
 Disk /dev/sdb: 60 GiB, 64424509440 bytes, 125829120 sectors
 Units: sectors of 1 * 512 = 512 bytes
@@ -168,7 +168,7 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-### :four: Créer un conteneur pour tester le volume 
+✔ ### :four: Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
@@ -176,7 +176,7 @@ zram0  252:0    0 122.1M  0 disk [SWAP]
 PS> docker-machine env CB-HYPERV | Invoke-Expression
 ```
 
-:pushpin: Créer le conteneur avec le nouveau volume
+✔:pushpin: Créer le conteneur avec le nouveau volume
 
 ```
 PS > $SRC = '/mnt/sdb1'
@@ -191,7 +191,7 @@ PS > docker container run `
 PS > docker container exec --interactive some-mysqlds sh -c "ls /var/lib/mysql-files"
 ```
 
-## Autres commandes pour Hyper-V module
+✔ ## Autres commandes pour Hyper-V module
 
 ```
 PS > Get-Command -module HYPERV
