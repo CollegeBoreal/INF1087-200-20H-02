@@ -1,6 +1,28 @@
 # INF1087-200-20H-02
 Administration d'infrastructure informatique 1
 
+```
+Topic: CBCV-218171  INF1087/2/Face à face  Administration d'infrastructure informatique 1 
+Time: This is a recurring meeting Meet anytime
+ 
+Join Zoom Meeting
+https://collegeboreal.zoom.us/j/178415865
+ 
+One tap mobile
++14388097799,,178415865# Canada
++15873281099,,178415865# Canada
+ 
+Dial by your location
+        +1 438 809 7799 Canada
+        +1 587 328 1099 Canada
+        +1 647 374 4685 Canada
+        +1 647 558 0588 Canada
+        +1 778 907 2071 Canada
+        855 703 8985 Canada Toll-free
+Meeting ID: 178 415 865
+Find your local number: https://collegeboreal.zoom.us/u/axPBnQGUF
+```
+
 ## Devoirs
 
 | Date   | Titre               |     Commentaires                                                                         |
