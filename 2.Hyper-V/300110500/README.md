@@ -73,11 +73,11 @@ Creating 300110500_wpcli_1 ... done
 
 :pushpin: Administrer votre site `Wordpress`
 
-http://`changer-mon-adresse-ip`/wp-admin
+http://10.13.237.75/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://`changer-mon-adresse-ip`:8080
+http://10.13.237.75:8080
 
 ## :m: CB-HYPERV2
 
