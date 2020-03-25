@@ -24,11 +24,11 @@ PS > docker-compose up --detach
 
 :three: Initialiser WordPress
 
-http://`changer-mon-adresse-ip`/wp-admin
+http://10.13.2.86/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://`changer-mon-adresse-ip`:8080
+http://10.13.2.86:8080/index.php
 
 ## :m: CB-HYPERV2
 
