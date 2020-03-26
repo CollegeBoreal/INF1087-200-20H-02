@@ -5,3 +5,10 @@
 ```
 PS > $Env:MACHINE_STORAGE_PATH = "C:\Users\Administrator\.docker\machine"
 ```
+
+:two: Guarder le numéro d'étudiant
+
+```
+PS > $Env:ID="300098957"
+PS > cd $Env:ID
+```
