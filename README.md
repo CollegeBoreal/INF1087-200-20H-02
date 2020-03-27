@@ -56,4 +56,5 @@ Find your local number: https://collegeboreal.zoom.us/u/axPBnQGUF
 | Titre | Description |
 |-------|-------------|
 | [Docker In Action](https://www.manning.com/books/docker-in-action-second-edition) | Docker In action  <sup>2nd ed</sup>|
-| [Microsoft Containers](https://azure.microsoft.com/en-us/product-categories/containers) | Livre Pakt
+| [Microsoft Containers](https://azure.microsoft.com/en-us/product-categories/containers) | Livre Pakt |
+| [VMWare](https://k8s.vmware.com/kubernetes-up-and-running) | O'reilly |
