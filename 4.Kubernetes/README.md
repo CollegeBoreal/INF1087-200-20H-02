@@ -10,11 +10,13 @@ https://kube.academy/
 | [Docker In Action](https://www.manning.com/books/docker-in-action-second-edition) | [Chapitre 1](https://livebook.manning.com/book/kubernetes-in-action/chapter-1) |
 
 
-1. Ouvrir son compte GCP
+Etapes: 
 
-2. Configurer son environnement GCP
+- [ ]  Ouvrir son compte GCP
 
-3. Créer sa première VM avec GCP
+- [ ]  Configurer son environnement GCP
 
-4. Créer son premier cluster Kubernetes avec GCP
+- [ ]  Créer sa première VM avec GCP
+
+- [ ]  Créer son premier cluster Kubernetes avec GCP
 
