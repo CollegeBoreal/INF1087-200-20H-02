@@ -1,22 +1,38 @@
+# Kubernetes
 
-⭕️ Sur votre PC, créer votre répertoire de travail dans git bash
- Dans le répertoire 4.Kubernetes Créer un répertoire avec comme nom, votre 🆔
-$ mkdir 🆔
+Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Google Cloud Platform).
 
- Copier le fichier se trouvant dans le repretoire . dans votre répertoire
+:closed_book: Copiez le `README.md` dans votre répertoire et cocher les sections `- [x]` au fur et à mesure de votre progression.
 
-* incluant le fichier `README.md` 
-$ cp ./README.md 🆔
+## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
- Soumettre votre répertoire de travail vers github (git add, commit, push)
-🅰️ Dans votre Serveur Windows du laboratoire
-⭐️ Prérequis
-Etapes:
+- [ ] Dans le répertoire `4.Kubernetes` Créer un répertoire avec comme nom, votre :id:
 
- Ouvrir son compte GCP
+`$ mkdir ` :id:
 
- Configurer son environnement GCP
+- [ ] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
- Créer sa première VM avec GCP
+      * incluant le fichier `README.md` 
 
- Créer son premier cluster Kubernetes avec GCP
+
+`$ cp ./README.md `:id:` `
+
+- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+
+## :a: Dans votre Serveur Windows du laboratoire
+
+## :star: Prérequis
+
+Etapes: 
+
+- [ ]  Ouvrir son compte GCP
+
+- [ ]  Configurer son environnement GCP
+
+- [ ]  Créer sa première VM avec GCP
+
+- [ ]  Créer son premier cluster Kubernetes avec GCP
+
+## References
+
+https://kube.academy/
