@@ -33,6 +33,10 @@ Etapes:
 
 - [ ]  Créer son premier cluster Kubernetes avec GCP
 
+## GCP
+
+https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/4.Cloud/2.Public/4.GCP
+
 ## References
 
 https://kube.academy/
