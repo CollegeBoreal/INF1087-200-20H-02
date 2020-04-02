@@ -89,47 +89,7 @@ with Compute Engine resources, the default is assumed.
  [8] us-central1-a
  [9] us-central1-f
  [10] us-central1-b
- [11] us-west1-b
- [12] us-west1-c
- [13] us-west1-a
- [14] europe-west4-a
- [15] europe-west4-b
- [16] europe-west4-c
- [17] europe-west1-b
- [18] europe-west1-d
- [19] europe-west1-c
- [20] europe-west3-c
- [21] europe-west3-a
- [22] europe-west3-b
- [23] europe-west2-c
- [24] europe-west2-b
- [25] europe-west2-a
- [26] asia-east1-b
- [27] asia-east1-a
- [28] asia-east1-c
- [29] asia-southeast1-b
- [30] asia-southeast1-a
- [31] asia-southeast1-c
- [32] asia-northeast1-b
- [33] asia-northeast1-c
- [34] asia-northeast1-a
- [35] asia-south1-c
- [36] asia-south1-b
- [37] asia-south1-a
- [38] australia-southeast1-b
- [39] australia-southeast1-c
- [40] australia-southeast1-a
- [41] southamerica-east1-b
- [42] southamerica-east1-c
- [43] southamerica-east1-a
- [44] asia-east2-a
- [45] asia-east2-b
- [46] asia-east2-c
- [47] asia-northeast2-a
- [48] asia-northeast2-b
- [49] asia-northeast2-c
- [50] asia-northeast3-a
-Did not print [18] options.
+Did not print [58] options.
 Too many options [68]. Enter "list" at prompt to print choices fully.
 Please enter numeric choice or text value (must exactly match list
 item):  us-central1-a
@@ -156,6 +116,81 @@ Some things to try next:
 
 * Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
 * Run `gcloud topic --help` to learn about advanced features of the SDK like arg files and output formatting
+```
+
+:b: `gcp CLI`
+
+```
+C:\Users\Tochgaly-K.J.Etienne\AppData\Local\Google\Cloud SDK>gcloud beta compute ssh --zone us-central1-a cb-gcp-test --project my-college-project-273006
+You do not currently have this command group installed.  Using it
+requires the installation of components: [beta]
+
+Restarting command:
+  $ gcloud components install beta
+
+Installing component in a new window.
+
+Please re-run this command when installation is complete.
+    $ gcloud beta compute ssh --zone us-central1-a cb-gcp-test --project my-college-project-273006
+```
+
+While in the new window
+
+```
+Your current Cloud SDK version is: 287.0.0
+Installing components from version: 287.0.0
+
+ ---------------------------------------------
+|     These components will be installed.     |
+ ---------------------- ------------ ---------
+|         Name         |  Version   |   Size  |
+ ---------------------- ------------ ---------
+| gcloud Beta Commands | 2019.05.17 | < 1 MiB |
+ ---------------------- ------------ ---------
+
+For the latest full release notes, please visit:
+  https://cloud.google.com/sdk/release_notes
+
+Do you want to continue (Y/n)?  Y
+
+Creating update staging area
+10%
+20%
+30%
+35%
+40%
+45%
+50%
+55%
+60%
+65%
+70%
+75%
+80%
+85%
+90%
+95%
+100%
+100%
+100%
+Installing: gcloud Beta Commands
+50%
+62%
+75%
+88%
+100%
+100%
+100%
+Creating backup and activating new installation
+50%
+100%
+100%
+
+Performing post processing steps...done.
+
+Update done!
+
+Press any key to continue . . .
 ```
 
 - [x]  Créer sa première VM avec GCP
