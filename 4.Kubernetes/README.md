@@ -19,9 +19,9 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 - [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
-## :a: Dans votre Serveur Windows du laboratoire
+## :a: Avec votre compte [GCP](Google Cloud Platform)
 
-## :star: Prérequis
+### :star: Taches
 
 Etapes: 
 
@@ -33,7 +33,7 @@ Etapes:
 
 - [ ]  Créer son premier cluster Kubernetes avec GCP
 
-## GCP
+### Référence GCP
 
 https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/4.Cloud/2.Public/4.GCP
 
