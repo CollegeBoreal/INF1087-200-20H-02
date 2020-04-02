@@ -220,6 +220,29 @@ Checking connection to Docker...
 Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env cb-gcp-test
 ```
+:b: Connexion a la VM
+```
+Using username "Tochgaly-K.J.Etienne".
+Authenticating with public key "LAPTOP-1Q5O20OP\Tochgaly-K.J.Etienne@LAPTOP-1Q5O20OP"
+Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.10.0-27-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+249 packages can be updated.
+157 updates are security updates.
+
+New release '18.04.4 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Tochgaly-K.J.Etienne@cb-gcp-test:~$
+```
+https://github.com/CollegeBoreal/INF1087-200-20H-02/blob/master/4.Kubernetes/300107361/gcp.PNG?raw=true
 
 - [ ]  Créer son premier cluster Kubernetes avec GCP
 
