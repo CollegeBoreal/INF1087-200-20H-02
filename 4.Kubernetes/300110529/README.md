@@ -1,37 +1,44 @@
-Kubernetes
+# Kubernetes
 
 Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Google Cloud Platform).
 
-📕 Copiez le README.md dans votre répertoire et cocher les sections - [x] au fur et à mesure de votre progression.
-⭕️ Sur votre PC, créer votre répertoire de travail dans git bash
+:closed_book: Copiez le `README.md` dans votre répertoire et cocher les sections `- [x]` au fur et à mesure de votre progression.
 
-    Dans le répertoire 4.Kubernetes Créer un répertoire avec comme nom, votre 🆔
+## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-$ mkdir 🆔
+- [ ] Dans le répertoire `4.Kubernetes` Créer un répertoire avec comme nom, votre :id:
 
-    Copier le fichier se trouvant dans le repretoire . dans votre répertoire
+`$ mkdir ` :id:
 
-    * incluant le fichier `README.md` 
+- [ ] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
-$ cp ./README.md 🆔
+      * incluant le fichier `README.md` 
 
-    Soumettre votre répertoire de travail vers github (git add, commit, push)
 
-🅰️ Dans votre Serveur Windows du laboratoire
-⭐️ Prérequis
+`$ cp ./README.md `:id:` `
 
-Etapes:
+- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
-    Ouvrir son compte GCP
+## :a: Dans votre Serveur Windows du laboratoire
 
-    Configurer son environnement GCP
+## :star: Prérequis
 
-    Créer sa première VM avec GCP
+Etapes: 
 
-    Créer son premier cluster Kubernetes avec GCP
+- [ ]  Ouvrir son compte GCP
 
-References
+- [ ]  Configurer son environnement GCP
+
+- [ ]  Créer sa première VM avec GCP
+
+- [ ]  Créer son premier cluster Kubernetes avec GCP
+
+## References
 
 https://kube.academy/
-Titre 	 Description
-Docker In Action 	 Chapitre 1
+
+| Titre | Description |
+|-------|-------------|
+| [Docker In Action](https://www.manning.com/books/docker-in-action-second-edition) | [Chapitre 1](https://livebook.manning.com/book/kubernetes-in-action/chapter-1) |
+
+
