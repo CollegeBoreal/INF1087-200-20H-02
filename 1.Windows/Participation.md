@@ -75,6 +75,11 @@ PS > Add-LocalGroupMember -Group "Administrators" -Member "Brice"
 PS> Set-LocalUser "Brice" -AccountNeverExpires
 ```
 
+#### :x: Donner un autre mot de passe
+
+```
+PS > Set-LocalUser "Brice" -Password (ConvertTo-SecureString -AsPlainText "B0r34l$" -Force)
+```
 
 #### :o: Verification
 
