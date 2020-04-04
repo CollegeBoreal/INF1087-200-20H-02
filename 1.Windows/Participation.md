@@ -62,11 +62,19 @@ PS > $Password = Read-Host -AsSecureString
 PS > New-LocalUser "Brice" -Password $Password -FullName "Brice" -Description "Prof. "
 ```
 
+
 #### :three: Donner les droits administrateurs à l'utilisateur
 
 ```
 PS > Add-LocalGroupMember -Group "Administrators" -Member "Brice"
 ```
+
+#### :four: Ne jamais faire expirer le mot de passe
+
+```
+PS> Set-LocalUser "Brice" -AccountNeverExpires
+```
+
 
 #### :o: Verification
 
