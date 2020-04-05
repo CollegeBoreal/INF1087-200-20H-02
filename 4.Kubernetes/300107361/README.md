@@ -30,18 +30,21 @@ Etapes:
 - [x]  Configurer son environnement GCP
 
 ```
-C:\Users\Tochgaly-K.J.Etienne\AppData\Local\Google\Cloud SDK>gcloud init
+C:\Program Files (x86)\Google\Cloud SDK>gcloud init
 Welcome! This command will take you through the configuration of gcloud.
 
 Settings from your current configuration [default] are:
 accessibility:
   screen_reader: 'true'
+compute:
+  region: us-central1
+  zone: us-central1-a
 core:
   account: etiennetochgaly@gmail.com
   disable_usage_reporting: 'True'
   project: my-college-project-273006
-  
-  Pick configuration to use:
+
+Pick configuration to use:
  [1] Re-initialize this configuration [default] with new settings
  [2] Create a new configuration
 Please enter your numeric choice:  1
@@ -65,15 +68,15 @@ Please enter your numeric choice:  1
 You are logged in as: [etiennetochgaly@gmail.com].
 
 Pick cloud project to use:
- [1] my-college-project-273006
+ [1] b300107361
  [2] poised-ceiling-260607
  [3] Create a new project
 Please enter numeric choice or text value (must exactly match list
 item):  1
 
-Your current project has been set to: [my-college-project-273006].
+Your current project has been set to: [b300107361].
 
-Do you want to configure a default Compute Region and Zone? (Y/n)?  y
+Do you want to configure a default Compute Region and Zone? (Y/n)?  Y
 
 Which Google Compute Engine zone would you like to use as project
 default?
@@ -103,7 +106,7 @@ You can change it by running [gcloud config set compute/region NAME].
 Your Google Cloud SDK is configured and ready to use!
 
 * Commands that require authentication will use etiennetochgaly@gmail.com by default
-* Commands will reference project `my-college-project-273006` by default
+* Commands will reference project `b300107361` by default
 * Compute Engine commands will use region `us-central1` by default
 * Compute Engine commands will use zone `us-central1-a` by default
 
@@ -121,7 +124,7 @@ Some things to try next:
 :b: `gcp CLI`
 
 ```
-C:\Users\Tochgaly-K.J.Etienne\AppData\Local\Google\Cloud SDK>gcloud beta compute ssh --zone us-central1-a cb-gcp-test --project my-college-project-273006
+C:\Users\Tochgaly-K.J.Etienne\AppData\Local\Google\Cloud SDK>gcloud beta compute ssh --zone us-central1-a cb-gcp-test --project b300107361
 You do not currently have this command group installed.  Using it
 requires the installation of components: [beta]
 
@@ -131,7 +134,7 @@ Restarting command:
 Installing component in a new window.
 
 Please re-run this command when installation is complete.
-    $ gcloud beta compute ssh --zone us-central1-a cb-gcp-test --project my-college-project-273006
+    $ gcloud beta compute ssh --zone us-central1-a cb-gcp-test --project b300107361
 ```
 
 While in the new window
@@ -193,10 +196,14 @@ Update done!
 Press any key to continue . . .
 ```
 
+```
+$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300107361-4db83e95415e.json"
+```
+
 - [x]  Créer sa première VM avec GCP
 
 ```
-PS C:\Users\Tochgaly-K.J.Etienne\Downloads> docker-machine create --driver google --google-project my-college-project-273006 cb-gcp-test
+docker-machine create --driver google --google-project b300107361 cb-gcp-test
 Running pre-create checks...
 (cb-gcp-test) Check that the project exists
 (cb-gcp-test) Check if the instance already exists
@@ -218,10 +225,11 @@ Copying certs to the remote machine...
 Setting Docker configuration on the remote daemon...
 Checking connection to Docker...
 Docker is up and running!
-To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env cb-gcp-test
+To see how to connect your Docker Client to the Docker Engine running on this virtenv cb-gcp-test
 ```
-:b: Connexion a la VM
+:b: Connexion a la VM depuis GCloudSDK
 ```
+$ gcloud beta compute ssh --zone us-central1-a cb-gcp-test --project b300107361
 Using username "Tochgaly-K.J.Etienne".
 Authenticating with public key "LAPTOP-1Q5O20OP\Tochgaly-K.J.Etienne@LAPTOP-1Q5O20OP"
 Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.10.0-27-generic x86_64)
