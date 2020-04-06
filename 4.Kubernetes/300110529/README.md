@@ -25,7 +25,7 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 Etapes: 
 
-- [ ]  Ouvrir son compte GCP
+- [✔]  Ouvrir son compte GCP
 
 - [ ]  Configurer son environnement GCP
 
