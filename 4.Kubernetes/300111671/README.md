@@ -27,11 +27,18 @@ Etapes:
 
 - [x]  Ouvrir son compte GCP
 
-- [ ]  Configurer son environnement GCP
+- [x]  Configurer son environnement GCP
 
-- [ ]  Créer sa première VM avec GCP
+- [x]  Créer sa première VM avec GCP
 
-- [ ]  Créer son premier cluster Kubernetes avec GCP
+- [x]  Créer son premier cluster Kubernetes avec GCP
+
+```
+gcloud container clusters create kubia --num-nodes 3 --machine-type f1-micro --zone "us-central1-a"
+
+```
+
+
 
 ## References
 
