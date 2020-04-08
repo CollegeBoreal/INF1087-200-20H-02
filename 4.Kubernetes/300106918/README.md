@@ -30,6 +30,7 @@ Etapes:
 - [ ]  Configurer son environnement GCP
 
 - [ ]  Créer sa première VM avec GCP
+- [ ]  Créer son premier cluster Kubernetes avec GCP
 
 ![](image/cluster.png)
 
@@ -38,7 +39,10 @@ Etapes:
 
 ![](image/cloudsdk.png)
 
-- [ ]  Créer son premier cluster Kubernetes avec GCP
+
+- [ ]  Se connecter à une machine existante avec ssh
+
+![](image/ssh.png)
 
 ## References
 
