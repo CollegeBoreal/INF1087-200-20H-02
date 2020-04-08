@@ -24,22 +24,33 @@
 PS > $Env:MACHINE_STORAGE_PATH = "C:\Users\Administrator\.docker\machine"
 ```
 
+## CB-HYPERV
+
 :two: Guarder le numéro d'étudiant (i.e. penser `docker-compose` )
 
 ```
+PS> docker-machine env CB-HYPERV | Invoke-Expression
 PS > $Env:ID="300098957"
-PS > cd $Env:ID
+PS > cd C:\Users\Administrator\Developer\INF1087-200-20H-02\2.Hyper-V\$Env:ID
+PS > docker-compose ps
+      Name                     Command               State                  Ports
+-----------------------------------------------------------------------------------------------
+300107361_db_1      docker-entrypoint.sh --def ...   Up       0.0.0.0:3306->3306/tcp, 33060/tcp
+300107361_pma_1     /docker-entrypoint.sh apac ...   Up       0.0.0.0:8080->80/tcp
+300107361_wp_1      docker-entrypoint.sh apach ...   Up       0.0.0.0:80->80/tcp
+300107361_wpcli_1   docker-entrypoint.sh wp shell    Exit 1
 ```
 
 ## CB-HYPERV:two: 
 
 ```
 PS > docker-machine inspect CB-HYPERV2 --format='{{json .Driver.CPU}} {{json .Driver.MemSize}}'
+2 4096
 ```
 
-## CB-HYPERV:two: 
+## CB-HYPERV:three: 
 
-* docker Connect to the VM
+* docker Connect to the VM - pour test direct
 
 ```
 PS > docker-machine env CB-HYPERV3 | Invoke-Expression
@@ -53,7 +64,7 @@ PS > docker container exec --interactive --tty some-mysqlds sh -c "df -h | grep 
 ```
 
 
-* SSH Connect to the VM
+* SSH Connect to the VM - pour test alternatif
 
 ```
 PS > docker-machine ssh CB-HYPERV3
