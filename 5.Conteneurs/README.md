@@ -58,3 +58,7 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 - [ ] Commentaires
 
 [Participation](Participation.md)
+
+# Références
+
+https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/2.VM/1.Docker
