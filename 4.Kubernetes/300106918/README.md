@@ -10,7 +10,7 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 `$ mkdir ` :id:
 
-- [ ] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
+- [x] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
       * incluant le fichier `README.md` 
 
