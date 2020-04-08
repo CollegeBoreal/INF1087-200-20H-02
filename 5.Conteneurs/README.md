@@ -30,20 +30,31 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 - [ ] Créer une machine virtuelle avec docker machine
 
 ```
-$ docker-machine 
+$ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 ```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
+- [ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
+
+- [ ] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
+- [ ] Décrire la configuration du `firewall`
+
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
-* adresse IP
+- [ ] Que fait l'application?
 
-* port de l'application
+- [ ] Quel est son adresse IP?
+
+- [ ] Quel port utilisé pour y accéder?
+
+## :star: Autres commentaires utiles à donner
+
+- [ ] Commentaires
 
 [Participation](Participation.md)
