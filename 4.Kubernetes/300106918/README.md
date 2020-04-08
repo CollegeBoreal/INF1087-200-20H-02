@@ -31,6 +31,8 @@ Etapes:
 
 - [ ]  Créer sa première VM avec GCP
 
+![](image/cluster.png)
+
 - [ ]  Créer son premier cluster Kubernetes avec GCP
 
 ## References
