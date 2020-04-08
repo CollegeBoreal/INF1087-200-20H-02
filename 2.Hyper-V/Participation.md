@@ -30,3 +30,9 @@ PS > $Env:MACHINE_STORAGE_PATH = "C:\Users\Administrator\.docker\machine"
 PS > $Env:ID="300098957"
 PS > cd $Env:ID
 ```
+
+VM:two: 
+
+```
+PS > docker-machine inspect CB-HYPERV2 --format='{{json .Driver.CPU}} {{json .Driver.MemSize}}'
+```
