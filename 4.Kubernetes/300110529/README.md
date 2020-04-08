@@ -27,7 +27,7 @@ Etapes:
 
 - [✔]  Ouvrir son compte GCP
 
-- [ ]  Configurer son environnement GCP
+- [✔]  Configurer son environnement GCP
 
 - [ ]  Créer sa première VM avec GCP
 
