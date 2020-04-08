@@ -33,6 +33,17 @@ Etapes:
 
 - [ ]  Créer son premier cluster Kubernetes avec GCP
 
+## :b: kubectl Avec [GCP](Google Cloud Platform)
+
+https://www.linkedin.com/learning/l-essentiel-de-kubernetes/creer-son-premier-pod?u=56968449
+
+### :star: Taches
+
+- [ ]  Créer son premier pod
+
+
+
+
 ### Référence GCP
 
 https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/4.Cloud/2.Public/4.GCP
