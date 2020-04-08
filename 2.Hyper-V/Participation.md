@@ -31,7 +31,7 @@ PS > $Env:ID="300098957"
 PS > cd $Env:ID
 ```
 
-VM:two: 
+## CB-HYPERV:two: 
 
 ```
 PS > docker-machine inspect CB-HYPERV2 --format='{{json .Driver.CPU}} {{json .Driver.MemSize}}'
