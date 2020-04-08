@@ -25,9 +25,11 @@ Find your local number: https://collegeboreal.zoom.us/u/axPBnQGUF
 
 ## Devoirs
 
-| Date   | Titre               |     Commentaires                                                                         |
-|:------:|:--------------------|:-----------------------------------------------------------------------------------------|
-|31-01-20| [1.Windows](1.Windows/Participation.md) | Installation de Windows Server                                       |
+| Date   | Titre               |     Commentaires                                      |  Fait |
+|:------:|:--------------------|:------------------------------------------------------|-------|
+|31-01-20| [2.Hyper-V](1.Windows/Participation.md) | Virtualisation                    | :-1:  |
+|31-01-20| [2.Hyper-V](1.Windows/Participation.md) | Virtualisation                    | :+1:  |
+|31-01-20| [1.Windows](1.Windows/Participation.md) | Installation de Windows Server    | :+1:  |
 
 
 ## Déroulement de cours:
