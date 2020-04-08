@@ -7,7 +7,7 @@
 | 03   | 300106918 | :heavy_check_mark:  | :heavy_check_mark: |  :x: |
 | 04   | 300107361 | :heavy_check_mark:  | :heavy_check_mark: |  :x: |
 | 05   | 300108234 | :heavy_check_mark:  | :heavy_check_mark: |  :x: |
-| 06   | 300110500 | :heavy_check_mark:  | :heavy_check_mark: |  :x: |
+| 06   | 300110500 | :heavy_check_mark:  | :heavy_check_mark: |  :heavy_check_mark: |
 | 07   | 300110529 | :heavy_check_mark:  | :heavy_check_mark: |  :x: |
 | 08   | 300111671 | :heavy_check_mark:  | :heavy_check_mark: |  :x: |
 | 09   | 300111766 | :heavy_check_mark:  | :heavy_check_mark: |  :x: |
