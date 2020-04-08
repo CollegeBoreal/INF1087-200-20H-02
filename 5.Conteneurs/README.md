@@ -21,7 +21,16 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 ## :a: Créer une machine virtuelle dans le cloud
 
+- [ ] Vérifier que vos identifiants `cloud` sont installés
+
+| Cloud  |  Google  | Azure       | AWS      |  Autres |
+|--------|----------|-------------|----------|---------|
+| Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
+
+- [ ] Créer une machine virtuelle avec docker machine
+
 ```
+$ docker-machine 
 ```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
