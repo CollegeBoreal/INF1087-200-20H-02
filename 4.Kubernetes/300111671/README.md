@@ -107,6 +107,15 @@ with Compute Engine resources, the default is assumed.
 
 - [x]  Créer sa première VM avec GCP
 
+```
+
+ docker-machine ls
+NAME          ACTIVE   DRIVER    STATE     URL   SWARM   DOCKER    ERRORS
+cb-gcp-test   -        google    Error                   Unknown   google: could not find default credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
+labo16                 generic   Timeout
+
+```
+
 - [x]  Créer son premier cluster Kubernetes avec GCP
 
 ```
