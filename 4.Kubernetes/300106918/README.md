@@ -33,6 +33,11 @@ Etapes:
 
 ![](image/cluster.png)
 
+
+- [ ]  gcloud CLI
+
+![](image/cloud sdk.png 
+
 - [ ]  Créer son premier cluster Kubernetes avec GCP
 
 ## References
