@@ -36,3 +36,18 @@ PS > cd $Env:ID
 ```
 PS > docker-machine inspect CB-HYPERV2 --format='{{json .Driver.CPU}} {{json .Driver.MemSize}}'
 ```
+
+## CB-HYPERV:two: 
+
+Connect to the VM
+
+```
+PS > docker-machine ssh CB-HYPERV3
+```
+
+Check its 2nd disk size - 62914560 = 60GiB
+
+```
+$ fdisk -s  /dev/sdb
+62914560
+```
