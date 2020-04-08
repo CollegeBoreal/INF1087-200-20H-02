@@ -6,7 +6,7 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `4.Kubernetes` Créer un répertoire avec comme nom, votre :id:
+- [x] Dans le répertoire `4.Kubernetes` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
@@ -17,7 +17,7 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 `$ cp ./README.md `:id:` `
 
-- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Dans votre Serveur Windows du laboratoire
 
@@ -25,22 +25,22 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 Etapes: 
 
-- [ ]  Ouvrir son compte GCP
+- [x]  Ouvrir son compte GCP
 
-- [ ]  Configurer son environnement GCP
+- [x]  Configurer son environnement GCP
 
-- [ ]  Créer sa première VM avec GCP
-- [ ]  Créer son premier cluster Kubernetes avec GCP
+- [x]  Créer sa première VM avec GCP
+- [x]  Créer son premier cluster Kubernetes avec GCP
 
 ![](image/cluster.png)
 
 
-- [ ]  gcloud CLI
+- [x]  gcloud CLI
 
 ![](image/cloudsdk.png)
 
 
-- [ ]  Se connecter à une machine existante avec ssh
+- [x]  Se connecter à une machine existante avec ssh
 
 ![](image/ssh.png)
 
