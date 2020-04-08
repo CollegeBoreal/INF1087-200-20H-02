@@ -43,12 +43,16 @@ PS > docker-compose ps
 
 ## CB-HYPERV:two: 
 
+:three: VM Size
+
 ```
 PS > docker-machine inspect CB-HYPERV2 --format='{{json .Driver.CPU}} {{json .Driver.MemSize}}'
 2 4096
 ```
 
 ## CB-HYPERV:three: 
+
+:four: Check VM size through mounted VHDx disk
 
 * docker Connect to the VM - pour test direct
 
@@ -63,6 +67,7 @@ PS > docker container exec --interactive --tty some-mysqlds sh -c "df -h | grep 
 /dev/sdb1        59G   53M   56G   1% /var/lib/mysql-files
 ```
 
+:x: Other alternatives less points
 
 * SSH Connect to the VM - pour test alternatif
 
