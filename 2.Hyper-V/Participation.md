@@ -39,7 +39,21 @@ PS > docker-machine inspect CB-HYPERV2 --format='{{json .Driver.CPU}} {{json .Dr
 
 ## CB-HYPERV:two: 
 
-Connect to the VM
+* docker Connect to the VM
+
+```
+PS > docker-machine env CB-HYPERV3 | Invoke-Expression
+```
+
+* Check `/dev/sdb1` volume through the container `some-mysqlds`
+
+```
+PS > docker container exec --interactive --tty some-mysqlds sh -c "df -h | grep sdb"
+/dev/sdb1        59G   53M   56G   1% /var/lib/mysql-files
+```
+
+
+* SSH Connect to the VM
 
 ```
 PS > docker-machine ssh CB-HYPERV3
@@ -52,7 +66,3 @@ $ fdisk -s  /dev/sdb
 62914560
 ```
 
-```
-$ > docker container exec --interactive --tty some-mysqlds sh -c "df -h | grep sdb"
-/dev/sdb1        59G   53M   56G   1% /var/lib/mysql-files
-```
