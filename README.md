@@ -27,8 +27,9 @@ Find your local number: https://collegeboreal.zoom.us/u/axPBnQGUF
 
 | Date   | Titre               |     Commentaires                                      |  Fait |
 |:------:|:--------------------|:------------------------------------------------------|-------|
-|31-01-20| [2.Hyper-V](1.Windows/Participation.md) | Virtualisation                    | :-1:  |
-|31-01-20| [2.Hyper-V](1.Windows/Participation.md) | Virtualisation                    | :+1:  |
+|31-01-20| [5.Conteneurs](5.Conteneurs/Participation.md) | Sur un cloud public                    | :-1:  |
+|17-04-20| [4.Kubernetes](4.Kubernetes/Participation.md) | Grappe                    | :-1:  |
+|23-03-20| [2.Hyper-V](1.Windows/Participation.md) | Virtualisation                    | :+1:  |
 |31-01-20| [1.Windows](1.Windows/Participation.md) | Installation de Windows Server    | :+1:  |
 
 
