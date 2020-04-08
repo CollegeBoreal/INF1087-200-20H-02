@@ -46,7 +46,14 @@ https://www.linkedin.com/learning/l-essentiel-de-kubernetes/creer-son-premier-po
 
 ### Référence GCP
 
+* Créer son environment GCP (incluant la console)
+
 https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/4.Cloud/2.Public/4.GCP
+
+* Gérer sa grapper Kubernetes (avec `kubectl`)
+
+https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/3.Orchestration/1.Kubernetes
+
 
 ## References
 
