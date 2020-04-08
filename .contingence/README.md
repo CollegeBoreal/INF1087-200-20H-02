@@ -9,7 +9,7 @@
 | :two: | Test        | Implémentation de la virtualisation Hyper-V         | 15|:+1:|
 | :two: | Laboratoire | Configuration dans le laboratoire virtuel           | 15|:+1:|
 |:three:| Test        | Conteneur                                           | 15|:+1:|
-|:three:| Laboratoire | Installation et configuration d’un conteneur Docker | 15|:x: Kubernetes Pod|
+|:three:| Laboratoire | Installation et configuration d’un conteneur Docker | 15|:bulb: Kubernetes Pod|
 |:one:,:two:,:three:| Examen final        |                                        | 15|:x:|
 |       |             |                                                     |:100:|                 |
 
