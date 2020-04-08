@@ -51,3 +51,8 @@ Check its 2nd disk size - 62914560 = 60GiB
 $ fdisk -s  /dev/sdb
 62914560
 ```
+
+```
+$ > docker container exec --interactive --tty some-mysqlds sh -c "df -h | grep sdb"
+/dev/sdb1        59G   53M   56G   1% /var/lib/mysql-files
+```
