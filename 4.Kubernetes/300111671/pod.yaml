@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testing-for-image-pull
+spec:
+  containers:
+  - name: bash
+    image: bash
+    imagePullPolicy: Always
+    command: ["echo"]
+    args: ["SUCCESS"]
