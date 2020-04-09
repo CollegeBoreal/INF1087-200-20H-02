@@ -371,4 +371,116 @@ kubia  us-central1-a  1.14.10-gke.27  104.198.71.194  f1-micro      1.14.10-gke.
 ```
 
 <img src="node.JPG"></img>
+```
+% gcloud projects list
+PROJECT_ID         NAME        PROJECT_NUMBER
+b300112017-273623  b300112017  519722586733
+```
+# Vérifier que l'on a 3 noeuds (nodes) 
+## _Note:un noeud est égale une machine virtuelle (VM)_
+```
+% kubectl get nodes
+NAME                                   STATUS     ROLES    AGE   VERSION
+gke-kubia-default-pool-e6fd6670-1zcv   NotReady   <none>   14m   v1.14.10-gke.27
+gke-kubia-default-pool-e6fd6670-8jzb   NotReady   <none>   14m   v1.14.10-gke.27
+gke-kubia-default-pool-e6fd6670-qls8   NotReady   <none>   14m   v1.14.10-gke.27
+```
+
+<img src="noeud.JPG"></img>
+
+## Décrire un des noeuds avec la commande describe
+
+```
+% kubectl describe node gke-kubia-default-pool-e6fd6670-8jzb
+C:\Program Files (x86)\Google\Cloud SDK>kubectl describe node gke-kubia-default-pool-e6fd6670-8jzb
+Name:               gke-kubia-default-pool-e6fd6670-8jzb
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/fluentd-ds-ready=true
+                    beta.kubernetes.io/instance-type=f1-micro
+                    beta.kubernetes.io/os=linux
+                    cloud.google.com/gke-nodepool=default-pool
+                    cloud.google.com/gke-os-distribution=cos
+                    failure-domain.beta.kubernetes.io/region=us-central1
+                    failure-domain.beta.kubernetes.io/zone=us-central1-a
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=gke-kubia-default-pool-e6fd6670-8jzb
+                    kubernetes.io/os=linux
+Annotations:        container.googleapis.com/instance_id: 1704390514379523766
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Thu, 09 Apr 2020 01:55:23 -0400
+Taints:             node.kubernetes.io/unreachable:NoSchedule
+Unschedulable:      false
+Conditions:
+  Type                          Status    LastHeartbeatTime                 LastTransitionTime                Reason                          Message
+  ----                          ------    -----------------                 ------------------                ------                          -------
+  FrequentDockerRestart         True      Thu, 09 Apr 2020 02:18:55 -0400   Thu, 09 Apr 2020 02:12:22 -0400   FrequentDockerRestart           Found 5 matching logs, which meets the threshold of 5
+  FrequentContainerdRestart     False     Thu, 09 Apr 2020 02:18:55 -0400   Thu, 09 Apr 2020 02:12:24 -0400   NoFrequentContainerdRestart     containerd is functioning properly
+  KernelDeadlock                False     Thu, 09 Apr 2020 02:18:55 -0400   Thu, 09 Apr 2020 01:55:28 -0400   KernelHasNoDeadlock             kernel has no deadlock
+  ReadonlyFilesystem            False     Thu, 09 Apr 2020 02:18:55 -0400   Thu, 09 Apr 2020 01:55:28 -0400   FilesystemIsNotReadOnly         Filesystem is not read-only
+  CorruptDockerOverlay2         False     Thu, 09 Apr 2020 02:18:55 -0400   Thu, 09 Apr 2020 01:55:28 -0400   NoCorruptDockerOverlay2         docker overlay2 is functioning properly
+  FrequentUnregisterNetDevice   False     Thu, 09 Apr 2020 02:18:55 -0400   Thu, 09 Apr 2020 02:15:33 -0400   NoFrequentUnregisterNetDevice   node is functioning properly
+  FrequentKubeletRestart        True      Thu, 09 Apr 2020 02:18:55 -0400   Thu, 09 Apr 2020 02:15:34 -0400   FrequentKubeletRestart          Found 5 matching logs, which meets the threshold of 5
+  NetworkUnavailable            False     Thu, 09 Apr 2020 01:55:31 -0400   Thu, 09 Apr 2020 01:55:31 -0400   RouteCreated                    RouteController created a route
+  MemoryPressure                Unknown   Thu, 09 Apr 2020 02:16:24 -0400   Thu, 09 Apr 2020 02:17:43 -0400   NodeStatusUnknown               Kubelet stopped posting node status.
+  DiskPressure                  Unknown   Thu, 09 Apr 2020 02:16:24 -0400   Thu, 09 Apr 2020 02:17:43 -0400   NodeStatusUnknown               Kubelet stopped posting node status.
+  PIDPressure                   Unknown   Thu, 09 Apr 2020 02:16:24 -0400   Thu, 09 Apr 2020 02:17:43 -0400   NodeStatusUnknown               Kubelet stopped posting node status.
+  Ready                         Unknown   Thu, 09 Apr 2020 02:16:24 -0400   Thu, 09 Apr 2020 02:17:43 -0400   NodeStatusUnknown               Kubelet stopped posting node status.
+Addresses:
+  InternalIP:   10.128.0.4
+  ExternalIP:   34.66.179.46
+  InternalDNS:  gke-kubia-default-pool-e6fd6670-8jzb.us-central1-a.c.b300112017-273623.internal
+  Hostname:     gke-kubia-default-pool-e6fd6670-8jzb.us-central1-a.c.b300112017-273623.internal
+Capacity:
+ attachable-volumes-gce-pd:  15
+ cpu:                        1
+ ephemeral-storage:          98868448Ki
+ hugepages-2Mi:              0
+ memory:                     600420Ki
+ pods:                       110
+Allocatable:
+ attachable-volumes-gce-pd:  15
+ cpu:                        940m
+ ephemeral-storage:          98868448Ki
+ hugepages-2Mi:              0
+ memory:                     236900Ki
+ pods:                       110
+System Info:
+ Machine ID:                 44aae4becacc4747bba5601b83c54b99
+ System UUID:                44AAE4BE-CACC-4747-BBA5-601B83C54B99
+ Boot ID:                    4ade95a0-bd59-483c-8bcb-231146035e4a
+ Kernel Version:             4.14.138+
+ OS Image:                   Container-Optimized OS from Google
+ Operating System:           linux
+ Architecture:               amd64
+ Container Runtime Version:  docker://18.9.7
+ Kubelet Version:            v1.14.10-gke.27
+ Kube-Proxy Version:         v1.14.10-gke.27
+PodCIDR:                     10.52.2.0/24
+ProviderID:                  gce://b300112017-273623/us-central1-a/gke-kubia-default-pool-e6fd6670-8jzb
+Non-terminated Pods:         (4 in total)
+  Namespace                  Name                                               CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                  ----                                               ------------  ----------  ---------------  -------------  ---
+  kube-system                fluentd-gcp-v3.1.1-lkpmt                           0 (0%)        0 (0%)      0 (0%)           0 (0%)         25m
+  kube-system                kube-dns-5877696fb4-vmgj6                          260m (27%)    0 (0%)      110Mi (47%)      170Mi (73%)    25m
+  kube-system                kube-proxy-gke-kubia-default-pool-e6fd6670-8jzb    100m (10%)    0 (0%)      0 (0%)           0 (0%)         25m
+  kube-system                prometheus-to-sd-r6jd6                             1m (0%)       3m (0%)     20Mi (8%)        20Mi (8%)      25m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource                   Requests     Limits
+  --------                   --------     ------
+  cpu                        361m (38%)   3m (0%)
+  memory                     130Mi (56%)  190Mi (82%)
+  ephemeral-storage          0 (0%)       0 (0%)
+  attachable-volumes-gce-pd  0            0
+Events:
+  Type     Reason                         Age                    From                                                   Message
+  ----     ------                         ----                   ----                                                   -------
+  ```
+  
+  ## Delete a cluster
+  ```
+  gcloud container clusters delete kubia --zone "us-central1-a"
+```
 
