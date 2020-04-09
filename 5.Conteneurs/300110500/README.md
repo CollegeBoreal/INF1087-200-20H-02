@@ -29,7 +29,6 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 - [x] Créer une machine virtuelle avec docker machine
 
-```
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 ```
  docker-machine create --driver google --google-project bold-ally-272914 ma-virtuelle-machine
