@@ -351,3 +351,24 @@ ls -l ~/.ssh/google_compute_*
 -rw-r--r-- 1 Ador 197121  418 Apr  5 15:15 /c/Users/Ador/.ssh/google_compute_engine.pub
 
 ```
+
+## Créer son premier cluster Kubernetes avec GCP
+```
+% gcloud container clusters create kubia --num-nodes 3 --machine-type f1-micro --zone "us-central1-a"
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud container clusters create kubia --num-nodes 3 --machine-type f1-micro --zone "us-central1-a"
+WARNING: Currently VPC-native is not the default mode during cluster creation. In the future, this will become the default mode and can be disabled using `--no-enable-ip-alias` flag. Use `--[no-]enable-ip-alias` flag to suppress this warning.
+WARNING: Newly created clusters and node-pools will have node auto-upgrade enabled by default. This can be disabled using the `--no-enable-autoupgrade` flag.
+WARNING: Starting with version 1.18, clusters will have shielded GKE nodes by default.
+WARNING: Your Pod address range (`--cluster-ipv4-cidr`) can accommodate at most 1008 node(s).
+This will enable the autorepair feature for nodes. Please see https://cloud.google.com/kubernetes-engine/docs/node-auto-repair for more information on node autorepairs.
+Creating cluster kubia in us-central1-a... Cluster is being health-checked (master is healthy)...done.
+Created [https://container.googleapis.com/v1/projects/b300112017-273623/zones/us-central1-a/clusters/kubia].
+To inspect the contents of your cluster, go to: https://console.cloud.google.com/kubernetes/workload_/gcloud/us-central1-a/kubia?project=b300112017-273623
+kubeconfig entry generated for kubia.
+NAME   LOCATION       MASTER_VERSION  MASTER_IP       MACHINE_TYPE  NODE_VERSION    NUM_NODES  STATUS
+kubia  us-central1-a  1.14.10-gke.27  104.198.71.194  f1-micro      1.14.10-gke.27  3          RUNNING
+```
+
+<img src="node.JPG"></img>
+
