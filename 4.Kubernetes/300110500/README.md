@@ -34,6 +34,8 @@ Etapes:
 
 - [x]  Créer son premier cluster Kubernetes avec GCP
 
+![](Pictures/cloudsdk.png)
+
 # gcloud config set accessibility/screen_reader true
 # gcloud auth list
 # gcloud container clusters create kubia --num-nodes 3 --machine-type f1-micro --zone "us-central1-a"
