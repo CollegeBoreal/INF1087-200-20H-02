@@ -62,6 +62,7 @@ Docker is up and running!
 
 - [x] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
+```
  docker-compose up --detach
 The DB_NAME variable is not set. Defaulting to a blank string.
 The DB_ROOT_PASSWORD variable is not set. Defaulting to a blank string.
@@ -87,7 +88,7 @@ Creating gcp_db_1 ... done
 Creating gcp_wp_1  ... done
 Creating gcp_pma_1   ... done
 Creating gcp_wpcli_1 ... done
-
+```
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
