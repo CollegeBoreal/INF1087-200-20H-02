@@ -66,26 +66,71 @@ Checking connection to Docker...
 Docker is up and running!
 
 ```
+- Pour activer la machine :
+
+```
+$ eval $(docker-machine env cb-gcb-lima)
+```
+```
+$ docker-machine active
+```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
-- [ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
+- [x] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
 
-- [ ] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+- [x] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+
+- Installer WordPress
+
+```
+$ docker-compose up --detach
+```
+- Initialiser WordPress
+
+📌 Administrer le site Wordpress
+
+http://34.67.12.74/wp-admin
+
+📌 Visualiser MySQL avec PHPMyAdmin
+
+http://34.67.12.74:8080
+
 
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
-- [ ] Décrire la configuration du `firewall`
+- [x] Décrire la configuration du `firewall`
+
+- étape à suivre:
+
+![image](images/1.png)
+
+![image](images/2.png)
+
+![image](images/3.png)
+
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
-- [ ] Que fait l'application?
+- [x] Que fait l'application?
 
-- [ ] Quel est son adresse IP?
+```
+Un site web WordPress sous nom de "Tech Tutoriels"
+```
 
-- [ ] Quel port utilisé pour y accéder?
+- [x] Quel est son adresse IP?
+
+```
+34.67.12.74
+```
+
+- [x] Quel port utilisé pour y accéder?
+
+```
+port tcp 2376 
+```
 
 ## :star: Autres commentaires utiles à donner
 
