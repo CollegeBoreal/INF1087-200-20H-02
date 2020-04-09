@@ -35,23 +35,42 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
-- [ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
+- [x] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
 
-- [ ] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+- [x] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
-- [ ] Décrire la configuration du `firewall`
+- [x] Décrire la configuration du `firewall`
+```
+
+ docker-machine ls
+NAME          ACTIVE   DRIVER    STATE     URL                         SWARM   DOCKER     ERRORS
+cb-gcp-prod   *        google    Running   tcp://35.193.104.208:2376           v19.03.8
+
+```
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
-- [ ] Que fait l'application?
+- [x] Que fait l'application?
+L'exemple lance une pile exécutant Puppet Server, PuppetDB, un conteneur PostgresDB pour PuppetDB et les tableaux de bord open source Puppetboard et Puppet Explorer
 
 - [ ] Quel est son adresse IP?
 
+
 - [ ] Quel port utilisé pour y accéder?
+
+```
+$ docker ps
+CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS                         PORTS                                              NAMES
+45b88f894ce1        puppet/puppetserver        "dumb-init /docker-e…"   About an hour ago   Up About an hour (healthy)     0.0.0.0:32772->8140/tcp                            puppet
+2916f96ac229        puppet/puppetdb            "dumb-init /docker-e…"   About an hour ago   Up About an hour (healthy)     0.0.0.0:32770->8080/tcp, 0.0.0.0:32769->8081/tcp   300111671_puppetdb_1
+d3086eb40a1b        puppet/puppetexplorer      "/usr/bin/caddy"         About an hour ago   Up About an hour               0.0.0.0:32771->80/tcp                              300111671_puppetexplorer_1
+65eb0d2ba63d        puppet/puppetboard         "/bin/sh -c 'gunicor…"   About an hour ago   Up About an hour (unhealthy)   0.0.0.0:32768->8000/tcp                            300111671_puppetboard_1
+707923cb1b2e        puppet/puppetdb-postgres   "docker-entrypoint.s…"   About an hour ago   Up About an hour               5432/tcp                                           postgres
+```
 
 ## :star: Autres commentaires utiles à donner
 
