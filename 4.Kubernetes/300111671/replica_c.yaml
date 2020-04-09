@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: delux
+spec:
+  replicas: 3
+  selector:
+    app: delux
+  template:
+    metadata:
+      name: delux
+      labels:
+        app: delux
+    spec:
+      containers:
+      - name: delux
+        image: jenkins
+        ports:
+        - containerPort: 80
