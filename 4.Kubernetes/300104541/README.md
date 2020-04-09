@@ -19,9 +19,15 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 - [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
+<<<<<<< HEAD
 ## :a: Avec votre compte [GCP](Google Cloud Platform)
 
 ### :star: Taches
+=======
+## :a: Dans votre Serveur Windows du laboratoire
+
+## :star: Prérequis
+>>>>>>> bf16a7557d1cd62ca8b27053ed722413e57281ce
 
 Etapes: 
 
@@ -33,6 +39,7 @@ Etapes:
 
 - [ ]  Créer son premier cluster Kubernetes avec GCP
 
+<<<<<<< HEAD
 ## :b: kubectl Avec [GCP](Google Cloud Platform)
 
 https://www.linkedin.com/learning/l-essentiel-de-kubernetes/creer-son-premier-pod?u=56968449
@@ -55,16 +62,22 @@ https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/4.Cloud/
 https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/3.Orchestration/1.Kubernetes
 
 
+=======
+>>>>>>> bf16a7557d1cd62ca8b27053ed722413e57281ce
 ## References
 
 https://kube.academy/
 
 | Titre | Description |
 |-------|-------------|
+<<<<<<< HEAD
 | [Kubernetes In Action](https://www.manning.com/books/kubernetes-in-action) | [Chapitre 1](https://livebook.manning.com/book/kubernetes-in-action/chapter-1) |
 
 :tada: Demo:
 
 https://github.com/GoogleCloudPlatform/microservices-demo
 
+=======
+| [Docker In Action](https://www.manning.com/books/docker-in-action-second-edition) | [Chapitre 1](https://livebook.manning.com/book/kubernetes-in-action/chapter-1) |
+>>>>>>> bf16a7557d1cd62ca8b27053ed722413e57281ce
 

@@ -15,6 +15,7 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
       * incluant le fichier `README.md` 
 
 
+
 `$ cp ./README.md `:id:` `
 
 - [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
@@ -25,13 +26,21 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 Etapes: 
 
-- [ ]  Ouvrir son compte GCP
+- [x]  Ouvrir son compte GCP
 
-- [ ]  Configurer son environnement GCP
+- [x]  Configurer son environnement GCP
 
-- [ ]  Créer sa première VM avec GCP
+- [x]  Créer sa première VM avec GCP
 
-- [ ]  Créer son premier cluster Kubernetes avec GCP
+- [x]  Créer son premier cluster Kubernetes avec GCP
+
+![](Pictures/cloudsdk.png)
+
+# gcloud config set accessibility/screen_reader true
+# gcloud auth list
+# gcloud container clusters create kubia --num-nodes 3 --machine-type f1-micro --zone "us-central1-a"
+# kubectl get nodes
+
 
 ## References
 

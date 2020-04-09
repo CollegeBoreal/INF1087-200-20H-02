@@ -188,10 +188,37 @@ Conditions:
   CorruptDockerOverlay2         False     Tue, 07 Apr 2020 12:42:25 -0400   Tue, 07 Apr 2020 12:27:04 -0400   NoCorruptDockerOverlay2         docker overlay2 is functioning properly
   
   ```
-  
+  ### :star: Taches
 
+- [x]  Créer son premier pod
+```
+$ kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+delux-csz76              0/1     Pending   0          5m51s
+delux-fdz5c              0/1     Pending   0          5m51s
+delux-q5d6h              0/1     Pending   0          5m51s
+frontend-nk7nd           0/1     Pending   0          9m24s
+frontend-zb7x8           0/1     Pending   0          9m24s
+frontend-zv8cn           0/1     Pending   0          9m24s
+testing-for-image-pull   0/1     Pending   0          80m
 
+```
 
+# Avec replicaController
+```
+kubectl get rc
+NAME    DESIRED   CURRENT   READY   AGE
+delux   3         3         0       6m34s
+
+```
+# Avec replicaSet
+
+```
+$ kubectl get rs
+NAME       DESIRED   CURRENT   READY   AGE
+frontend   3         3         0       10m
+
+```
 
 ## References
 
