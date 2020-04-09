@@ -123,7 +123,7 @@ http://34.67.12.74:8080
 - [x] Que fait l'application?
 
 ```
-Un site web WordPress sous nom de "Tech Tutoriels"
+Un site web WordPress sous nom de "Tech Tutoriels", Mon 1er tutoreil sera sur les étapes à suivre pour installer et configurer Samba sur Ubuntu
 ```
 
 - [x] Quel est son adresse IP?
@@ -135,7 +135,7 @@ Un site web WordPress sous nom de "Tech Tutoriels"
 - [x] Quel port utilisé pour y accéder?
 
 ```
-port tcp 8080 
+Port tcp 8080 
 ```
 
 ## :star: Autres commentaires utiles à donner
