@@ -105,9 +105,15 @@ http://34.67.12.74:8080
 
 - étape à suivre:
 
+*Selectionez la mahine vertuelle puis cliquer sur Afficher les details du réseaux
+
 ![image](images/1.png)
 
+*cliquez sur Regles de pare-feu et choisissez la 1er regle sous le nom de docker-machine puis cliquer sur Modifier 
+
 ![image](images/2.png)
+
+*Pour Protocoles et ports, choisissez tout autoriser
 
 ![image](images/3.png)
 
@@ -129,12 +135,14 @@ Un site web WordPress sous nom de "Tech Tutoriels"
 - [x] Quel port utilisé pour y accéder?
 
 ```
-port tcp 2376 
+port tcp 8080 
 ```
 
 ## :star: Autres commentaires utiles à donner
 
-- [ ] Commentaires
+- [x] Commentaires
+
+*A faire 
 
 [Participation](Participation.md)
 
