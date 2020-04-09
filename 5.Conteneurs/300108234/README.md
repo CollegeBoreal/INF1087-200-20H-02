@@ -105,18 +105,18 @@ http://34.67.12.74:8080
 
 - étape à suivre:
 
-*Selectionez la mahine vertuelle puis cliquer sur Afficher les details du réseaux
+#### *Selectionez la mahine vertuelle puis cliquer sur Afficher les details du réseaux
 
 ![image](images/1.png)
 
-*cliquez sur Regles de pare-feu et choisissez la 1er regle sous le nom de docker-machine puis cliquer sur Modifier 
+#### *cliquez sur Regles de pare-feu et choisissez la 1er regle sous le nom de docker-machine puis cliquer sur Modifier 
 
 ![image](images/2.png)
 
-*Pour Protocoles et ports, choisissez Protocoles et ports spécifiés et saisissez tcp: 8080,3306 dans le champ associé, où :
+#### *Pour Protocoles et ports, choisissez Protocoles et ports spécifiés et saisissez tcp: 8080,3306 dans le champ associé, où :
 
-8080 est le port utilisé par WordPress.
-3306 est le port utilisé par phpMyAdmin.
+- 8080 est le port utilisé par WordPress.
+- 3306 est le port utilisé par phpMyAdmin.
 
 ![image](images/3.png)
 
