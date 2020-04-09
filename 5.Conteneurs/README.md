@@ -1,5 +1,3 @@
-
-=======
 # :five: Conteneurs
 
 Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GCP, Azure]
