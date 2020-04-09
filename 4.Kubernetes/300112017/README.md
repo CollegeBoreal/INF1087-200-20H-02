@@ -109,10 +109,11 @@ Example: ajuster avec le nom de fichier `identifiants`
  ## Set le projet
 
 ```
-% gcloud config set project b300112017
+gcloud config set project b300112017
 Updated property [core/project].
 ```
-% gcloud beta compute ssh --zone "us-central1-a" "cb-gcp-test" --project "b300112017"
+```
+gcloud beta compute ssh --zone "us-central1-a" "cb-gcp-test" --project "b300112017"
 You do not currently have this command group installed.  Using it 
 requires the installation of components: [beta]
 
@@ -157,9 +158,13 @@ to obtain new credentials, or if you have already logged in with a
 different account:
 
   $ gcloud config set account ACCOUNT
-Creer sa cle SSH en se connectant a la machine
+  ```
 
-% gcloud beta compute ssh --zone us-central1-a cb-gcp-test --project b300112017
+
+## Creer sa cle SSH en se connectant a la machine
+
+```
+gcloud beta compute ssh --zone us-central1-a cb-gcp-test --project b300112017
 
 WARNING: The public SSH key file for gcloud does not exist.
 WARNING: The private SSH key file for gcloud does not exist.
@@ -204,6 +209,16 @@ New release '18.04.4 LTS' available.
 Run 'do-release-upgrade' to upgrade to it.
 
 
-ador@cb-gcp-test:~$ 
+Ador@cb-gcp-test:~$ 
+```
 
 <img src="ssh.JPG"></img>
+
+## Fichier de clés SSH
+```
+ls -l ~/.ssh/google_compute_*
+-rw-r--r-- 1 Ador 197121 1675 Apr  5 15:15 /c/Users/Ador/.ssh/google_compute_engine
+-rw-r--r-- 1 Ador 197121 1454 Apr  5 15:15 /c/Users/Ador/.ssh/google_compute_engine.ppk
+-rw-r--r-- 1 Ador 197121  418 Apr  5 15:15 /c/Users/Ador/.ssh/google_compute_engine.pub
+
+```
