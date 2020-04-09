@@ -25,20 +25,12 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 Etapes: 
 
-- [ ]  Ouvrir son compte GCP
+- [✔ ]  Ouvrir son compte GCP
 
-- [ ]  Configurer son environnement GCP
+- [✔ ]  Configurer son environnement GCP
 
-- [ ]  Créer sa première VM avec GCP
+- [ ✔]  Créer sa première VM avec GCP
+
 
 - [ ]  Créer son premier cluster Kubernetes avec GCP
-
-## References
-
-https://kube.academy/
-
-| Titre | Description |
-|-------|-------------|
-| [Docker In Action](https://www.manning.com/books/docker-in-action-second-edition) | [Chapitre 1](https://livebook.manning.com/book/kubernetes-in-action/chapter-1) |
-
 
