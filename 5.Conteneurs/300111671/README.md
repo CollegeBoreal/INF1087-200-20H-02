@@ -6,31 +6,54 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
+- [x] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ ] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
+- [x] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
       * incluant le fichier `README.md` 
 
 
 `$ cp ./README.md `:id:` `
 
-- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Créer une machine virtuelle dans le cloud
 
-- [ ] Vérifier que vos identifiants `cloud` sont installés
+- [x] Vérifier que vos identifiants `cloud` sont installés
 
 | Cloud  |  Google  | Azure       | AWS      |  Autres |
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
-- [ ] Créer une machine virtuelle avec docker machine
+- [x] Créer une machine virtuelle avec docker machine
 
 ```
-$ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
+ docker-machine create --driver google --google-project myvm-273714 cb-gcp-prod
+Running pre-create checks...
+(cb-gcp-prod) Check that the project exists
+(cb-gcp-prod) Check if the instance already exists
+Creating machine...
+(cb-gcp-prod) Generating SSH Key
+(cb-gcp-prod) Creating host...
+(cb-gcp-prod) Opening firewall ports
+(cb-gcp-prod) Creating instance
+(cb-gcp-prod) Waiting for Instance
+(cb-gcp-prod) Uploading SSH Key
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with ubuntu(systemd)...
+Installing Docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe env cb-gcp-prod
+
 ```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
