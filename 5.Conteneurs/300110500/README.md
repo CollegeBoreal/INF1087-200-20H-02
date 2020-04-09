@@ -58,9 +58,35 @@ Docker is up and running!
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
-- [ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
+- [x] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
 
-- [ ] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+- [x] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+
+ docker-compose up --detach
+The DB_NAME variable is not set. Defaulting to a blank string.
+The DB_ROOT_PASSWORD variable is not set. Defaulting to a blank string.
+Creating network "gcp_default" with the default driver
+Creating volume "gcp_db_data" with default driver
+Pulling db (mysql:latest)...
+latest: Pulling from library/mysql
+Digest: sha256:b69d0b62d02ee1eba8c7aeb32eba1bb678b6cfa4ccfb211a5d7931c7755dc4a8
+Status: Downloaded newer image for mysql:latest
+Pulling pma (phpmyadmin/phpmyadmin:)...
+latest: Pulling from phpmyadmin/phpmyadmin
+Digest: sha256:59912efb52a5b0342b3defc890a7041ab2a32dc2f5c9a014150006db8c55a793
+Status: Downloaded newer image for phpmyadmin/phpmyadmin:latest
+Pulling wp (wordpress:latest)...
+latest: Pulling from library/wordpress
+Digest: sha256:191d5caf4ef5b8c57721ade777820f3267654325f7902b2ccd377ceeba1c3fe2
+Status: Downloaded newer image for wordpress:latest
+Pulling wpcli (wordpress:cli)...
+cli: Pulling from library/wordpress
+Digest: sha256:9f165c3679042257f7c7905b0cb9491b1d3e37d78590f2b52235a968212c3f71
+Status: Downloaded newer image for wordpress:cli
+Creating gcp_db_1 ... done
+Creating gcp_wp_1  ... done
+Creating gcp_pma_1   ... done
+Creating gcp_wpcli_1 ... done
 
 ## :ab: Vérifier que l'application marche
 
