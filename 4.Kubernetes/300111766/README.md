@@ -6,7 +6,7 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [✖] Dans le répertoire `4.Kubernetes` Créer un répertoire avec comme nom, votre :id:
+- [✔] Dans le répertoire `4.Kubernetes` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
