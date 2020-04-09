@@ -30,7 +30,7 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 - Ajouter la variable d'identifiants à son Environement
 
 ```
- export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300108234-de32988388af.json"
+$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300108234-de32988388af.json"
 ```
 
 | Cloud  |  Google  | Azure       | AWS      |  Autres |
@@ -113,7 +113,10 @@ http://34.67.12.74:8080
 
 ![image](images/2.png)
 
-*Pour Protocoles et ports, choisissez tout autoriser
+*Pour Protocoles et ports, choisissez Protocoles et ports spécifiés et saisissez tcp: 8080,3306 dans le champ associé, où :
+
+8080 est le port utilisé par WordPress.
+3306 est le port utilisé par phpMyAdmin.
 
 ![image](images/3.png)
 
