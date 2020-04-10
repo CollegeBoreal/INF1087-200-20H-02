@@ -92,9 +92,13 @@ http://35.225.13.172/wp-admin
 
 <img src="wps.JPG"></img>
 
-- [ ] Que fait l'application?
+- [ ✔] Que fait l'application?
 ```
-WordPress est un système de gestion de contenu (SGC ou content management system (CMS) en anglais) gratuit, libre et open-source. Ce logiciel écrit en PHP repose sur une base de données MySQL et est distribué par l'entreprise américaine Automattic.Les fonctionnalités de WordPress lui permettent de créer et gérer différents types de sites Web : site vitrine, site de vente en ligne, site applicatif, blogue, ou encore portfolio. Il est distribué selon les termes de la licence GNU GPL version.Le logiciel est aussi utilisé comme socle du service multisite WordPress.com, celui ci supporte plusieurs millions de sites.
+WordPress est un système de gestion de contenu (SGC ou content management system (CMS) en anglais) gratuit, 
+libre et open-source. Ce logiciel écrit en PHP repose sur une base de données MySQL et est distribué par l'entreprise américaine Automattic.Les fonctionnalités de WordPress lui permettent de créer et gérer différents types de sites Web : site vitrine, 
+site de vente en ligne, site applicatif, blogue, ou encore portfolio. 
+Il est distribué selon les termes de la licence GNU GPL version.Le logiciel est aussi utilisé 
+comme socle du service multisite WordPress.com, celui ci supporte plusieurs millions de sites.
 ```
 - [ ✔] Quel est son adresse IP?
 
