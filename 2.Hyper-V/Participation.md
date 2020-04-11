@@ -89,19 +89,23 @@ $ fdisk -s  /dev/sdb
 62914560
 ```
 
-PowerShell chmod 400
+### :o: PowerShell chmod 400
 
 https://gist.github.com/jaskiratr/cfacb332bfdff2f63f535db7efb6df93
 
-```
+```powershell
 # Source: https://stackoverflow.com/a/43317244
 $path = ".\id_rsa"
 # Reset to remove explict permissions
-icacls.exe $path /reset
+icacls $path /reset
 # Give current user explicit read-permission
-icacls.exe $path /GRANT:R "$($env:USERNAME):(R)"
+icacls $path /GRANT:R "$($env:USERNAME):(R)"
 # Disable inheritance and remove inherited permissions
-icacls.exe $path /inheritance:r
+icacls $path /inheritance:r
+```
+
+```
+$ docker-machine ssh CB-HYPERV3
 ```
 
 
