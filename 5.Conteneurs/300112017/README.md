@@ -103,7 +103,7 @@ comme socle du service multisite WordPress.com, celui ci supporte plusieurs mill
 - [ ✔] Quel est son adresse IP?
 
 ```
-http://35.225.13.172/wp-admin
+http://35.225.13.172
 ```
 - [ ] Quel port utilisé pour y accéder?
 ``
