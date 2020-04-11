@@ -11,5 +11,5 @@
 |:three:| Test        | Conteneur                                           | 15|:bulb: [5.Conteneurs](../5.Conteneurs) déploiement sur un cloud publique   |
 |:three:| Laboratoire | Installation et configuration d’un conteneur Docker | 15|:bulb: [4.Kubernetes](../4.Kubernetes) Nodes (3) Pods|
 |:one:,:two:,:three:| Examen final        |                                        | 15|:x:|
-|       |             |                                                     |:eigth::zero:/:100:|                 |
+|       |             |                                                     |:eight::zero:/:100:|                 |
 
