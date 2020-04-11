@@ -91,6 +91,11 @@ $ fdisk -s  /dev/sdb
 
 ### :o: PowerShell chmod 400
 
+```
+PS > docker-machine ssh CB-HYPERV3
+exit status 255
+```
+
 https://gist.github.com/jaskiratr/cfacb332bfdff2f63f535db7efb6df93
 
 ```powershell
