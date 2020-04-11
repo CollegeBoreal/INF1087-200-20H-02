@@ -109,8 +109,3 @@ icacls $path /GRANT:R "$($env:USERNAME):(R)"
 icacls $path /inheritance:r
 ```
 
-```
-$ docker-machine ssh CB-HYPERV3
-```
-
-
