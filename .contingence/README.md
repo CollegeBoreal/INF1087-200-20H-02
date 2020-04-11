@@ -3,7 +3,7 @@
 
 | Titre | Type        | Description                                         | % | Statut           |
 |-------|-------------|-----------------------------------------------------|---|------------------|
-| :one: | Quiz        | Introduction Windows Server                         |  5|:heavy_check_mark:|
+| :one: | Quiz        | Introduction Windows Server                         |  5|:x:|
 | :one: | Test        | Installation Windows Server                         | 10|:heavy_check_mark:|
 | :one: | Laboratoire | Installation Windows Server                         | 10|:heavy_check_mark:|
 | :two: | Test        | Implémentation de la virtualisation Hyper-V         | 15|:+1: CB-HYPERV et CB-HYPERV2 |
@@ -11,5 +11,5 @@
 |:three:| Test        | Conteneur                                           | 15|:bulb: [5.Conteneurs](../5.Conteneurs) déploiement sur un cloud publique   |
 |:three:| Laboratoire | Installation et configuration d’un conteneur Docker | 15|:bulb: [4.Kubernetes](../4.Kubernetes) Nodes (3) Pods|
 |:one:,:two:,:three:| Examen final        |                                        | 15|:x:|
-|       |             |                                                     |:100:|                 |
+|       |             |                                                     |:eigth::zero:/:100:|                 |
 
