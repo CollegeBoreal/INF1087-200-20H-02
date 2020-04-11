@@ -60,6 +60,13 @@ PS > docker-machine inspect CB-HYPERV2 --format='{{json .Driver.CPU}} {{json .Dr
 PS > docker-machine env CB-HYPERV3 | Invoke-Expression
 ```
 
+* Check Container volume through the container `some-mysqlds` (if no ssh)
+
+```
+PS > docker container exec --interactive --tty some-mysqlds sh -c "ls /var/lib/mysql-files"
+lost+found
+```
+
 * Check `/dev/sdb1` volume through the container `some-mysqlds`
 
 ```
@@ -81,4 +88,20 @@ Check its 2nd disk size - 62914560 = 60GiB
 $ fdisk -s  /dev/sdb
 62914560
 ```
+
+PowerShell chmod 400
+
+https://gist.github.com/jaskiratr/cfacb332bfdff2f63f535db7efb6df93
+
+```
+# Source: https://stackoverflow.com/a/43317244
+$path = ".\id_rsa"
+# Reset to remove explict permissions
+icacls.exe $path /reset
+# Give current user explicit read-permission
+icacls.exe $path /GRANT:R "$($env:USERNAME):(R)"
+# Disable inheritance and remove inherited permissions
+icacls.exe $path /inheritance:r
+```
+
 
