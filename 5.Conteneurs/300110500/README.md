@@ -6,28 +6,28 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [x] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
+-  [✔ ] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [x] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
+- [✔ ] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
       * incluant le fichier `README.md` 
 
 
 `$ cp ./README.md `:id:` `
 
-- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [✔ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Créer une machine virtuelle dans le cloud
 
-- [ ] Vérifier que vos identifiants `cloud` sont installés
+- [✔ ] Vérifier que vos identifiants `cloud` sont installés
 
 | Cloud  |  Google  | Azure       | AWS      |  Autres |
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
-- [x] Créer une machine virtuelle avec docker machine
+- [✔ ] Créer une machine virtuelle avec docker machine
 
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 ```
@@ -58,9 +58,9 @@ Docker is up and running!
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
-- [x] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
+- [✔ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
 
-- [x] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+- [✔ ] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
 ```
  docker-compose up --detach
@@ -93,15 +93,15 @@ Creating gcp_wpcli_1 ... done
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
-- [ ] Décrire la configuration du `firewall`
+- [✔ ] Décrire la configuration du `firewall`
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
-- [ ] Que fait l'application?
+- [✔ ] Que fait l'application?
 
-- [ ] Quel est son adresse IP?
+- [✔ ] Quel est son adresse IP?
 
-- [ ] Quel port utilisé pour y accéder?
+- [✔ ] Quel port utilisé pour y accéder?
 
 ## :star: Autres commentaires utiles à donner
 
