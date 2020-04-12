@@ -94,9 +94,8 @@ Creating 300111766_wp_1 ... done
 Creating 300111766_wpcli_1 ... done
 
 ```
-<img src="c.JPG"></img>
 
-## Activater le  Pare feu
+##  Activater le  Pare feu
 
 ## Initialiser WordPress
 
@@ -114,11 +113,10 @@ http://35.222.156.96/wp-admin/
 
 - [ ✔] Que fait l'application?
 ```
-WordPress est un système de gestion de contenu (SGC ou content management system (CMS) en anglais) gratuit, 
-libre et open-source. Ce logiciel écrit en PHP repose sur une base de données MySQL et est distribué par l'entreprise américaine Automattic.Les fonctionnalités de WordPress lui permettent de créer et gérer différents types de sites Web : site vitrine, 
-site de vente en ligne, site applicatif, blogue, ou encore portfolio. 
-Il est distribué selon les termes de la licence GNU GPL version.Le logiciel est aussi utilisé 
-comme socle du service multisite WordPress.com, celui ci supporte plusieurs millions de sites.
+_WordPress est un logiciel destiné à la conception et à la mise à jour dynamique de sites Web ou d'applications multimédias.
+WordPress est donc un logiciel de la famille des systèmes de gestion de contenu ou encore CMS (Content Management System).
+Le CMS WordPress permet à la fois de gagner du temps de développement au niveau de la création de votre site internet et d’y ajouter facilement des pages, WordPress permet donc de créer des sites dynamiques_.
+
 ```
 - [ ✔] Quel est son adresse IP?
 
