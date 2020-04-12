@@ -79,9 +79,8 @@ Creating 300112017_wpcli_1 ... done
 
 📌 Administrer votre site Wordpress
 
-```
 http://35.225.13.172/wp-admin
-```
+
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
@@ -102,10 +101,9 @@ comme socle du service multisite WordPress.com, celui ci supporte plusieurs mill
 ```
 - [ ✔] Quel est son adresse IP?
 
-```
 http://35.225.13.172
-```
+
 - [ ] Quel port utilisé pour y accéder?
-``
+
 80
-``
+
