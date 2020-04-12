@@ -10,7 +10,7 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 `$ mkdir ` :id:
 
-- [x] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
+- [V] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
       * incluant le fichier `README.md` 
 
