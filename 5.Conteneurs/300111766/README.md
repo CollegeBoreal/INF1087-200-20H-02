@@ -95,9 +95,9 @@ Creating 300111766_wpcli_1 ... done
 
 ```
 
-# _Comment Activater le  Pare feu
+## _Comment Activater le  Pare feu_
 
-## _ Mon WordPress
+# _Mon WordPress_
 
 📌 Administrer votre site Wordpress
 
