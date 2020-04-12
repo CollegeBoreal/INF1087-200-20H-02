@@ -375,7 +375,7 @@ spec:
   - name: nginx
     image: nginx:1.17-alpine
 ```
-* Creation du 1 er Pod en applicant les specification du fishier web.yml
+* Creation du 1 er Pod en applicant les specification du fichier web.yml
 
 ``` 
 $ kubectl apply -f .\web.yml
@@ -419,7 +419,7 @@ Containers:
 Conditions:
   Type              Status
   Initialized       True
-  Ready             False
+  Ready             True
   ContainersReady   True
   PodScheduled      True
 Volumes:
@@ -434,7 +434,7 @@ Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
 Events:
   Type     Reason            Age                   From                                           Message
   ----     ------            ----                  ----                                           -------
-  Warning  FailedScheduling  5m52s (x3 over 7m4s)  default-scheduler                              0/3 nodes are available: 3 node(s) had taints that the pod didn't tolerate.
+ 
   Normal   Scheduled         4m40s                 default-scheduler                              Successfully assigned default/web to gke-kubia-default-pool-feccf4b5-fv0k
   Normal   Pulling           4m15s                 kubelet, gke-kubia-default-pool-feccf4b5-fv0k  Pulling image "nginx:1.17-alpine"
   Normal   Pulled            3m5s                  kubelet, gke-kubia-default-pool-feccf4b5-fv0k  Successfully pulled image "nginx:1.17-alpine"
@@ -443,6 +443,8 @@ Events:
 
 ```
 
+
+💡
 
 
 
