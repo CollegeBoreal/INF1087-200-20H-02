@@ -54,7 +54,7 @@ Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe env cb-gcp-cheikh
 
 ```
-<img src="cheikh.JPG"></img>
+<img src=".JPG"></img>
 
 ## Pointer le container engine sur la machine virtuelle
 ```
@@ -126,6 +126,4 @@ http://35.222.156.96
 
 - [ ] Quel port utilisé pour y accéder?
 
-```
 8080
-``
