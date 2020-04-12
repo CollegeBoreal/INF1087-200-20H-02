@@ -113,15 +113,15 @@ http://35.222.156.96/wp-admin/
 
 - [ ✔] Que fait l'application?
 ```
-_WordPress est un logiciel destiné à la conception et à la mise à jour dynamique de sites Web ou d'applications multimédias.
+WordPress est un logiciel destiné à la conception et à la mise à jour dynamique de sites Web ou d'applications multimédias.
 WordPress est donc un logiciel de la famille des systèmes de gestion de contenu ou encore CMS (Content Management System).
-Le CMS WordPress permet à la fois de gagner du temps de développement au niveau de la création de votre site internet et d’y ajouter facilement des pages, WordPress permet donc de créer des sites dynamiques_.
+Le CMS WordPress permet à la fois de gagner du temps de développement au niveau de la création de votre site internet et d’y ajouter facilement des pages, WordPress permet donc de créer des sites dynamiques.
 
 ```
 - [ ✔] Quel est son adresse IP?
 
 http://35.222.156.96
 
-- [ ] Quel port utilisé pour y accéder?
+- [✔ ] Quel port utilisé pour y accéder?
 
 8080
