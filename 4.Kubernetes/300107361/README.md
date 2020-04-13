@@ -274,7 +274,11 @@ Updates are available for some Cloud SDK components.  To install them,
 please run:
   $ gcloud components update
 ```
-
+```
+ kubectl config get-contexts
+CURRENT   NAME                                 CLUSTER                              AUTHINFO                             NAMESPACE
+*         gke_b300107361_us-central1-a_joker   gke_b300107361_us-central1-a_joker   gke_b300107361_us-central1-a_joker
+```
 ### Verifier que l'on a les trois noeuds
 ```
 
