@@ -70,21 +70,21 @@ PS > docker-machine env CB-HYPERV | Invoke-Expression
 PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
 ```
 
-- [ ] Installer WordPress
+- [X] Installer WordPress
 
 ```
 PS > docker-compose up --detach
 ```
 
-- [ ] Initialiser WordPress
+- [X] Initialiser WordPress
 
 :pushpin: Administrer votre site `Wordpress`
 
-http://`changer-mon-adresse-ip`/wp-admin
+http://10.13.2.72/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://`changer-mon-adresse-ip`:8080
+http://10.13.2.72:8080
 
 ## :m: CB-HYPERV2
 
@@ -101,7 +101,7 @@ PS > docker-machine create `
 
 ## :m: CB-HYPERV3
 
-- [ ] Créer le disque virtuel
+- [X] Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
@@ -115,7 +115,7 @@ PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
 
-- [ ]  Créer la table de partition 
+- [X]  Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
@@ -150,7 +150,7 @@ Device       Start      End  Sectors  Size Type
 Partition table entries are not in disk order.
 ```
 
-- [ ]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
+- [X]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
 ```
 $ sudo fdisk /dev/sdb
@@ -199,14 +199,14 @@ Writing superblocks and filesystem accounting information:
 done
 ```
 
-- [ ]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
+- [X]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
 ```
 
-- [ ]  S'assurer que le répertoire est visible
+- [X]  S'assurer que le répertoire est visible
 
 * Faire la liste des appareils (devices) de type `block storage`
 
@@ -222,7 +222,7 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-- [ ]  Créer un conteneur pour tester le volume 
+- [X]  Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
