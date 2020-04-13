@@ -102,6 +102,7 @@ PS > docker-machine create `
       CB-HYPERV2
 ```
 
+<img src="HYPER.PNG"></img>
 
 ## :m: CB-HYPERV3
 
@@ -118,6 +119,7 @@ PS > ADD-VMHardDiskDrive -VMName $vm -Path "$VMLOC\$vm\$vm.vhdx"
 PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
+<img src="HYPERV3.PNG"></img>
 
 - [X]  Créer la table de partition 
 
@@ -153,6 +155,7 @@ Device       Start      End  Sectors  Size Type
 
 Partition table entries are not in disk order.
 ```
+<img src="FDISK.PNG"></img>
 
 - [X]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
@@ -202,6 +205,7 @@ Creating journal (65536 blocks): done
 Writing superblocks and filesystem accounting information:
 done
 ```
+<img src="MKFS.PNG"></img>
 
 - [X]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
@@ -225,6 +229,8 @@ sdb      8:16   0    60G  0 disk
 sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
+
+<img src="LSBLK.PNG"></img>
 
 - [X]  Créer un conteneur pour tester le volume 
 
