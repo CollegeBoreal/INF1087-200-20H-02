@@ -49,6 +49,10 @@ $ docker-machine create --driver google --google-project b300112917 cb-gcp-test
 
 - [X] Décrire la configuration du `firewall`
 
+Les règles de pare-feu Google Cloud vous permettent d'autoriser ou de refuser le trafic vers et depuis vos instances de machine virtuelle (VM) en fonction d'une configuration que vous spécifiez. Les règles de pare-feu Google Cloud activées sont toujours appliquées, protégeant vos instances indépendamment de leur configuration et de leur système d'exploitation, même si elles n'ont pas démarré.
+
+<img src="GCP5.PNG"></img>
+
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
 - [X] Que fait l'application?
