@@ -63,6 +63,7 @@ PS > docker-machine create `
 ```
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
+<img src="HYPER.PNG"></img>
 
 - [X] Cloner le cours et aller dans son répertoire de travail :id:
 
@@ -85,6 +86,9 @@ http://10.13.2.72/wp-admin
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
 http://10.13.2.72:8080
+
+
+<img src="PHP.PNG"></img>
 
 ## :m: CB-HYPERV2
 
