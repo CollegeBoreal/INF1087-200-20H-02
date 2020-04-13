@@ -8,14 +8,14 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public GCP
 
 - [X] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
 
-`$ mkdir ` :300112917:
+`$ mkdir ` 300112917
 
 - [X] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
       * incluant le fichier `README.md` 
 
 
-`$ cp ./README.md `:300112917:` `
+`$ cp ./README.md `300112917` `
 
 - [X] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
@@ -41,6 +41,8 @@ $ docker-machine create --driver google --google-project b300112917 cb-gcp-test
 
 - [X] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
+<img src="GCP3.PNG"></img>
+
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
@@ -54,11 +56,13 @@ $ docker-machine create --driver google --google-project b300112917 cb-gcp-test
 WordPress est un système de gestion de contenu (SGC ou content management system (CMS) en anglais) gratuit, libre et open-source. Les fonctionnalités de WordPress lui permettent de créer et gérer différents types de sites Web : site vitrine, site de vente en ligne, site applicatif, blogue, ou encore portfolio.
 
 - [X] Quel est son adresse IP?
+
 Myphp: http://35.232.59.82:8080/
 
 WordPress: http://35.232.59.82/wp-admin
 
 - [X] Quel port utilisé pour y accéder?
+
 Myphp: 8080
 
 WordPress: 
