@@ -29,6 +29,15 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 - [✔ ] Créer une machine virtuelle avec docker machine
 
+ 
+- [✔ ] Vérifier que vos identifiants cloud sont installés
+~/.gcp/b300110500-54dd5d2a1258.json 
+
+- [✔ ] Ajouter la variable d'identifiants à son Environement
+$  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json"
+
+
+
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 ```
  docker-machine create --driver google --google-project bold-ally-272914 ma-virtuelle-machine
