@@ -106,7 +106,7 @@ Creating gcp_wpcli_1 ... done
 - [✔ ] Que fait l'application?
 
 - [✔ ] Quel est son adresse IP?
-
+http://35.223.212.123/wp-admin/
 - [✔ ] Quel port utilisé pour y accéder?
 
 ## :star: Autres commentaires utiles à donner
