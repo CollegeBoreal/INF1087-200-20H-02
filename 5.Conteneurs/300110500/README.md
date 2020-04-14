@@ -98,15 +98,17 @@ Creating gcp_wpcli_1 ... done
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
+ WordPress est un systeme de gestion de contenu (SGC ou content management system (CMS) en anglais) gratuit, libre et open-source. 
+Les fonctionnalités de WordPress lui permettent de creer et gérer differents types de sites Web : site vitrine, site de vente en ligne, site applicatif, blogue, ou encore portfolio.
 
 - [✔ ] Décrire la configuration du `firewall`
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
 - [✔ ] Que fait l'application?
-````
+
 - [✔ ] Quel est son adresse IP?
-````
+
 http://35.223.212.123/wp-admin/
 
 - [✔ ] MYSQL et PHP  admin
@@ -116,7 +118,9 @@ http://35.223.212.123/wp-admin/
 - [✔ ] Décrire la configuration du `firewall` 
 
 - [✔ ] Quel port utilisé pour y accéder?
-`Port tcp: 8080
+````
+Port tcp: 8080
+````
                     
 ## :star: Autres commentaires utiles à donner
 
