@@ -37,7 +37,7 @@ $  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.jso
 ```
 - [✔ ] Créer une machine virtuelle avec docker machine
 ```
-`docker-machine create --driver google --google-project  ma-virtuelle-machine```
+$ docker-machine create --driver google --google-project  ma-virtuelle-machine
 Running pre-create checks...
 (ma-virtuelle-machine) Check that the project exists
 (ma-virtuelle-machine) Check if the instance already exists
