@@ -252,8 +252,118 @@ Tochgaly-K.J.Etienne@cb-gcp-test:~$
 ```
 https://github.com/CollegeBoreal/INF1087-200-20H-02/blob/master/4.Kubernetes/300107361/gcp.PNG?raw=true
 
-- [ ]  Créer son premier cluster Kubernetes avec GCP
+- [x]  Créer son premier cluster Kubernetes avec GCP
+```
+$ gcloud container clusters create joker --num-nodes 3 --machine-type f1-micro --zone "us-central1-a"
 
+WARNING: Currently VPC-native is not the default mode during cluster creation. In the future, this will become the default mode and can be disabled using `--no-enable-ip-alias` flag. Use `--[no-]enable-ip-alias` flag to suppress this warning.
+WARNING: Newly created clusters and node-pools will have node auto-upgrade enabled by default. This can be disabled using the `--no-enable-autoupgrade` flag.
+WARNING: Starting with version 1.18, clusters will have shielded GKE nodes by default.
+WARNING: Your Pod address range (`--cluster-ipv4-cidr`) can accommodate at most 1008 node(s). 
+This will enable the autorepair feature for nodes. Please see https://cloud.google.com/kubernetes-engine/docs/node-auto-repair for more information on node autorepairs.
+Creating cluster joker in us-central1-a... Cluster is being health-checked (master is healthy
+)...done.
+Created [https://container.googleapis.com/v1/projects/b300107361/zones/us-central1-a/clusters/joker].
+To inspect the contents of your cluster, go to: https://console.cloud.google.com/kubernetes/workload_/gcloud/us-central1-a/joker?project=b300107361
+kubeconfig entry generated for joker.
+NAME   LOCATION       MASTER_VERSION  MASTER_IP       MACHINE_TYPE  NODE_VERSION    NUM_NODES  STATUS
+joker  us-central1-a  1.14.10-gke.27  35.193.108.112  f1-micro      1.14.10-gke.27  3          RUNNING
+
+
+Updates are available for some Cloud SDK components.  To install them,
+please run:
+  $ gcloud components update
+```
+```
+ kubectl config get-contexts
+CURRENT   NAME                                 CLUSTER                              AUTHINFO                             NAMESPACE
+*         gke_b300107361_us-central1-a_joker   gke_b300107361_us-central1-a_joker   gke_b300107361_us-central1-a_joker
+```
+### Verifier que l'on a les trois noeuds
+```
+
+C:\Program Files (x86)\Google\Cloud SDK>kubectl get nodes
+NAME                                   STATUS     ROLES    AGE   VERSION
+gke-joker-default-pool-00dd9dc8-6dh4   NotReady   <none>   18m   v1.14.10-gke.27
+gke-joker-default-pool-00dd9dc8-8dcs   Ready      <none>   18m   v1.14.10-gke.27
+gke-joker-default-pool-00dd9dc8-l5t7   Ready      <none>   18m   v1.14.10-gke.27
+```
+
+### Decrire un des noeuds 
+```
+C:\Program Files (x86)\Google\Cloud SDK>kubectl describe node gke-joker-default-pool-00dd9dc8-8dcs
+Name:               gke-joker-default-pool-00dd9dc8-8dcs
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/fluentd-ds-ready=true
+                    beta.kubernetes.io/instance-type=f1-micro
+                    beta.kubernetes.io/os=linux
+                    cloud.google.com/gke-nodepool=default-pool
+                    cloud.google.com/gke-os-distribution=cos
+                    failure-domain.beta.kubernetes.io/region=us-central1
+                    failure-domain.beta.kubernetes.io/zone=us-central1-a
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=gke-joker-default-pool-00dd9dc8-8dcs
+                    kubernetes.io/os=linux
+Annotations:        container.googleapis.com/instance_id: 645741231228936081
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 13 Apr 2020 18:04:14 -0400
+Taints:             <none>
+Unschedulable:      false
+Conditions:
+  Type                          Status  LastHeartbeatTime                 LastTransitionTime                Reason                          Message
+  ----                          ------  -----------------                 ------------------                ------                          -------
+  KernelDeadlock                False   Mon, 13 Apr 2020 18:24:31 -0400   Mon, 13 Apr 2020 18:04:18 -0400   KernelHasNoDeadlock             kernel has no deadlock
+  ReadonlyFilesystem            False   Mon, 13 Apr 2020 18:24:31 -0400   Mon, 13 Apr 2020 18:04:18 -0400   FilesystemIsNotReadOnly         Filesystem is not read-only
+  CorruptDockerOverlay2         False   Mon, 13 Apr 2020 18:24:31 -0400   Mon, 13 Apr 2020 18:04:18 -0400   NoCorruptDockerOverlay2         docker overlay2 is functioning properly
+  FrequentUnregisterNetDevice   False   Mon, 13 Apr 2020 18:24:31 -0400   Mon, 13 Apr 2020 18:04:18 -0400   NoFrequentUnregisterNetDevice   node is functioning properly
+  FrequentKubeletRestart        False   Mon, 13 Apr 2020 18:24:31 -0400   Mon, 13 Apr 2020 18:04:18 -0400   NoFrequentKubeletRestart        kubelet is functioning properly
+  FrequentDockerRestart         False   Mon, 13 Apr 2020 18:24:31 -0400   Mon, 13 Apr 2020 18:04:18 -0400   NoFrequentDockerRestart         docker is functioning properly
+  FrequentContainerdRestart     False   Mon, 13 Apr 2020 18:24:31 -0400   Mon, 13 Apr 2020 18:04:18 -0400   NoFrequentContainerdRestart     containerd is functioning properly
+  NetworkUnavailable            False   Mon, 13 Apr 2020 18:04:29 -0400   Mon, 13 Apr 2020 18:04:29 -0400   RouteCreated                    RouteController created a route
+  MemoryPressure                False   Mon, 13 Apr 2020 18:23:36 -0400   Mon, 13 Apr 2020 18:22:32 -0400   KubeletHasSufficientMemory      kubelet has sufficient memory available
+  DiskPressure                  False   Mon, 13 Apr 2020 18:23:36 -0400   Mon, 13 Apr 2020 18:22:32 -0400   KubeletHasNoDiskPressure        kubelet has no disk pressure
+  PIDPressure                   False   Mon, 13 Apr 2020 18:23:36 -0400   Mon, 13 Apr 2020 18:22:32 -0400   KubeletHasSufficientPID         kubelet has sufficient PID available
+  Ready                         True    Mon, 13 Apr 2020 18:23:36 -0400   Mon, 13 Apr 2020 18:22:34 -0400   KubeletReady                    kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:   10.128.0.5
+  ExternalIP:   35.202.163.192
+  InternalDNS:  gke-joker-default-pool-00dd9dc8-8dcs.us-central1-a.c.b300107361.internal
+  Hostname:     gke-joker-default-pool-00dd9dc8-8dcs.us-central1-a.c.b300107361.internal
+Capacity:
+ attachable-volumes-gce-pd:  15
+ cpu:                        1
+ ephemeral-storage:          98868448Ki
+ hugepages-2Mi:              0
+ memory:                     600420Ki
+ pods:                       110
+Allocatable:
+ attachable-volumes-gce-pd:  15
+ cpu:                        940m
+ ephemeral-storage:          47093746742
+ hugepages-2Mi:              0
+ memory:                     236900Ki
+ pods:                       110
+System Info:
+ Machine ID:                 135d66f75ba2ea230443b0a218ce1f2f
+ System UUID:                135D66F7-5BA2-EA23-0443-B0A218CE1F2F
+ Boot ID:                    499c04f2-97ac-4649-aea0-74940f12f6c3
+ Kernel Version:             4.14.138+
+ OS Image:                   Container-Optimized OS from Google
+ Operating System:           linux
+ Architecture:               amd64
+ Container Runtime Version:  docker://18.9.7
+ Kubelet Version:            v1.14.10-gke.27
+ Kube-Proxy Version:         v1.14.10-gke.27
+PodCIDR:                     10.36.1.0/24
+ProviderID:                  gce://b300107361/us-central1-a/gke-joker-default-pool-00dd9dc8-8dcs
+Non-terminated Pods:         (4 in total)
+  Namespace                  Name                                               CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                  ----                                               ------------  ----------  ---------------  -------------  ---
+  
+  ...
+```
 ## GCP
 
 https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/4.Cloud/2.Public/4.GCP

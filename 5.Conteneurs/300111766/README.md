@@ -28,16 +28,40 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
 - [✔ ] Créer une machine virtuelle avec docker machine
+```
+$ docker-machine create --driver google --google-project b300111766-274000 cb-gcp-cheikh
+Running pre-create checks...
+(cb-gcp-cheikh) Check that the project exists
+(cb-gcp-cheikh) Check if the instance already exists
+Creating machine...
+(cb-gcp-cheikh) Generating SSH Key
+(cb-gcp-cheikh) Creating host...
+(cb-gcp-cheikh) Opening firewall ports
+(cb-gcp-cheikh) Creating instance
+(cb-gcp-cheikh) Waiting for Instance
+(cb-gcp-cheikh) Uploading SSH Key
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with ubuntu(systemd)...
+Installing Docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe env cb-gcp-cheikh
 
-<img src="vm1.JPG"></img>
+```
 
-<img src="docker.JPG"></img>
+## 👉 Pointer le container engine sur la machine virtuelle
 
-## Pointer le container engine sur la machine virtuelle
 ```
 $  eval $(docker-machine env cb-gcp-test)
 ```
-## Activer le container
+## 🆗 Activer le container                          
+
 ```
 $ docker-machine active
 ```
@@ -48,18 +72,15 @@ $ docker-machine active
 
 
 ## Installer WordPress
+
 ```
 $ docker-compose up --detach
-Creating network "300112017_default" with the default driver
-Creating volume "300112017_db_data" with default driver
+Creating network "300111766_default" with the default driver
+Creating volume "300111766_db_data" with default driver
 Pulling db (mysql:latest)...
 latest: Pulling from library/mysql
 Digest: sha256:b69d0b62d02ee1eba8c7aeb32eba1bb678b6cfa4ccfb211a5d7931c7755dc4a8
 Status: Downloaded newer image for mysql:latest
-Pulling pma (phpmyadmin/phpmyadmin:)...
-latest: Pulling from phpmyadmin/phpmyadmin
-Digest: sha256:59912efb52a5b0342b3defc890a7041ab2a32dc2f5c9a014150006db8c55a793
-Status: Downloaded newer image for phpmyadmin/phpmyadmin:latest
 Pulling wp (wordpress:latest)...
 latest: Pulling from library/wordpress
 Digest: sha256:191d5caf4ef5b8c57721ade777820f3267654325f7902b2ccd377ceeba1c3fe2
@@ -68,18 +89,19 @@ Pulling wpcli (wordpress:cli)...
 cli: Pulling from library/wordpress
 Digest: sha256:9f165c3679042257f7c7905b0cb9491b1d3e37d78590f2b52235a968212c3f71
 Status: Downloaded newer image for wordpress:cli
-Creating 300112017_db_1 ... done
-Creating 300112017_wp_1  ... done
-Creating 300112017_pma_1 ... done
-Creating 300112017_wpcli_1 ... done
-```
-## Activation du Pare feu
+Creating 300111766_db_1 ... done
+Creating 300111766_wp_1 ... done
+Creating 300111766_wpcli_1 ... done
 
-## Initialiser WordPress
+```
+
+# _Comment Activater le  Pare feu_
+
+## ✍ _Mon WordPress_
 
 📌 Administrer votre site Wordpress
 
-http://35.225.13.172/wp-admin
+http://35.222.156.96/wp-admin/
 
 ## :ab: Vérifier que l'application marche
 
@@ -89,21 +111,17 @@ http://35.225.13.172/wp-admin
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
-<img src="wps.JPG"></img>
-
 - [ ✔] Que fait l'application?
 ```
-WordPress est un système de gestion de contenu (SGC ou content management system (CMS) en anglais) gratuit, 
-libre et open-source. Ce logiciel écrit en PHP repose sur une base de données MySQL et est distribué par l'entreprise américaine Automattic.Les fonctionnalités de WordPress lui permettent de créer et gérer différents types de sites Web : site vitrine, 
-site de vente en ligne, site applicatif, blogue, ou encore portfolio. 
-Il est distribué selon les termes de la licence GNU GPL version.Le logiciel est aussi utilisé 
-comme socle du service multisite WordPress.com, celui ci supporte plusieurs millions de sites.
+WordPress est un logiciel destiné à la conception et à la mise à jour dynamique de sites Web ou d'applications multimédias.
+WordPress est donc un logiciel de la famille des systèmes de gestion de contenu ou encore CMS (Content Management System).
+Le CMS WordPress permet à la fois de gagner du temps de développement au niveau de la création de votre site internet et d’y ajouter facilement des pages, WordPress permet donc de créer des sites dynamiques.
+
 ```
 - [ ✔] Quel est son adresse IP?
 
-http://35.225.13.172
+http://35.222.156.96
 
-- [ ] Quel port utilisé pour y accéder?
+- 😃 [✔ ] Quel port utilisé pour y accéder?
 
-80
-
+8080  

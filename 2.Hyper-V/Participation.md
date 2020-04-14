@@ -60,6 +60,13 @@ PS > docker-machine inspect CB-HYPERV2 --format='{{json .Driver.CPU}} {{json .Dr
 PS > docker-machine env CB-HYPERV3 | Invoke-Expression
 ```
 
+* Check Container volume through the container `some-mysqlds` (if no ssh)
+
+```
+PS > docker container exec --interactive --tty some-mysqlds sh -c "ls /var/lib/mysql-files"
+lost+found
+```
+
 * Check `/dev/sdb1` volume through the container `some-mysqlds`
 
 ```
@@ -75,10 +82,45 @@ PS > docker container exec --interactive --tty some-mysqlds sh -c "df -h | grep 
 PS > docker-machine ssh CB-HYPERV3
 ```
 
-Check its 2nd disk size - 62914560 = 60GiB
+* Check its 2nd disk size - 62914560 = 60GiB
 
 ```
-$ fdisk -s  /dev/sdb
+docker@CB-HYPERV3:~$  fdisk -s  /dev/sdb
 62914560
+```
+
+* check if /mnt/sdb1 is mounted in `/etc/fstab`
+
+```
+docker@CB-HYPERV3:~$ cat /etc/fstab
+# /etc/fstab
+proc            /proc        proc    defaults          0       0
+sysfs           /sys         sysfs   defaults          0       0
+devpts          /dev/pts     devpts  defaults          0       0
+tmpfs           /dev/shm     tmpfs   defaults          0       0
+/dev/zram0  swap         swap    defaults,noauto   0       0
+/dev/sda2       none            swap     defaults             0 0 # Added by TC
+/dev/sda1       /mnt/sda1       ext4     noauto,users,exec    0 0 # Added by TC
+/dev/sr0        /mnt/sr0        auto     noauto,users,exec    0 0 # Added by TC
+```
+
+### :o: PowerShell chmod 400
+
+```
+PS > docker-machine ssh CB-HYPERV3
+exit status 255
+```
+
+https://gist.github.com/jaskiratr/cfacb332bfdff2f63f535db7efb6df93
+
+```powershell
+# Source: https://stackoverflow.com/a/43317244
+$path = ".\id_rsa"
+# Reset to remove explict permissions
+icacls $path /reset
+# Give current user explicit read-permission
+icacls $path /GRANT:R "$($env:USERNAME):(R)"
+# Disable inheritance and remove inherited permissions
+icacls $path /inheritance:r
 ```
 

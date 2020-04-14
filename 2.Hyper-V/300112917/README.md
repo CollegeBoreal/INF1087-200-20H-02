@@ -63,6 +63,7 @@ PS > docker-machine create `
 ```
 PS > docker-machine env CB-HYPERV | Invoke-Expression
 ```
+<img src="HYPER.PNG"></img>
 
 - [X] Cloner le cours et aller dans son répertoire de travail :id:
 
@@ -70,21 +71,24 @@ PS > docker-machine env CB-HYPERV | Invoke-Expression
 PS > git clone https://github.com/CollegeBoreal/INF1087-200-20H-02.git 
 ```
 
-- [ ] Installer WordPress
+- [X] Installer WordPress
 
 ```
 PS > docker-compose up --detach
 ```
 
-- [ ] Initialiser WordPress
+- [X] Initialiser WordPress
 
 :pushpin: Administrer votre site `Wordpress`
 
-http://`changer-mon-adresse-ip`/wp-admin
+http://10.13.2.72/wp-admin
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
-http://`changer-mon-adresse-ip`:8080
+http://10.13.2.72:8080
+
+
+<img src="PHP.PNG"></img>
 
 ## :m: CB-HYPERV2
 
@@ -98,10 +102,11 @@ PS > docker-machine create `
       CB-HYPERV2
 ```
 
+<img src="HYPER.PNG"></img>
 
 ## :m: CB-HYPERV3
 
-- [ ] Créer le disque virtuel
+- [X] Créer le disque virtuel
 
 :bulb: Pour ajouter le disque à la machine virtuelle il faut l'arreter et ensuite la redémarrer
 
@@ -114,8 +119,9 @@ PS > ADD-VMHardDiskDrive -VMName $vm -Path "$VMLOC\$vm\$vm.vhdx"
 PS > (Get-VMHardDiskDrive -VMName $vm).Path
 PS > docker-machine start $vm
 ```
+<img src="HYPERV3.PNG"></img>
 
-- [ ]  Créer la table de partition 
+- [X]  Créer la table de partition 
 
 :bulb: Penser à `GPT - GUID Partition Table`
 
@@ -149,8 +155,9 @@ Device       Start      End  Sectors  Size Type
 
 Partition table entries are not in disk order.
 ```
+<img src="FDISK.PNG"></img>
 
-- [ ]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
+- [X]  Créer la table de partition du nouveau disque avec l'utilitaire Linux `fdisk` 
 
 ```
 $ sudo fdisk /dev/sdb
@@ -198,15 +205,16 @@ Creating journal (65536 blocks): done
 Writing superblocks and filesystem accounting information:
 done
 ```
+<img src="MKFS.PNG"></img>
 
-- [ ]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
+- [X]  Attacher (Monter) le système de fichier à l'arborescence de fichiers
 
 ```
 $ sudo mkdir /mnt/sdb1
 $ sudo mount /dev/sdb1 /mnt/sdb1
 ```
 
-- [ ]  S'assurer que le répertoire est visible
+- [X]  S'assurer que le répertoire est visible
 
 * Faire la liste des appareils (devices) de type `block storage`
 
@@ -222,7 +230,9 @@ sr0     11:0    1    57M  0 rom
 zram0  252:0    0 122.1M  0 disk [SWAP]
 ```
 
-- [ ]  Créer un conteneur pour tester le volume 
+<img src="LSBLK.PNG"></img>
+
+- [X]  Créer un conteneur pour tester le volume 
 
 :pushpin: Pointer le container engine sur la machine virtuelle
 
