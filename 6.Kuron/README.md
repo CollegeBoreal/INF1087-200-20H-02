@@ -63,3 +63,19 @@ $ kubectl describe pod
 ```
 $ gcloud container clusters delete kuron --zone "us-central1-a"
 ```
+
+```
+$ gcloud beta container --project "b300098957" \
+       clusters create "your-first-cluster-1" --zone "us-central1-a" \
+       --no-enable-basic-auth --release-channel "rapid" --machine-type "g1-small" \
+       --image-type "COS" --disk-type "pd-standard" --disk-size "30" \
+       --num-nodes "1" --no-enable-stackdriver-kubernetes --enable-ip-alias \
+       --network "projects/b300098957/global/networks/default" \
+       --subnetwork "projects/b300098957/regions/us-central1/subnetworks/default" \
+       --default-max-pods-per-node "110" --no-enable-master-authorized-networks \
+       --addons HorizontalPodAutoscaling,HttpLoadBalancing --enable-autoupgrade --enable-autorepair
+```
+
+```
+       --metadata disable-legacy-endpoints=true --scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append"
+```
