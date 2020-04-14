@@ -92,10 +92,13 @@ cb-gcp-prod   *        google    Running   tcp://35.193.104.208:2376           v
 - [x] Que fait l'application?
 L'exemple lance une pile exécutant Puppet Server, PuppetDB, un conteneur PostgresDB pour PuppetDB et les tableaux de bord open source Puppetboard et Puppet Explorer
 
-- [ ] Quel est son adresse IP?
+- [x] Quel est son adresse IP?
 
+http://35.193.104.208
 
 - [ ] Quel port utilisé pour y accéder?
+
+
 
 ```
 $ docker ps
