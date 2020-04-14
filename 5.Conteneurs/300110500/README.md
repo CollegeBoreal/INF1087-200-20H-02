@@ -28,15 +28,16 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
 - [✔ ] Vérifier que vos identifiants cloud sont install`
-```$ ~/.gcp/b300110500-54dd5d2a1258.json```
-
+```
+$ ~/.gcp/b300110500-54dd5d2a1258.json
+```
 - [✔ ] Ajouter la variable d'identifiants à son Environement
-`$  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json`
-
+```
+$  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json`
+```
 - [✔ ] Créer une machine virtuelle avec docker machine
 ```
 `docker-machine create --driver google --google-project  ma-virtuelle-machine```
- ```
 Running pre-create checks...
 (ma-virtuelle-machine) Check that the project exists
 (ma-virtuelle-machine) Check if the instance already exists
