@@ -15,14 +15,14 @@ Ce laboratoire permettra de créer une grappe (cluster) Kubernetes sur GCP (Goog
       * incluant le fichier `README.md` 
 
 
-`$ cp ./README.md :300104541: `
+`$ cp ./README.md 300104541 `
 
 #- [x] Soumettre le répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Avec votre compte [GCP](Google Cloud Platform)
 
 ### :star: Taches
-=======
+
 ## :a: Dans votre Serveur Windows du laboratoire
 
 ## :star: Prérequis
