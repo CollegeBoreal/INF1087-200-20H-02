@@ -106,11 +106,10 @@ Creating gcp_wpcli_1 ... done
 - [✔ ] Que fait l'application?
 `ip 
 - [✔ ] Quel est son adresse IP?
-
-http://35.223.212.123/wp-admin/
+  http://35.223.212.123/wp-admin/
 
 - [✔ ] MYSQL et PHP  `admin`
-http://35.223.212.123:8080
+    http://35.223.212.123:8080
 - [✔ ] Décrire la configuration du `firewall` 
 
 [✔ ] Quel port utilisé pour y accéder?
