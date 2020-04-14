@@ -71,7 +71,35 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 ## :star: Autres commentaires utiles à donner
 
-- [ ] Commentaires
+- [X] Commentaires 
+
+https://cloud.google.com/compute/docs/reference/rest/v1/firewalls
+https://www.terraform.io/docs/providers/google/r/compute_firewall.html
+
+
+'''
+        To get more information about Firewall, see: API
+                    resource "google_compute_firewall" "default" {
+  name    = "test-firewall"
+  network = google_compute_network.default.name
+
+  allow {
+    protocol = "icmp"
+  }
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80", "8080", "1000-2000"]
+  }
+
+  source_tags = ["web"]
+}
+
+resource "google_compute_network" "default" {
+  name = "test-network"
+}
+
+''''
 
 [Participation](Participation.md)
 
