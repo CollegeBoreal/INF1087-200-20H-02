@@ -17,7 +17,7 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 `$ cp ./README.md `:id:` `
 
-- [ x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Créer une machine virtuelle dans le cloud
 
@@ -27,7 +27,7 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
-- [ ] Créer une machine virtuelle avec docker machine
+- [X] Créer une machine virtuelle avec docker machine
 
 ```
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
@@ -52,6 +52,8 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
              
                   gcloud compute firewall-rules create cb-gcp-test1 --action allow \
                                                                     --rules tcp:80,icpm
+                 
+                  ![](image/allowfirl.png )
  '''
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
@@ -62,6 +64,8 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
  '''                   
             http://34.66.40.184/wp-admin/ 
  '''
+ 
+  ![](image/wrodpress1.png  )
 
 - [x] Quel port utilisé pour y accéder?
 
