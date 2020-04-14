@@ -52,9 +52,9 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
              
                   gcloud compute firewall-rules create cb-gcp-test1 --action allow \
                                                                     --rules tcp:80,icpm
-                 
-                  ![](image/allowfirl.png )
+                               
  '''
+ ![](image/allowfirl.png )
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
