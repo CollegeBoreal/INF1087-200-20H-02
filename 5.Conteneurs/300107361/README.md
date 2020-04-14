@@ -156,7 +156,7 @@ Status: Downloaded newer image for docker/whalesay:latest
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
 - [x] Décrire la configuration du `firewall`
-![image](ssh.PNG) | pare-feux.PNG
+![image](ssh.PNG) | ![image](pare-feux.PNG)
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
 - [x] Que fait l'application?
@@ -169,9 +169,17 @@ Whalesay contains an adaption of the Linux cowsay game. The game was originally 
 
 
 - [x] Quel est son adresse IP?
+
+
 `34.69.50.60`
+
+
 - [x] Quel port utilisé pour y accéder?
+
+
 `2376` `8080`
+
+
 ## :star: Autres commentaires utiles à donner
 
 - [ ] Commentaires
