@@ -1,5 +1,6 @@
 # :six: Kuron Boreal
 
+[kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet)
 
 ## :o: Prérequis
 
