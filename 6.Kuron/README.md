@@ -44,6 +44,12 @@ NAME          READY   STATUS              RESTARTS   AGE
 kuron-l4z2b   0/1     ContainerCreating   0          2m48s
 ```
 
+:round_pushpin: Vérifier avancement
+
+
+```
+$ kubectl describe pod
+```
 
 
 # :x: Cleanup
