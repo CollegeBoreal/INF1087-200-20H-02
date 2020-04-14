@@ -20,7 +20,11 @@ $ gcloud container clusters create kuron --num-nodes 3 --machine-type f1-micro -
 
 ## :one: Déploiement de l'application node
 
-collegeboreal/kuron
+https://hub.docker.com/r/collegeboreal/kuron
+
+```
+$ kubectl run kuron --image=collegeboreal/kuron --port=8080 --generator=run/v1
+```
 
 
 
