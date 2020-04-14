@@ -21,8 +21,7 @@ $ gcloud beta container clusters create "kuron" \
        --machine-type "f1-micro" \
        --zone "us-central1-a" \
        --release-channel "rapid" \
-       --enable-ip-alias \
-       --no-enable-autoupgrade
+       --enable-ip-alias
 ```
 
 :round_pushpin: Assurez vous d'activer votre context avec `kubectl`, vérifiez l'étoile
