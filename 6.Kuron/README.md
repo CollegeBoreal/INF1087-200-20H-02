@@ -26,6 +26,12 @@ CURRENT   NAME                          CLUSTER                       AUTHINFO  
 *         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
 ```
 
+:round_pushpin: Information sur sa grappe
+
+```
+$ kubectl cluster-info                 
+```
+
 ## :one: Déploiement de l'application node
 
 https://hub.docker.com/r/collegeboreal/kuron
