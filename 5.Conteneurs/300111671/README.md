@@ -55,6 +55,18 @@ Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe env cb-gcp-prod
 
 ```
+# ajuster avec le nom de fichier identifiants
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/myVM-ad426b5f8268.json"
+
+```
+# Pour pointer la machine
+
+```
+eval $(docker-machine env cb-gcp-prod)
+
+```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
