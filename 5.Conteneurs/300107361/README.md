@@ -59,15 +59,15 @@ To see how to connect your Docker Client to the Docker Engine running on
 this virtual machine, run: 
 C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env 
 digital-space-academy
-
 ```
+
 ```
 $ docker-machine ls
 NAME                    ACTIVE   DRIVER    STATE     URL                  SWARM   DOCKER     ERRORS
 cb-gcp-test             -        google    Running  tcp://35.184.160.136:2376     v19.03.8
 digital-space-academy   -        google    Running  tcp://34.69.50.60:2376        v19.03.8
 labo16                           generic   Timeout
-
+```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
@@ -88,7 +88,9 @@ NAME                    ACTIVE   DRIVER    STATE     URL                        
 cb-gcp-test             -        google    Running   tcp://35.184.160.136:2376           v19.03.8
 digital-space-academy   *        google    Running   tcp://34.69.50.60:2376              v19.03.8
 labo16                           generic   Timeout
+```
 
+```
 Tochgaly-K.J.Etienne@LAPTOP-1Q5O20OP MINGW64 ~
 $ docker run docker/whalesay cowsay joker
 Unable to find image 'docker/whalesay:latest' locally
@@ -164,6 +166,8 @@ Whalesay contains an adaption of the Linux cowsay game. The game was originally 
 * a docker.cow was added
 * a modification to the install.sh to disable interactive feature
 * This image is used by the Docker demo tutorial purely as a teaching tool.
+
+
 - [x] Quel est son adresse IP?
 `34.69.50.60`
 - [x] Quel port utilisé pour y accéder?
