@@ -25,7 +25,7 @@ collegeboreal/kuron
 
 
 
-# Cleanup
+# :x: Cleanup
 
 ```
 $ gcloud container clusters delete kuron --zone "us-central1-a"
