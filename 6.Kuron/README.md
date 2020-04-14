@@ -30,8 +30,10 @@ CURRENT   NAME                          CLUSTER                       AUTHINFO  
 
 https://hub.docker.com/r/collegeboreal/kuron
 
+:round_pushpin: Créer son premier `Replication Controller`
+
 ```
-$ kubectl run kuron --image=collegeboreal/kuron --port=8080 --generator=run/v1
+$ kubectl run kuron --image=collegeboreal/kuron --port=8080 --generator=run-pod/v1
 ```
 
 
