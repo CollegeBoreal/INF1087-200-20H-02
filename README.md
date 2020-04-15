@@ -29,7 +29,7 @@ Après la contingence
 
 | Date   | Titre                                                  |     Commentaires            |  Fait |
 |:------:|:-------------------------------------------------------|:----------------------------|-------|
-|17-04-20| [6.Kuron](6.Kuron/.scripts/Participation.md)           | Grappe                      | :-1:  |
+|17-04-20| [6.kuron](6.kuron/.scripts/Participation.md)           | Grappe                      | :-1:  |
 |17-04-20| [5.Conteneurs](5.Conteneurs/.scripts/Participation.md) | Sur un cloud public         | :-1:  |
 
 Avant la contingence
