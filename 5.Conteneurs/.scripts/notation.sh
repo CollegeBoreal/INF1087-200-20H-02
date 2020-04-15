@@ -32,11 +32,12 @@ i=1
 
 for id in "${ETUDIANTS[@]}"
 do
-   FILE=${id}/Dockerfile
-   FILE2=${id}/docker-compose.yml
-   OK="| ${i} | [${id}](../${FILE}) | [:heavy_check_mark:] |"
-   OK2="| ${i} | [${id}](../${FILE2}) | [:heavy_check_mark:] |"
-   KO="| ${i} | [${id}](../${id})         | [:x:]                |"
+   REP=${id}
+   FILE=${REP}/Dockerfile
+   FILE2=${REP}/docker-compose.yml
+   OK="| ${id} | [${id}](../${FILE}) | [:heavy_check_mark:] |"
+   OK2="| ${id} | [${id}](../${FILE2}) | [:heavy_check_mark:] |"
+   KO="| ${id} | [${id}](../${REP})         | [:x:]                |"
    if [ -f "$FILE" ]; then
        echo ${OK}
    else
