@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inspect
+spec:
+  containers:
+  - name: inspect
+    image: alpine:3.10 
