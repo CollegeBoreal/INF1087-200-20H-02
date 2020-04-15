@@ -90,7 +90,7 @@ http://104.198.19.69/wp-admin/
 📌 Visualiser MySQL avec PHPMyAdmin
 
 ```
-http://104.198.19.69:8080/phpmyadmin
+http://104.198.19.69:8080
 
 ## :ab: Vérifier que l'application marche
 
