@@ -53,17 +53,20 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
                         --enable-autoupgrade --enable-autorepair --enable-ip-alias                
 ```
 
-<img src="images/Kuron-cluster.png" width=577 height=141></img>
-
 ![image](images/Kuron-cluster.png)
 
-
-:round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifiez l'étoile
+:round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
 ```
 $ kubectl config get-contexts
 CURRENT   NAME                          CLUSTER                       AUTHINFO                        NAMESPACE
 *         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
+```
+
+* Changer de contexte si ce n'est pas le cas, exemple
+
+```
+$ kubectl config set-context gke_pid_us-central1-a_kuron
 ```
 
 :round_pushpin: Visualise quelques informations sur ta grappe
