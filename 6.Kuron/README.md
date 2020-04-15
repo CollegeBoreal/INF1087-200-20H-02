@@ -109,10 +109,10 @@ kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
 
 Le service permet la publication des ports vers l'extérieur. Le port que nous allons utiliser et le port `8080`
 
-- [ ] Utilise le fichier `kuron-deployment-services.yml` pour ouvrir les `ports`
+- [ ] Utilise le fichier `kuron-deployment-service.yml` pour ouvrir les `ports`
 
 ```
-$ kubectl apply -f kuron-deployment-services.yml 
+$ kubectl apply -f kuron-deployment-service.yml 
 ```
 
 :round_pushpin: Vérifie ton service et note l'adresse IP externe et le port d'accès
