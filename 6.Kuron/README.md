@@ -74,6 +74,21 @@ kubernetes                 ClusterIP      10.32.0.1      <none>        443/TCP  
 kuron-deployment-service   LoadBalancer   10.32.13.239   <pending>     80:32731/TCP   27s
 ```
 
+```
+% gcloud compute firewall-rules list              
+NAME                                     NETWORK  DIRECTION  PRIORITY  ALLOW                         DENY  DISABLED
+default-allow-icmp                       default  INGRESS    65534     icmp                                False
+default-allow-internal                   default  INGRESS    65534     tcp:0-65535,udp:0-65535,icmp        False
+default-allow-rdp                        default  INGRESS    65534     tcp:3389                            False
+default-allow-ssh                        default  INGRESS    65534     tcp:22                              False
+docker-machines                          default  INGRESS    1000      tcp:2376                            False
+gke-kuron-3fd17b28-all                   default  INGRESS    1000      tcp,udp,icmp,esp,ah,sctp            False
+gke-kuron-3fd17b28-ssh                   default  INGRESS    1000      tcp:22                              False
+gke-kuron-3fd17b28-vms                   default  INGRESS    1000      icmp,tcp:1-65535,udp:1-65535        False
+k8s-dec7e94d017bc317-node-http-hc        default  INGRESS    1000      tcp:10256                           False
+k8s-fw-a91d9566cf4db4da5a6a523d802bbedb  default  INGRESS    1000      tcp:8080                            False
+```
+
 ## :one: Déploiement de l'application node
 
 https://hub.docker.com/r/collegeboreal/kuron
@@ -98,6 +113,8 @@ kuron-l4z2b   0/1     ContainerCreating   0          2m48s
 ```
 $ kubectl describe pod
 ```
+
+
 
 
 # :x: Cleanup
