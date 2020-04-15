@@ -19,7 +19,7 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 `$ cp ./README.md `:id:` `
 
-`$ cp -r .src `:id:` `
+`$ cp -r .src/* `:id:` `
 
 - [x] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
 
