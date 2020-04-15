@@ -34,39 +34,65 @@ Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 
 Assures toi d'avoir positionner tes identifiants `google`
 
+* avec Powershell
+
 ```
-$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json"
+PS > $env:GOOGLE_APPLICATION_CREDENTIALS="C:\Users\User\.gcp\b300108234-de32988388af.json"
 ```
 
 ## :a: Créer sa grappe `kuron`
 
 - [x] Crée ta grappe `kuron` avec 3 VM (noeuds)
 
+* avec Powershell
+
 ```
-$ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
-                        --num-nodes "3" --release-channel "rapid" \
-                        --machine-type "g1-small" --image-type "COS" \
-                        --disk-type "pd-standard" --disk-size "30" \
-                        --no-enable-stackdriver-kubernetes --no-enable-basic-auth \
-                        --no-enable-master-authorized-networks \
-                        --addons HorizontalPodAutoscaling,HttpLoadBalancing \
-                        --enable-autoupgrade --enable-autorepair --enable-ip-alias                
+PS > gcloud beta container clusters create "kuron" --zone "us-central1-a" `
+                        --num-nodes "3" --release-channel "rapid" `
+                        --machine-type "g1-small" --image-type "COS" `
+                        --disk-type "pd-standard" --disk-size "30" `
+                        --no-enable-stackdriver-kubernetes --no-enable-basic-auth `
+                        --no-enable-master-authorized-networks `
+                        --addons HorizontalPodAutoscaling,HttpLoadBalancing `
+                        --enable-autoupgrade --enable-autorepair --enable-ip-alias
+                        
+                        
+WARNING: Starting with version 1.18, clusters will have shielded GKE nodes by default.
+WARNING: The Pod address range limits the maximum size of the cluster. Please refer to https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr to learn how to optimize IP address allocation.
+This will enable the autorepair feature for nodes. Please see https://cloud.google.com/kubernetes-engine/docs/node-auto-repair for more information on node autorepairs.
+Creating cluster kuron in us-central1-a... Cluster is being health-checked (master
+is healthy)...done.
+Created [https://container.googleapis.com/v1beta1/projects/excellent-bolt-272914/zones/us-central1-a/clusters/kuron].
+To inspect the contents of your cluster, go to: https://console.cloud.google.com/kubernetes/workload_/gcloud/us-central1-a/kuron?project=excellent-bolt-272914
+kubeconfig entry generated for kuron.
+NAME   LOCATION       MASTER_VERSION  MASTER_IP     MACHINE_TYPE  NODE_VERSION  NUM_NODES  STATUS
+kuron  us-central1-a  1.16.8-gke.8    34.68.35.154  g1-small      1.16.8-gke.8  3          RUNNING
+
+
+Updates are available for some Cloud SDK components.  To install them,
+please run:
+  $ gcloud components update                       
+                          
 ```
 
+
+
 ![image](images/Kuron-cluster.png)
+
+* Changes de contexte
+
+```
+$ kubectl config set-context gke_pid_us-central1-a_kuron
+```
 
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
 ```
-$ kubectl config get-contexts
-CURRENT   NAME                          CLUSTER                       AUTHINFO                        NAMESPACE
-*         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
-```
-
-* Changes de contexte si ce n'est pas le cas, exemple
-
-```
-$ kubectl config set-context gke_pid_us-central1-a_kuron
+ > kubectl config get-contexts
+CURRENT   NAME                                            CLUSTER                                         AUTHINFO                                        NAMESPACE
+          gke_excellent-bolt-272914_us-central1-a_kubia   gke_excellent-bolt-272914_us-central1-a_kubia   gke_excellent-bolt-272914_us-central1-a_kubia
+*         gke_excellent-bolt-272914_us-central1-a_kuron   gke_excellent-bolt-272914_us-central1-a_kuron   gke_excellent-bolt-272914_us-central1-a_kuron
+          gke_pid_us-central1-a_kuron    
 ```
 
 :round_pushpin: Visualise quelques informations sur ta grappe
@@ -75,7 +101,7 @@ $ kubectl config set-context gke_pid_us-central1-a_kuron
 $ kubectl cluster-info                 
 ```
 
-- [x] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
+- [ ] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
 
 ```
 % kubectl get nodes
