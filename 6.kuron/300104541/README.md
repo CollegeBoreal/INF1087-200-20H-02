@@ -158,9 +158,10 @@ http://35.192.145.202:8080
 - [ ] Liste ton `service`
 
 ```
-$ kubectl get services                                           NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP      PORT(S)          AGE
+$ kubectl get services
+NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP      PORT(S)          AGE
 kubernetes                 ClusterIP      10.32.0.1    <none>           443/TCP          133m
-kuron-deployment-service   LoadBalancer   10.32.5.27   35.192.145.202   8080:31441/TCP   55m             
+kuron-deployment-service   LoadBalancer   10.32.5.27   35.192.145.202   8080:31441/TCP   55m
 
 ```
 
