@@ -78,6 +78,7 @@ $ kubectl cluster-info
 
 ```
 % kubectl get nodes
+
 ![image](kuron02.PNG)
 ```
 
