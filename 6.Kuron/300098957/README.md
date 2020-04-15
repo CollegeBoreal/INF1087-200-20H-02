@@ -6,11 +6,11 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
+- [x] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
+- [x] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
 
       * incluant le fichier `README.md` 
 
@@ -19,18 +19,18 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 `$ cp ./README.md `:id:` `
 
-`$ cp -r .src `:id:` `
+`$ cp -r .src/* `:id:` `
 
-- [ ] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
 
 
 ## :star: Prérequis
 
-- [ ] Compte GCP
+- [x] Compte GCP
 
 Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 
-- [ ] Identifiants GCP 
+- [x] Identifiants GCP 
 
 Assures toi d'avoir positionner tes identifiants `google`
 
@@ -162,32 +162,28 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 
 :bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
 
+1. Test
+
 ```
 $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
 Tu as touché kuron-deployment-8bf4f7f9f-d4d9l
 ```
 
-```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
-```
+2. Test
 
 ```
 $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
 Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
 ```
 
-```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
-```
+3. Test
 
 ```
 $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
 Tu as touché kuron-deployment-8bf4f7f9f-xw4gz
 ```
 
-- [ ] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
+- [ ] Finalement, Va dans un pod (conteneur) et donne la taille mémoire du pod avec la commande `top`
 
 ```
 $ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-5hm4n -- /bin/bash
