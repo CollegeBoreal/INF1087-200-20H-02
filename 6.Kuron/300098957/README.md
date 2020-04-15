@@ -89,13 +89,13 @@ gke-kuron-default-pool-1e3feddf-p2j8   Ready    <none>   2m32s   v1.16.8-gke.8
 
 Les applications ou `pod` sont des conteneurs où tournent l'application, dans notre cas un serveur `node` nous donnant le nom du conteneur.
 
-- [ ] Utilise le fichier `kuron-deployment.yml` pour déployer tes `pods`
+- [x] Utilise le fichier `kuron-deployment.yml` pour déployer tes `pods`
 
 ```
 $ kubectl apply -f kuron-deployment.yml 
 ```
 
-- [ ] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
+- [x] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
 
 ```
 $ kubectl get pods                                                              
