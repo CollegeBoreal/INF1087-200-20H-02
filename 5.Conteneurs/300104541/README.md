@@ -100,7 +100,7 @@ http://104.198.19.69:8080
 
 ### *Selectionez la mahine vertuelle puis cliquer sur Afficher les details du réseaux
 
-![image](images5.PNG)
+![image](images5.png)
 
 ### *Cliquez sur Regles de pare-feu et choisissez la 1er regle sous le nom de docker-machine puis cliquer sur Modifier 
 
