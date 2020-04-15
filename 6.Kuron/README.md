@@ -15,18 +15,21 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json
 
 :round_pushpin: Créer sa grappe `kuron`
 
+--project "b300098957" \
+--metadata disable-legacy-endpoints=true \
+--scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append"
+--network "projects/b300098957/global/networks/default" \
+--subnetwork "projects/b300098957/regions/us-central1/subnetworks/default" \
+--default-max-pods-per-node "110" \
+
+
 ```
-$ gcloud beta container --project "b300098957" clusters create "your-first-cluster-1" \
-                        --zone "us-central1-a" --no-enable-basic-auth --release-channel "rapid" \
+$ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
                         --machine-type "g1-small" --image-type "COS" --disk-type "pd-standard" --disk-size "30" \
-                        --num-nodes "1" --no-enable-stackdriver-kubernetes --enable-ip-alias \
-                        --network "projects/b300098957/global/networks/default" \
-                        --subnetwork "projects/b300098957/regions/us-central1/subnetworks/default" \
-                        --default-max-pods-per-node "110" \
-                        --no-enable-master-authorized-networks \
+                        --num-nodes "3" --release-channel "rapid" \
+                        --no-enable-stackdriver-kubernetes --no-enable-master-authorized-networks --no-enable-basic-auth \
+                        --enable-ip-alias \                        
                         --addons HorizontalPodAutoscaling,HttpLoadBalancing --enable-autoupgrade --enable-autorepair
-                        --metadata disable-legacy-endpoints=true \
-                        --scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append"
 ```
 
 :round_pushpin: Assurez vous d'activer votre context avec `kubectl`, vérifiez l'étoile
