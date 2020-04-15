@@ -40,7 +40,7 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json
 
 ## :a: Créer sa grappe `kuron`
 
-- [ ] ta grappe `kuron` avec 3 VM (noeuds)
+- [ ] Crée ta grappe `kuron` avec 3 VM (noeuds)
 
 ```
 $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
