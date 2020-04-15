@@ -17,17 +17,26 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 `$ cp ./README.md `:id:` `
 
-- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Créer une machine virtuelle dans le cloud
 
-- [ ] Vérifier que vos identifiants `cloud` sont installés
+- [x] Vérifier que vos identifiants `cloud` sont installés
+
+ ~/.gcp/b300104524-38d76c1cec7c.json
+
+Ajouter la variable d'identifiants à son Environement
+
+```
+ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300104524-38d76c1cec7c.json"
+
 
 | Cloud  |  Google  | Azure       | AWS      |  Autres |
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
 - [ ] Créer une machine virtuelle avec docker machine
+docker-machine create --driver google --google-project b300104524 cb-gcp-test
 
 ```
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
