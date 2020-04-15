@@ -21,7 +21,7 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 `$ cp -r .src `:id:` `
 
-- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [ ] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
 
 
 ## :star: Prérequis
