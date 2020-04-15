@@ -88,11 +88,11 @@ $ kubectl apply -f kuron-deployment.yml
 - [ ] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
 
 ```
-$ kubectl get pods --show-labels
-NAME                               READY   STATUS    RESTARTS   AGE    LABELS
-kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
-kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
-kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
+$ kubectl get pods                                                              
+NAME                               READY   STATUS    RESTARTS   AGE
+kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
+kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
+kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
 ```
 
 ## :ab: Déploie le service `kuron-deployment-service`
