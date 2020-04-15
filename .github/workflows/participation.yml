@@ -1,14 +1,18 @@
-name: Correction 6.kuron - Test présence
+name: Participations
 
 on: [push]
 
 jobs:
-  run-script:
-    name: Run script
+  presence:
+    name: presence de fichiers pour la participation
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
+      - shell: bash
+        run: |
+          cd 5.Conteneurs
+          bash .scripts/run.sh
       - shell: bash
         run: |
           cd 6.kuron
@@ -17,7 +21,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Correction Chapitre 6.kuron" -a
+          git commit -m "Vérification de la participation" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
