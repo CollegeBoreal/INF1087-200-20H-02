@@ -35,7 +35,7 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 | Cloud |  Google   | Azure       | AWS      |  Autres |
 |-------|-----------|-------------|----------|---------|
-|Config |[x]`~/.gcp`| `~/.azure`  | `~/.aws` |  ...    |
+|Config | (`~/.gcp`)| `~/.azure`  | `~/.aws` |  ...    |
 
 - [x] Créer une machine virtuelle avec docker machine
 
