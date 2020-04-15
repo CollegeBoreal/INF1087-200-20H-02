@@ -123,9 +123,7 @@ $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
 You've hit kuron-deployment-8bf4f7f9f-xw4gz
 ```
 
-```
 http://34.70.183.28:8080
-```
 
 ## :one: Déploiement de l'application node
 
