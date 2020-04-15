@@ -57,7 +57,7 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
 ```
-$ kubectl config get-contexts
+kubectl config get-contexts
 CURRENT   NAME                          CLUSTER                       AUTHINFO                        NAMESPACE
 *         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
 ```
@@ -74,14 +74,11 @@ $ kubectl config set-context gke_pid_us-central1-a_kuron
 $ kubectl cluster-info                 
 ```
 
-- [ ] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
+- [x] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
 
 ```
 % kubectl get nodes
-NAME                                   STATUS   ROLES    AGE     VERSION
-gke-kuron-default-pool-1e3feddf-8s94   Ready    <none>   2m32s   v1.16.8-gke.8
-gke-kuron-default-pool-1e3feddf-c4tn   Ready    <none>   2m32s   v1.16.8-gke.8
-gke-kuron-default-pool-1e3feddf-p2j8   Ready    <none>   2m32s   v1.16.8-gke.8
+![image](kuron02.PNG)
 ```
 
 ## :b: Déploie ton application `kuron`
