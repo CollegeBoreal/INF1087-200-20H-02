@@ -55,6 +55,9 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
 
 <img src="images/Kuron-cluster.png" width=577 height=141></img>
 
+![image](images/Kuron-cluster.png)
+
+
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifiez l'étoile
 
 ```
