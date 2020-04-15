@@ -98,7 +98,7 @@ http://104.198.19.69:8080
 
 - [x] Décrire la configuration du `firewall`
 
-### *Selectionez la mahine vertuelle puis cliquer sur Afficher les details du réseaux
+### *Selectionez la mahine virtuelle puis cliquer sur Afficher les details du réseaux
 
 ![image](images5.png)
 
@@ -126,7 +126,7 @@ Un site web WordPress sous nom de "Tech Tutoriels", Mon 1er tutoreil sera sur le
 - [x] Quel est son adresse IP?
 
 ```
-34.67.12.74
+104.198.19.69
 ```
 
 - [x] Quel port utilisé pour y accéder?
