@@ -1,4 +1,4 @@
-# Participation au 15-04-2020 17:48 UTC
+# Participation au 15-04-2020 18:00 UTC
  
 ## Légende
  
@@ -24,7 +24,7 @@
 | 11 | [300112917](../300112917/README.md) | [:x:] |
 | 12 | [300113775](../300113775/README.md) | [:x:] |
  
-# Participation au 15-04-2020 17:48 UTC
+# Participation au 15-04-2020 18:00 UTC
  
 ## Légende
  
@@ -37,7 +37,7 @@
  
 |:hash:| Boréal :id:                | Présence         |
 |------|----------------------------|------------------|
-| 1 | [300104524](../300104524) | [:x:] |
+| 1 | [300104524](../300104524/kuron-deployment-service.yaml) | [:heavy_check_mark:] |
 | 2 | [300104541](../300104541/kuron-deployment-service.yaml) | [:heavy_check_mark:] |
 | 3 | [300106918](../300106918/kuron-deployment-service.yaml) | [:heavy_check_mark:] |
 | 4 | [300107361](../300107361) | [:x:] |
