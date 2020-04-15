@@ -34,6 +34,14 @@ Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 
 Assures toi d'avoir positionner tes identifiants `google`
 
+* avec Powershell
+
+```
+$ $GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json"
+```
+
+avec gitbash
+
 ```
 $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json"
 ```
@@ -41,6 +49,22 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json
 ## :a: Créer sa grappe `kuron`
 
 - [ ] Crée ta grappe `kuron` avec 3 VM (noeuds)
+
+* avec Powershell
+
+```
+PS > gcloud beta container clusters create "kuron" --zone "us-central1-a" `
+                        --num-nodes "3" --release-channel "rapid" `
+                        --machine-type "g1-small" --image-type "COS" `
+                        --disk-type "pd-standard" --disk-size "30" `
+                        --no-enable-stackdriver-kubernetes --no-enable-basic-auth `
+                        --no-enable-master-authorized-networks `
+                        --addons HorizontalPodAutoscaling,HttpLoadBalancing `
+                        --enable-autoupgrade --enable-autorepair --enable-ip-alias                
+```
+
+* avec gitbash
+
 
 ```
 $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
