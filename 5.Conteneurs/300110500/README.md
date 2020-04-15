@@ -98,8 +98,6 @@ Creating gcp_wpcli_1 ... done
 ## :ab: Vérifier que l'application marche
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
-- [✔ ] Décrire la configuration du `firewall`
-
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
 - [✔ ] Que fait l'application?
@@ -109,7 +107,7 @@ Creating gcp_wpcli_1 ... done
 Les fonctionnalités de WordPress lui permettent de creer et gérer differents types de sites Web : 
 site vitrine, site de vente en ligne, site applicatif, blogs, ou encore portfolio.
 ```
-- [✔ ] Quel est son adresse IP?
+- [✔ ] Quel est son adresse IP?`
 ip address 35.223.212.123
 
 http://35.223.212.123/wp-admin/
