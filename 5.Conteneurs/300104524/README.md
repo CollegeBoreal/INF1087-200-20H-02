@@ -41,19 +41,73 @@ Ajouter la variable d'identifiants à son Environement
 
 ```
 $docker-machine create --driver google --google-project b300104524 cb-gcp-test
+
+
+$ docker-machine create --driver google --google-project b300104524 cb-gcp-test
+Running pre-create checks...
+(cb-gcp-test) Check that the project exists
+(cb-gcp-test) Check if the instance already exists
+Creating machine...
+(cb-gcp-test) Generating SSH Key
+(cb-gcp-test) Creating host...
+(cb-gcp-test) Opening firewall ports
+(cb-gcp-test) Creating instance
+(cb-gcp-test) Waiting for Instance
+(cb-gcp-test) Uploading SSH Key
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with ubuntu(systemd)...
+Installing Docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env cb-gcp-test
+
+```
+- Activer la machine
+
+```
+$ eval $(docker-machine env cb-gcp-test)
+```
+```
+$ docker-machine active
 ```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
-- [ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
+- [x] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
 
-- [ ] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+- [x] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+
+- Installer wordpress
+
+```
+$ docker-compose up --detach
+```
+- Initialiser Wordpress
+
+📌 Administrer le site Wordpress
+
+http://35.222.127.228/wp-admin wordpress
+
+📌 Visualiser MySQL avec PHPMyAdmin
+
+http://35.222.127.228:8080/ phpmyadmin
+
 
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
-- [ ] Décrire la configuration du `firewall`
+- [x] Décrire la configuration du `firewall`
+
+- étape à suivre:
+
+### *Selectionez la mahine vertuelle puis cliquer sur Afficher les details du réseaux
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
