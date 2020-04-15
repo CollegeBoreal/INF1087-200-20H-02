@@ -39,7 +39,7 @@ $ $env:GOOGLE_APPLICATION_CREDENTIALS="$env:USERPROFILE\.gcp\b300104524-38d76c1c
 
 ## :a: Créer sa grappe `kuron`
 
-- [ ] Crée ta grappe `kuron` avec 3 VM (noeuds)
+- [x] Crée ta grappe `kuron` avec 3 VM (noeuds)
 
 ```
 $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
@@ -100,17 +100,16 @@ $ kubectl apply -f kuron-deployment.yaml
 
 ```
 $ kubectl get pods                                                              
-NAME                               READY   STATUS    RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
+
+
+![image](kuron04.PNG)
 ```
 
 ## :ab: Déploie le service `kuron-deployment-service`
 
 Le service permet la publication des ports vers l'extérieur. Le port que nous allons utiliser et le port `8080`
 
-- [ ] Utilise le fichier `kuron-deployment-service.yaml` pour ouvrir les `ports`
+- [x] Utilise le fichier `kuron-deployment-service.yaml` pour ouvrir les `ports`
 
 ```
 $ kubectl apply -f kuron-deployment-service.yaml 
@@ -120,14 +119,14 @@ $ kubectl apply -f kuron-deployment-service.yaml
 
 ```
 $ kubectl get services                                                          
-NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)          AGE
-kubernetes                 ClusterIP      10.32.0.1     <none>         443/TCP          8m3s
-kuron-deployment-service   LoadBalancer   10.32.13.64   34.71.18.253   8080:30010/TCP   39s
+
+
+![image](kuron03.PNG)
 ```
 
-- [ ] Publie ton site Internet avec les informations du service
+- [x] Publie ton site Internet avec les informations du service
 
-http://34.71.18.253:8080
+http://10.32.13.96:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
@@ -135,9 +134,9 @@ http://34.71.18.253:8080
 
 ```
 $ kubectl get services    
-NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)          AGE
-kubernetes                 ClusterIP      10.32.0.1     <none>         443/TCP          8m3s
-kuron-deployment-service   LoadBalancer   10.32.13.64   34.71.18.253   8080:30010/TCP   39s
+NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1     <none>           443/TCP          127m
+kuron-deployment-service   LoadBalancer   10.32.13.96   35.239.109.144   8080:30332/TCP   79m
 ```
 
 * Note l'adresse IP locale de ton cluster, dans ce cas `10.32.13.64` 
@@ -146,10 +145,8 @@ kuron-deployment-service   LoadBalancer   10.32.13.64   34.71.18.253   8080:3001
 
 ```
 $ kubectl get pods
-NAME                               READY   STATUS    RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-jtbvg   1/1     Running   0          3m39s
-kuron-deployment-8bf4f7f9f-q7h6h   1/1     Running   0          3m39s
-kuron-deployment-8bf4f7f9f-rvt9w   1/1     Running   0          3m39s
+
+![image](kuron05.PNG)
 ```
 
 * Note le nom de tes trois `pods` ou conteneurs, i.e. `kuron-deployment-8bf4f7f9f-rvt9w`, `kuron-deployment-8bf4f7f9f-q7h6h`
@@ -166,22 +163,23 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 1. Test
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-jtbvg -- curl -s http://10.32.13.64:8080
-Tu as touchÃ© kuron-deployment-8bf4f7f9f-q7h6h
+$ kubectl exec kuron-deployment-8bf4f7f9f-4hf2r -- curl -s http://10.32.13.96:8080
+Tu as touché kuron-deployment-8bf4f7f9f-nkfzg
 ```
 
 2. Test
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-jtbvg -- curl -s http://10.32.13.64:8080
-Tu as touchÃ© kuron-deployment-8bf4f7f9f-rvt9w     
+$ kubectl exec kuron-deployment-8bf4f7f9f-4hf2r -- curl -s http://10.32.13.96:8080
+Tu as touché kuron-deployment-8bf4f7f9f-4hf2r   
 ```
 
 3. Test
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-jtbvg -- curl -s http://10.32.13.64:8080
-Tu as touchÃ© kuron-deployment-8bf4f7f9f-jtbvg
+$ kubectl exec kuron-deployment-8bf4f7f9f-4hf2r -- curl -s http://10.32.13.96:8080
+Tu as touché kuron-deployment-8bf4f7f9f-4hf2r
+
 ```
 
 - [x] Finalement, Va dans un pod (conteneur) et donne la taille mémoire du pod avec la commande `top`
