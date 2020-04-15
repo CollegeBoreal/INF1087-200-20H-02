@@ -41,6 +41,21 @@ CURRENT   NAME                          CLUSTER                       AUTHINFO  
 $ kubectl cluster-info                 
 ```
 
+```
+% kubectl get nodes
+NAME                                   STATUS   ROLES    AGE     VERSION
+gke-kuron-default-pool-1e3feddf-8s94   Ready    <none>   2m32s   v1.16.8-gke.8
+gke-kuron-default-pool-1e3feddf-c4tn   Ready    <none>   2m32s   v1.16.8-gke.8
+gke-kuron-default-pool-1e3feddf-p2j8   Ready    <none>   2m32s   v1.16.8-gke.8
+```
+
+## :zero: Déploiement de l'application node
+
+```
+$ kubectl apply -f kuron-deployment.yml 
+```
+
+
 ## :one: Déploiement de l'application node
 
 https://hub.docker.com/r/collegeboreal/kuron
