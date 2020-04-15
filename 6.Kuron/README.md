@@ -77,6 +77,8 @@ $ kubectl cluster-info
 
 ## :b: Déploie ton application `kuron`
 
+Les applications ou `pod` sont des conteneurs ou tournent l'application, dans notre cas un serveur `node` nous donnant le nom du conteneur.
+
 - [ ] Utilise le fichier `kuron-deployment.yml` pour déployer tes `pods`
 
 ```
@@ -93,11 +95,24 @@ kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          110s   app=kuron
 kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
 ```
 
-## :ab: Vérifier que l'application marche
+## :ab: Déploie le service `kuron-deployment-service`
 
-:bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
+Le service permet la publication des ports vers l'extérieur. Le port que nous allons utiliser et le port `8080`
 
-- [ ] Décrire la configuration du `firewall`
+- [ ] Utilise le fichier `kuron-deployment-services.yml` pour ouvrir les `ports`
+
+```
+$ kubectl apply -f kuron-deployment-services.yml 
+```
+
+:round_pushpin: Vérifie ton service et note l'adresse IP externe et le port d'accès
+
+```
+$ kubectl get services                                                          
+NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP          25m
+kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
+```
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
