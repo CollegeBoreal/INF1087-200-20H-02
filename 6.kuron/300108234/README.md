@@ -164,13 +164,14 @@ service/kuron-deployment-service created
 
 ```
 > kubectl get services
-NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-kubernetes   ClusterIP   10.32.0.1    <none>        443/TCP   4h27m
+NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1     <none>         443/TCP          4h43m
+kuron-deployment-service   LoadBalancer   10.32.6.255   34.71.90.105   8080:30699/TCP   90s
 ```
 
 - [x] Publie ton site Internet avec les informations du service
 
-http://1:8080
+http://:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
