@@ -63,7 +63,7 @@ kuron  us-central1-a  1.16.8-gke.8    34.71.217.85  g1-small      1.16.8-gke.8  
            
 ```
 
-![image](images/Kuron-cluster.png)
+![image](images.PNG)
 
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
