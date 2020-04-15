@@ -32,13 +32,19 @@ i=1
 
 for id in "${ETUDIANTS[@]}"
 do
-   FILE=${id}/.env
+   FILE=${id}/Dockerfile
+   FILE2=${id}/docker-compose.yml
    OK="| ${i} | [${id}](../${FILE}) | [:heavy_check_mark:] |"
-   KO="| ${i} | [${id}](../${FILE}) | [:x:]                |"
+   OK2="| ${i} | [${id}](../${FILE2}) | [:heavy_check_mark:] |"
+   KO="| ${i} | [${id}](..)         | [:x:]                |"
    if [ -f "$FILE" ]; then
        echo ${OK}
    else
-       echo ${KO}
+       if [ -f "$FILE2" ]; then
+           echo ${OK2}
+       else
+           echo ${KO}
+       fi
    fi
    let "i++"
 done
