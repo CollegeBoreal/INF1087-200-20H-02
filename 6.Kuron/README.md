@@ -160,6 +160,8 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 
 :warning: Remarque le nom du pod retourné change et n'est pas forcément le nom du pod
 
+:bangbang:
+
 ```
 $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
 Tu as touché kuron-deployment-8bf4f7f9f-d4d9l
@@ -184,6 +186,14 @@ Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
 $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
 Tu as touché kuron-deployment-8bf4f7f9f-xw4gz
 ```
+
+- [ ] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
+
+```
+$ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-5hm4n -- /bin/bash
+```
+
+KiB Mem:   1732772
 
 [Participation](Participation.md)
 
