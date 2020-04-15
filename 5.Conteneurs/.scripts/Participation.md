@@ -1,4 +1,4 @@
-# Participation au 15-04-2020 12:54 UTC
+# Participation au 15-04-2020 12:55 UTC
  
 ## Légende
  
@@ -24,7 +24,7 @@
 | 11 | [300112917](../300112917/README.md) | [:heavy_check_mark:] |
 | 12 | [300113775](../300113775/README.md) | [:heavy_check_mark:] |
  
-# Participation au 15-04-2020 12:54 UTC
+# Participation au 15-04-2020 12:55 UTC
  
 ## Légende
  
@@ -33,7 +33,7 @@
 | :heavy_check_mark: | Prêt à être corrigé           |
 | :x:                | Projet inexistant             |
  
-## Fichier Dump SQL
+## Fichier .env pour docker-compose
  
 |:hash:| Boréal :id:                | Présence         |
 |------|----------------------------|------------------|
