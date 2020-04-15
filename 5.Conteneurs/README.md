@@ -1,5 +1,7 @@
 # :five: Conteneurs
 
+[`Participation`](.scripts/Participation.md)
+
 Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GCP, Azure]
 
 :closed_book: Copiez le `README.md` dans votre répertoire et cocher les sections `- [x]` au fur et à mesure de votre progression.
@@ -57,9 +59,7 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 - [ ] Commentaires
 
-[Participation](Participation.md)
 
 # Références
 
 https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/2.VM/1.Docker
->>>>>>> bf16a7557d1cd62ca8b27053ed722413e57281ce
