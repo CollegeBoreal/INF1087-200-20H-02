@@ -1,4 +1,4 @@
-# Participation au 15-04-2020 22:19 UTC
+# Participation au 15-04-2020 23:29 UTC
  
 ## Légende
  
@@ -21,10 +21,10 @@
 | 8 | [300111671](../300111671/README.md) | [:heavy_check_mark:] |
 | 9 | [300111766](../300111766/README.md) | [:heavy_check_mark:] |
 | 10 | [300112017](../300112017/README.md) | [:heavy_check_mark:] |
-| 11 | [300112917](../300112917/README.md) | [:x:] |
+| 11 | [300112917](../300112917/README.md) | [:heavy_check_mark:] |
 | 12 | [300113775](../300113775/README.md) | [:x:] |
  
-# Participation au 15-04-2020 22:19 UTC
+# Participation au 15-04-2020 23:29 UTC
  
 ## Légende
  
@@ -47,5 +47,5 @@
 | 8 | [300111671](../300111671) | [:x:] |
 | 9 | [300111766](../300111766/kuron-deployment-service.yaml) | [:heavy_check_mark:] |
 | 10 | [300112017](../300112017) | [:x:] |
-| 11 | [300112917](../300112917) | [:x:] |
+| 11 | [300112917](../300112917/kuron-deployment-service.yaml) | [:heavy_check_mark:] |
 | 12 | [300113775](../300113775) | [:x:] |
