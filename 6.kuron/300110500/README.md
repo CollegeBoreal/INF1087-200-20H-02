@@ -1,3 +1,4 @@
+
 # :six: Kuron (prononcer Couronne)
 
 Ce laboratoire permettra de créer une grappe sur le cloud public [GCP]. 
@@ -6,11 +7,11 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
+- [✔ ] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
+- [✔ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
 
       * incluant le fichier `README.md` 
 
@@ -19,20 +20,36 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 `$ cp ./README.md `:id:` `
 
-`$ cp -r .src `:id:` `
+`$ cp -r .src/* `:id:` `
 
-- [ ] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
+- [ ✔] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
 
 
 ## :star: Prérequis
 
-- [ ] Compte GCP
+
+- [✔ ] Compte GCP
 
 Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 
-- [ ] Identifiants GCP 
-
+- [✔ ] Identifiants GCP 
+- [✔ ] Vérifier que vos identifiants cloud sont install`
+```
+$ ~/.gcp/b300110500-54dd5d2a1258.json
+```
+- [✔ ] Ajouter la variable d'identifiants à son Environement
+```
+$  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json`
+```
 Assures toi d'avoir positionner tes identifiants `google`
+
+* avec Powershell
+
+```
+PS > $env:GOOGLE_APPLICATION_CREDENTIALS="$env:USERPROFILE\.gcp\b300098957-a2662a9bd338.json"
+```
+
+avec gitbash
 
 ```
 $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json"
@@ -41,6 +58,22 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json
 ## :a: Créer sa grappe `kuron`
 
 - [ ] Crée ta grappe `kuron` avec 3 VM (noeuds)
+
+* avec Powershell
+
+```
+PS > gcloud beta container clusters create "kuron" --zone "us-central1-a" `
+                        --num-nodes "3" --release-channel "rapid" `
+                        --machine-type "g1-small" --image-type "COS" `
+                        --disk-type "pd-standard" --disk-size "30" `
+                        --no-enable-stackdriver-kubernetes --no-enable-basic-auth `
+                        --no-enable-master-authorized-networks `
+                        --addons HorizontalPodAutoscaling,HttpLoadBalancing `
+                        --enable-autoupgrade --enable-autorepair --enable-ip-alias                
+```
+
+* avec gitbash
+
 
 ```
 $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
@@ -217,4 +250,3 @@ $ gcloud container clusters delete kuron --zone "us-central1-a"
 https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/2.VM/1.Docker
 
 https://github.com/CollegeBoreal/INF1087-200-20H-02/tree/master/K.Kubernetes
-

@@ -23,6 +23,16 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 - [x] Vérifier que vos identifiants `cloud` sont installés
 
+```
+~/.gcp/myVM-ad426b5f8268.json
+
+```
+- Ajouter la variable d'identifiants à son Environement
+
+```
+$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/myVM-ad426b5f8268.json"  "
+```
+
 | Cloud  |  Google  | Azure       | AWS      |  Autres |
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
@@ -30,17 +40,17 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 - [x] Créer une machine virtuelle avec docker machine
 
 ```
- docker-machine create --driver google --google-project myvm-273714 cb-gcp-prod
+ docker-machine create --driver google --google-project myvm-273714 cb-gcp-abbas
 Running pre-create checks...
-(cb-gcp-prod) Check that the project exists
-(cb-gcp-prod) Check if the instance already exists
+(cb-gcp-abbas) Check that the project exists
+(cb-gcp-abbas) Check if the instance already exists
 Creating machine...
-(cb-gcp-prod) Generating SSH Key
-(cb-gcp-prod) Creating host...
-(cb-gcp-prod) Opening firewall ports
-(cb-gcp-prod) Creating instance
-(cb-gcp-prod) Waiting for Instance
-(cb-gcp-prod) Uploading SSH Key
+(cb-gcp-abbas) Generating SSH Key
+(cb-gcp-abbas) Creating host...
+(cb-gcp-abbas) Opening firewall ports
+(cb-gcp-abbas) Creating instance
+(cb-gcp-abbas) Waiting for Instance
+(cb-gcp-abbas) Uploading SSH Key
 Waiting for machine to be running, this may take a few minutes...
 Detecting operating system of created instance...
 Waiting for SSH to be available...
@@ -52,20 +62,16 @@ Copying certs to the remote machine...
 Setting Docker configuration on the remote daemon...
 Checking connection to Docker...
 Docker is up and running!
-To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe env cb-gcp-prod
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe env cb-gcp-abbas
 
 ```
-# ajuster avec le nom de fichier identifiants
+- Pour activer la machine :
 
 ```
-export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/myVM-ad426b5f8268.json"
-
+$  eval $(docker-machine env cb-gcp-abbas)
 ```
-# Pour pointer la machine
-
 ```
-eval $(docker-machine env cb-gcp-prod)
-
+$ docker-machine active
 ```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
@@ -74,45 +80,68 @@ eval $(docker-machine env cb-gcp-prod)
 
 - [x] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
+- Installer WordPress
+
+- Executer sur votre repertoire
+
+```
+LENOVO@DELUX MINGW64 ~/Developer/INF1087-200-20H-02/5.Conteneurs/300111671 (master)
+```
+```
+$ docker-compose up --detach
+
+
+```
+- Initialiser WordPress
+
+📌 Administrer le site Wordpress
+
+http://35.193.104.208/wp-admin
+
+📌 Visualiser MySQL avec PHPMyAdmin
+
+http://35.193.104.208:8080
+
+
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
 - [x] Décrire la configuration du `firewall`
-```
 
- docker-machine ls
-NAME          ACTIVE   DRIVER    STATE     URL                         SWARM   DOCKER     ERRORS
-cb-gcp-prod   *        google    Running   tcp://35.193.104.208:2376           v19.03.8
 
-```
+### *Pour Protocoles et ports, choisissez Protocoles et ports spécifiés et saisissez tcp: 8080,3306 dans le champ associé, où :
+
+- 8080 est le port utilisé par WordPress.
+- 3306 est le port utilisé par phpMyAdmin.
+
+
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
 - [x] Que fait l'application?
-L'exemple lance une pile exécutant Puppet Server, PuppetDB, un conteneur PostgresDB pour PuppetDB et les tableaux de bord open source Puppetboard et Puppet Explorer
+
+```
+
+```
 
 - [x] Quel est son adresse IP?
 
-http://35.193.104.208
+```
+35.193.104.208
+```
 
-- [ ] Quel port utilisé pour y accéder?
-
-
+- [x] Quel port utilisé pour y accéder?
 
 ```
-$ docker ps
-CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS                         PORTS                                              NAMES
-45b88f894ce1        puppet/puppetserver        "dumb-init /docker-e…"   About an hour ago   Up About an hour (healthy)     0.0.0.0:32772->8140/tcp                            puppet
-2916f96ac229        puppet/puppetdb            "dumb-init /docker-e…"   About an hour ago   Up About an hour (healthy)     0.0.0.0:32770->8080/tcp, 0.0.0.0:32769->8081/tcp   300111671_puppetdb_1
-d3086eb40a1b        puppet/puppetexplorer      "/usr/bin/caddy"         About an hour ago   Up About an hour               0.0.0.0:32771->80/tcp                              300111671_puppetexplorer_1
-65eb0d2ba63d        puppet/puppetboard         "/bin/sh -c 'gunicor…"   About an hour ago   Up About an hour (unhealthy)   0.0.0.0:32768->8000/tcp                            300111671_puppetboard_1
-707923cb1b2e        puppet/puppetdb-postgres   "docker-entrypoint.s…"   About an hour ago   Up About an hour               5432/tcp                                           postgres
+Port tcp 8080 
 ```
 
 ## :star: Autres commentaires utiles à donner
 
-- [ ] Commentaires
+- [x] Commentaires
+
+*A faire 
 
 [Participation](Participation.md)
 
