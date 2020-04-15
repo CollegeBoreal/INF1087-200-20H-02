@@ -21,6 +21,8 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json
 --network "projects/b300098957/global/networks/default" \
 --subnetwork "projects/b300098957/regions/us-central1/subnetworks/default" \
 --default-max-pods-per-node "110" \
+                        --no-enable-master-authorized-networks \        
+                        --addons HorizontalPodAutoscaling,HttpLoadBalancing \
 
 
 ```
@@ -29,8 +31,6 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
                         --machine-type "g1-small" --image-type "COS" \
                         --disk-type "pd-standard" --disk-size "30" \
                         --no-enable-stackdriver-kubernetes --no-enable-basic-auth \        
-                        --no-enable-master-authorized-networks \        
-                        --addons HorizontalPodAutoscaling,HttpLoadBalancing \
                         --enable-autoupgrade --enable-autorepair --enable-ip-alias                
 ```
 
