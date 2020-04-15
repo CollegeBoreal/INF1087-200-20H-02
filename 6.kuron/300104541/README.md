@@ -144,36 +144,36 @@ $ kubectl apply -f kuron-deployment-service.yaml
 
 ```
 $ kubectl get services                                                          
-NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP   PORT(S)          AGE
-kubernetes                 ClusterIP      10.32.0.1    <none>        443/TCP          78m
-kuron-deployment-service   LoadBalancer   10.32.5.27   <pending>     8080:31441/TCP   23s
+NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP      PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1    <none>           443/TCP          133m
+kuron-deployment-service   LoadBalancer   10.32.5.27   35.192.145.202   8080:31441/TCP   55m
 ```
 
 - [ ] Publie ton site Internet avec les informations du service
 
-http://104.198.29.69:8080
+http://35.192.145.202:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
 - [ ] Liste ton `service`
 
 ```
-$ kubectl get services                                                          
-NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)          AGE
-kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP          25m
-kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
+$ kubectl get services                                           NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP      PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1    <none>           443/TCP          133m
+kuron-deployment-service   LoadBalancer   10.32.5.27   35.192.145.202   8080:31441/TCP   55m             
+
 ```
 
-* Note l'adresse IP locale de ton cluster, dans ce cas `10.32.3.1` 
+* Note l'adresse IP locale de ton cluster, dans ce cas `10.32.5.27` 
 
 - [ ] Liste tes `pods`
 
 ```
-$ kubectl get pods                                                              
-NAME                               READY   STATUS    RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
+$ kubectl get pods                                               NAME                               READY   STATUS    RESTARTS   AGE
+kuron-deployment-8bf4f7f9f-22nn8   1/1     Running   0          61m
+kuron-deployment-8bf4f7f9f-rzfd2   1/1     Running   0          61m
+kuron-deployment-8bf4f7f9f-xm6v6   1/1     Running   0          61m              
+
 ```
 
 * Note le nom de tes trois `pods` ou conteneurs, i.e. `kuron-deployment-8bf4f7f9f-5hm4n`, `kuron-deployment-8bf4f7f9f-d4d9l`
