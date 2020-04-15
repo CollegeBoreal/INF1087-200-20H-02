@@ -10,7 +10,7 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 `$ mkdir ` :id:
 
-- [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire
+- [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
 
       * incluant le fichier `README.md` 
 
