@@ -130,63 +130,63 @@ http://34.70.183.28:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
-- [ ] Liste ton `service`
+- [x] Liste ton `service`
 
 ```
-$ kubectl get services                                                          
-NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)          AGE
-kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP          25m
-kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
+$ kubectl get services    
+NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1     <none>         443/TCP          8m3s
+kuron-deployment-service   LoadBalancer   10.32.13.64   34.71.18.253   8080:30010/TCP   39s
 ```
 
-* Note l'adresse IP locale de ton cluster, dans ce cas `10.32.3.1` 
+* Note l'adresse IP locale de ton cluster, dans ce cas `10.32.13.64` 
 
-- [ ] Liste tes `pods`
+- [x] Liste tes `pods`
 
 ```
-$ kubectl get pods                                                              
+$ kubectl get pods
 NAME                               READY   STATUS    RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
+kuron-deployment-8bf4f7f9f-jtbvg   1/1     Running   0          3m39s
+kuron-deployment-8bf4f7f9f-q7h6h   1/1     Running   0          3m39s
+kuron-deployment-8bf4f7f9f-rvt9w   1/1     Running   0          3m39s
 ```
 
-* Note le nom de tes trois `pods` ou conteneurs, i.e. `kuron-deployment-8bf4f7f9f-5hm4n`, `kuron-deployment-8bf4f7f9f-d4d9l`
+* Note le nom de tes trois `pods` ou conteneurs, i.e. `kuron-deployment-8bf4f7f9f-rvt9w`, `kuron-deployment-8bf4f7f9f-q7h6h`
 
 
-- [ ] Tapes les commandes ci-dessous en changeant le nom des pods et l'adresse IP locale.
+- [x] Tapes les commandes ci-dessous en changeant le nom des pods et l'adresse IP locale.
 
 Le programme javascript qui tourne dans les pods récupère le nom du conteneur dans ce cas le nom du pod.
 
-:warning: Remarque le nom du pod retourné change et n'est pas forcément le nom du pod
+:bulb: Remarque le nom du pod retourné change et n'est pas forcément le nom du pod pourtant le nom du pod dans la commande est le même
 
 :bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
 
 1. Test
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-d4d9l
+$ kubectl exec kuron-deployment-8bf4f7f9f-jtbvg -- curl -s http://10.32.13.64:8080
+Tu as touché kuron-deployment-8bf4f7f9f-q7h6h
 ```
 
 2. Test
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
+$ kubectl exec kuron-deployment-8bf4f7f9f-jtbvg -- curl -s http://10.32.13.64:8080
+Tu as touché kuron-deployment-8bf4f7f9f-rvt9w     
 ```
 
 3. Test
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-xw4gz
+$ kubectl exec kuron-deployment-8bf4f7f9f-jtbvg -- curl -s http://10.32.13.64:8080
+Tu as touché kuron-deployment-8bf4f7f9f-jtbvg
 ```
 
-- [ ] Finalement, Va dans un pod (conteneur) et donne la taille mémoire du pod avec la commande `top`
+- [x] Finalement, Va dans un pod (conteneur) et donne la taille mémoire du pod avec la commande `top`
 
 ```
-$ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-5hm4n -- /bin/bash
+$ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-jtbvg -- bash
 ```
 
 KiB Mem:   1732772
