@@ -35,18 +35,16 @@ Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 Assures toi d'avoir positionner tes identifiants `google`
 
 - [✔ ] Vérifier que vos identifiants cloud sont install`
-```
-$ ~/.gcp/b300110500-54dd5d2a1258.json
-```
-- [✔ ] Ajouter la variable d'identifiants à son Environement
-```
-$  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json`
 
+$ ~/.gcp/b300110500-54dd5d2a1258.json
+
+- [✔ ] Ajouter la variable d'identifiants à son Environement
+$  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json`
+`
 ## :a: Créer sa grappe `kuron`
 
 - [ ] Crée ta grappe `kuron` avec 3 VM (noeuds)
 
-```
 $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
                         --num-nodes "3" --release-channel "rapid" \
                         --machine-type "g1-small" --image-type "COS" \
@@ -55,33 +53,29 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
                         --no-enable-master-authorized-networks \
                         --addons HorizontalPodAutoscaling,HttpLoadBalancing \
                         --enable-autoupgrade --enable-autorepair --enable-ip-alias                
-```
 
 ![image](images/Kuron-cluster.png)
 
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
-```
 $ kubectl config get-contexts
 CURRENT   NAME                          CLUSTER                       AUTHINFO                        NAMESPACE
 *         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
-```
 
 * Changes de contexte si ce n'est pas le cas, exemple
 
-```
+
 $ kubectl config set-context gke_pid_us-central1-a_kuron
-```
+
 
 :round_pushpin: Visualise quelques informations sur ta grappe
 
-```
+
 $ kubectl cluster-info                 
-```
+
 
 - [ ] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
 
-```
 % kubectl get nodes
 NAME                                   STATUS   ROLES    AGE     VERSION
 gke-kuron-default-pool-1e3feddf-8s94   Ready    <none>   2m32s   v1.16.8-gke.8
@@ -99,19 +93,18 @@ Les applications ou `pod` sont des conteneurs où tournent l'application, dans n
 
 - [ ] Utilise le fichier `kuron-deployment.yaml` pour déployer tes `pods`
 
-```
+
 $ kubectl apply -f kuron-deployment.yaml 
-```
 
 - [ ] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
 
-```
+
 $ kubectl get pods                                                              
 NAME                               READY   STATUS    RESTARTS   AGE
 kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
 kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
 kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
-```
+
 
 ## :ab: Déploie le service `kuron-deployment-service`
 
