@@ -122,6 +122,7 @@ Pour configurer le firewall:
 - dans la console google cliquer sur computer engine 
 
 - fixer le  docker-machine et appliquer les regles de pare-feu
+
 ![image](fire1.PNG)
 
 - dans l'onglet tcp ajouter le port 8080
