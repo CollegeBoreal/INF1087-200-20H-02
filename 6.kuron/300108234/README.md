@@ -77,7 +77,7 @@ please run:
 
 
 
-![image](images/Kuron-cluster.png)
+![image](Kuron-cluster.png)
 
 * Changes de contexte
 
