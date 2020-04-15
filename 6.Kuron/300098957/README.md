@@ -119,14 +119,14 @@ $ kubectl apply -f kuron-deployment-service.yml
 
 ```
 $ kubectl get services                                                          
-NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)          AGE
-kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP          25m
-kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
+NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1     <none>         443/TCP          8m3s
+kuron-deployment-service   LoadBalancer   10.32.13.64   34.71.18.253   8080:30010/TCP   39s
 ```
 
 - [ ] Publie ton site Internet avec les informations du service
 
-http://34.70.183.28:8080
+http://34.71.18.253:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
