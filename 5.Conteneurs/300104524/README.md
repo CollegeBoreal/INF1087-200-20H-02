@@ -33,9 +33,9 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300104524-38d76c1cec7c.json"
 ```
 
-| Cloud  |  Google  | Azure       | AWS      |  Autres |
-|--------|----------|-------------|----------|---------|
-| Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
+| Cloud |  Google   | Azure       | AWS      |  Autres |
+|-------|-----------|-------------|----------|---------|
+|Config |[x]`~/.gcp`| `~/.azure`  | `~/.aws` |  ...    |
 
 - [x] Créer une machine virtuelle avec docker machine
 
