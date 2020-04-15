@@ -124,6 +124,10 @@ kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP   
 kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
 ```
 
+- [ ] Publie ton site Internet
+
+http://34.70.183.28:8080
+
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
 - [ ] Que fait l'application?
