@@ -56,11 +56,22 @@ $ kubectl apply -f kuron-deployment.yml
 ```
 
 ```
-% kubectl get pods --show-labels
+$ kubectl get pods --show-labels
 NAME                               READY   STATUS    RESTARTS   AGE    LABELS
 kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
 kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
 kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
+```
+
+```
+$ kubectl apply -f kuron-deployment-services.yml 
+```
+
+```
+$ kubectl get svc
+NAME                       TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+kubernetes                 ClusterIP      10.32.0.1      <none>        443/TCP        10m
+kuron-deployment-service   LoadBalancer   10.32.13.239   <pending>     80:32731/TCP   27s
 ```
 
 ## :one: Déploiement de l'application node
