@@ -10,7 +10,7 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 `$ mkdir ` :id:
 
-- [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
+- [ ✔] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
 
       * incluant le fichier `README.md` 
 
@@ -21,22 +21,26 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 `$ cp -r .src `:id:` `
 
-- [ ] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
+- [✔ ] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
 
 
 ## :star: Prérequis
 
-- [ ] Compte GCP
+- [ ✔] Compte GCP
 
 Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 
-- [ ] Identifiants GCP 
+- [✔] Identifiants GCP 
 
 Assures toi d'avoir positionner tes identifiants `google`
 
+- [✔ ] Vérifier que vos identifiants cloud sont install`
 ```
-$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json"
+$ ~/.gcp/b300110500-54dd5d2a1258.json
 ```
+- [✔ ] Ajouter la variable d'identifiants à son Environement
+```
+$  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json`
 
 ## :a: Créer sa grappe `kuron`
 
