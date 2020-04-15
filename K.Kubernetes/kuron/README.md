@@ -6,7 +6,7 @@ $ docker build --tag kuron .
 ```
 
 ```
-$ docker run --name kuron-container --publish 8080:8080 --detach kuron
+$ docker run --name conteneur-kuron --publish 8080:8080 --detach kuron
 ```
 
 ```
