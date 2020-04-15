@@ -27,9 +27,8 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 Ajouter la variable d'identifiants à son Environement
 
-```
  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300104524-38d76c1cec7c.json"
-
+```
 
 | Cloud  |  Google  | Azure       | AWS      |  Autres |
 |--------|----------|-------------|----------|---------|
