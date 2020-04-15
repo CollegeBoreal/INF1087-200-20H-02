@@ -63,7 +63,7 @@ CURRENT   NAME                          CLUSTER                       AUTHINFO  
 *         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
 ```
 
-* Changer de contexte si ce n'est pas le cas, exemple
+* Changes de contexte si ce n'est pas le cas, exemple
 
 ```
 $ kubectl config set-context gke_pid_us-central1-a_kuron
