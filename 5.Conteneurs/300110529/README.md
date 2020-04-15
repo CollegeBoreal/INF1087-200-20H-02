@@ -21,13 +21,13 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 ## :a: Créer une machine virtuelle dans le cloud
 
-- [ ] Vérifier que vos identifiants `cloud` sont installés
+- [✔] Vérifier que vos identifiants `cloud` sont installés
 
 | Cloud  |  Google  | Azure       | AWS      |  Autres |
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
-- [ ] Créer une machine virtuelle avec docker machine
+- [✔] Créer une machine virtuelle avec docker machine
 
 ```
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
@@ -35,15 +35,15 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
-- [ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
+- [✔] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
 
-- [ ] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+- [✔] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
-- [ ] Décrire la configuration du `firewall`
+- [✔] Décrire la configuration du `firewall`
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
