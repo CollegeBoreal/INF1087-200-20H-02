@@ -11,7 +11,7 @@ $ docker run --name conteneur-kuron --publish 8080:8080 --detach kuron
 
 ```
 $ curl localhost:8080
-You've hit 66d7b8a75754
+Tu as touché bc158a27be42
 ```
 
 ```
