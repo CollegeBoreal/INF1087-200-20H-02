@@ -75,6 +75,15 @@ Creating 300112017_wpcli_1 ... done
 ```
 ## Activation du Pare feu
 
+```
+    gcloud compute firewall-rules create fw-allow-proxies \
+      --network=b300112017-network \
+      --action=allow \
+      --direction=ingress \
+      --source-ranges=0.0.0.0/0 \
+      --target-tags=load-balanced-backend \
+      --rules=tcp:80,tcp:3306,tcp:8000
+````
 ## Initialiser WordPress
 
 📌 Administrer votre site Wordpress
@@ -82,10 +91,6 @@ Creating 300112017_wpcli_1 ... done
 http://35.225.13.172/wp-admin
 
 ## :ab: Vérifier que l'application marche
-
-:bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
-
-- [ ] Décrire la configuration du `firewall`
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
@@ -103,7 +108,7 @@ comme socle du service multisite WordPress.com, celui ci supporte plusieurs mill
 
 http://35.225.13.172
 
-- [ ] Quel port utilisé pour y accéder?
+- [✔ ] Quel port utilisé pour y accéder?
 
 80
 
