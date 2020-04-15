@@ -29,8 +29,8 @@ Après la contingence
 
 | Date   | Titre               |     Commentaires                                      |  Fait |
 |:------:|:--------------------|:------------------------------------------------------|-------|
+|17-04-20| [6.Kuron](6.Kuron/Participation.md)           | Grappe                      | :-1:  |
 |17-04-20| [5.Conteneurs](5.Conteneurs/Participation.md) | Sur un cloud public         | :-1:  |
-|17-04-20| [4.Kubernetes](4.Kubernetes/Participation.md) | Grappe                      | :-1:  |
 
 Avant la contingence
 
