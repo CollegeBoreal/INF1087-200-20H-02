@@ -1,53 +1,60 @@
-
-version: '2'
+version: '3'
 
 services:
-  puppet:
-    container_name: puppet
-    hostname: puppet
-    image: puppet/puppetserver
+  wp:
+    image: wordpress:latest # https://hub.docker.com/_/wordpress/
     ports:
-      - 8140
+      - "80:80"
     volumes:
-      - ./code:/etc/puppetlabs/code/
-      - ./puppet/ssl:/etc/puppetlabs/puppet/ssl/
-      - ./puppet/serverdata:/opt/puppetlabs/server/data/puppetserver/
-    # In some cases unqualified hostnames can have the .local suffix
-    # added, I've seen this under Docker of Mac Beta for instance.
-    # Due to needing to access PuppetDB on same hostame as signed in the
-    # certificate you may need to uncommant the following lines
+      - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+      - ./wp-app:/var/www/html # Full wordpress project
+      #- ./plugin-name/trunk/:/var/www/html/wp-content/plugins/plugin-name # Plugin development
+      #- ./theme-name/trunk/:/var/www/html/wp-content/themes/theme-name # Theme development
     environment:
-      - PUPPETDB_SERVER_URLS=https://puppetdb.local:8081
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: "${DB_NAME}"
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: "${DB_ROOT_PASSWORD}"
+    depends_on:
+      - db
     links:
-      - puppetdb:puppetdb.local
+      - db
 
-  puppetdb-postgres:
-    container_name: postgres
-    image: puppet/puppetdb-postgres
+  wpcli:
+    image: wordpress:cli
+    volumes:
+      - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+      - ./wp-app:/var/www/html
+    depends_on:
+      - db
+      - wp
+
+  pma:
+    image: phpmyadmin/phpmyadmin
     environment:
-      - POSTGRES_PASSWORD=puppetdb
-      - POSTGRES_USER=puppetdb
-    expose:
-      - 5432
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+    ports:
+      - "8080:80"
+    links:
+      - db:db
+
+  db:
+    image: mysql:latest # https://hub.docker.com/_/mysql/ - or mariadb https://hub.docker.com/_/mariadb
+    ports:
+      - "3306:3306"
+    command: [
+        '--default_authentication_plugin=mysql_native_password',
+        '--character-set-server=utf8mb4',
+        '--collation-server=utf8mb4_unicode_ci'
+    ]
     volumes:
-      - ./puppetdb-postgres/data:/var/lib/postgresql/data/
+      - ./wp-data:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: "${DB_NAME}"
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
 
-  puppetdb:
-    hostname: puppetdb
-    image: puppet/puppetdb
-    ports:
-      - 8080
-      - 8081
-    volumes:
-      - ./puppetdb/ssl:/etc/puppetlabs/puppet/ssl/
-
-  puppetboard:
-    image: puppet/puppetboard
-    ports:
-      - 8000
-
-  puppetexplorer:
-    image: puppet/puppetexplorer
-    ports:
-      - 80
-    read_only: true
+volumes:
+  db_data:
