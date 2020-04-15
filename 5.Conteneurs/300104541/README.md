@@ -83,13 +83,15 @@ Creating 5conteneurs_wpcli_1 ... done
 - Initialiser WordPress
 
 📌 Administrer le site Wordpress
-
-http://104.198.19.69/wp-admin
+```
+http://104.198.19.69/wp-admin/
+```
 
 📌 Visualiser MySQL avec PHPMyAdmin
 
+```
 http://104.198.19.69:8080
-
+```
 
 ## :ab: Vérifier que l'application marche
 
