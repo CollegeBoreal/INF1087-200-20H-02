@@ -169,22 +169,14 @@ $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
 Tu as touché kuron-deployment-8bf4f7f9f-d4d9l
 ```
 
-1. Test
+2. Test
 
 ```
 $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
 Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
 ```
 
-```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
-```
-
-```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
-```
+3. Test
 
 ```
 $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
