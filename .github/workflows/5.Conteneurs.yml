@@ -1,10 +1,10 @@
-name: Correction 5.Conteneurs- Test présence
+name: Participatios
 
 on: [push]
 
 jobs:
-  run-script:
-    name: Run script
+  presence:
+    name: presence de fichiers pour la participation
     runs-on: ubuntu-latest
 
     steps:
@@ -13,11 +13,15 @@ jobs:
         run: |
           cd 5.Conteneurs
           bash .scripts/run.sh
+      - shell: bash
+        run: |
+          cd 6.kuron
+          bash .scripts/run.sh
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Correction Chapitre 5.Conteneurs" -a
+          git commit -m "Vérification de la participation" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
