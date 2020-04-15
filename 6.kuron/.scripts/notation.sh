@@ -32,9 +32,10 @@ i=1
 
 for id in "${ETUDIANTS[@]}"
 do
-   FILE=${id}/kuron-deployment-service.yaml
+   REP=${id}
+   FILE=${REP}/kuron-deployment-service.yaml
    OK="| ${i} | [${id}](../${FILE}) | [:heavy_check_mark:] |"
-   KO="| ${i} | [${id}](../${FILE}) | [:x:]                |"
+   KO="| ${i} | [${id}](../${REP}) | [:x:]                |"
    if [ -f "$FILE" ]; then
        echo ${OK}
    else
