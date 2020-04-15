@@ -37,7 +37,7 @@ Assures toi d'avoir positionner tes identifiants `google`
 * avec Powershell
 
 ```
-PS > $GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json"
+PS > $env:GOOGLE_APPLICATION_CREDENTIALS="$env:USERPROFILE\.gcp\b300098957-a2662a9bd338.json"
 ```
 
 avec gitbash
