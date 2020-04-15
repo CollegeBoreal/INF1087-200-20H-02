@@ -6,18 +6,18 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
+- [x ] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ ] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
+- [x ] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
       * incluant le fichier `README.md` 
 
 
 `$ cp ./README.md `:id:` `
 
-- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Créer une machine virtuelle dans le cloud
 
@@ -27,7 +27,7 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
-- [ ] Créer une machine virtuelle avec docker machine
+- [X] Créer une machine virtuelle avec docker machine
 
 ```
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
@@ -35,27 +35,70 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
-- [ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
+- [x] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
 
-- [ ] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+- [x] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
-- [ ] Décrire la configuration du `firewall`
+- [x] Décrire la configuration du `firewall`
+
+'''
+             :bulb: https://cloud.google.com/sdk/gcloud/reference/compute/firewall-rules/create
+              
+               $ gcloud compute firewall-rules create MY-RULE --allow tcp:80,icmp
+             
+                  gcloud compute firewall-rules create cb-gcp-test1 --action allow \
+                                                                    --rules tcp:80,icpm
+                               
+ '''
+ ![](image/allowfirl.png )
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
-- [ ] Que fait l'application?
+- [x] Que fait l'application?
+              
+- [x] Quel est son adresse IP?
+ '''                   
+            http://34.66.40.184/wp-admin/ 
+ '''
+ 
+  ![](image/wrodpress1.png  )
 
-- [ ] Quel est son adresse IP?
-
-- [ ] Quel port utilisé pour y accéder?
+- [x] Quel port utilisé pour y accéder?
 
 ## :star: Autres commentaires utiles à donner
 
-- [ ] Commentaires
+- [X] Commentaires 
+'''
+             https://cloud.google.com/compute/docs/reference/rest/v1/firewalls
+             https://www.terraform.io/docs/providers/google/r/compute_firewall.html
+
+
+        To get more information about Firewall, see: API
+                    resource "google_compute_firewall" "default" {
+                    name    = "test-firewall"
+                           network = google_compute_network.default.name
+
+                     allow {
+                         protocol = "icmp"
+                        }
+
+                     allow {
+                          protocol = "tcp"
+                          ports    = ["80", "8080", "1000-2000"]
+                           }
+
+                           source_tags = ["web"]
+                           }
+
+                            resource "google_compute_network" "default" {
+                                                 name = "test-network"
+                            }
+
+''''
 
 [Participation](Participation.md)
 

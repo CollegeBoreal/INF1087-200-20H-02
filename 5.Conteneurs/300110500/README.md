@@ -27,11 +27,17 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
-- [✔ ] Créer une machine virtuelle avec docker machine
-
-$ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
+- [✔ ] Vérifier que vos identifiants cloud sont install`
 ```
- docker-machine create --driver google --google-project bold-ally-272914 ma-virtuelle-machine
+$ ~/.gcp/b300110500-54dd5d2a1258.json
+```
+- [✔ ] Ajouter la variable d'identifiants à son Environement
+```
+$  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json`
+```
+- [✔ ] Créer une machine virtuelle avec docker machine
+```
+$ docker-machine create --driver google --google-project  ma-virtuelle-machine
 Running pre-create checks...
 (ma-virtuelle-machine) Check that the project exists
 (ma-virtuelle-machine) Check if the instance already exists
@@ -90,19 +96,44 @@ Creating gcp_pma_1   ... done
 Creating gcp_wpcli_1 ... done
 ```
 ## :ab: Vérifier que l'application marche
-
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
-
-- [✔ ] Décrire la configuration du `firewall`
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
 - [✔ ] Que fait l'application?
+```
+ WordPress est un systeme de gestion de contenu (SGC ou content management system (CMS) en anglais) gratuit,
+ libre et open-source. 
+Les fonctionnalités de WordPress lui permettent de creer et gérer differents types de sites Web : 
+site vitrine, site de vente en ligne, site applicatif, blogs, ou encore portfolio.
+```
+- [✔ ] Quel est son adresse IP?`
+ip address 35.223.212.123
 
-- [✔ ] Quel est son adresse IP?
+http://35.223.212.123/wp-admin/
 
+- [✔ ] MYSQL et PHP  admin
+
+ http://35.223.212.123:8080
+ 
+- [✔ ] Décrire la configuration du `firewall` 
+
+Pour configurer le firewall:
+- dans la console google cliquer sur computer engine 
+
+- fixer le  docker-machine et appliquer les regles de pare-feu
+
+![image](fire1.PNG)
+
+- dans l'onglet tcp ajouter le port80 et 8080
+- puis cocher http, https et saugevarder
+
+  ![image](fire2.PNG)
 - [✔ ] Quel port utilisé pour y accéder?
-
+````
+Port tcp: 8080
+````
+                    
 ## :star: Autres commentaires utiles à donner
 
 - [ ] Commentaires
