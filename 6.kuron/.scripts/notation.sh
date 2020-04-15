@@ -22,7 +22,7 @@ echo "| :x:                | Projet inexistant             |"
 
 
 echo " "
-echo "## Fichier .env pour docker-compose"
+echo "## Fichier kuron-deployment-service.yaml pour kubectl"
 echo " "
 echo "|:hash:| Boréal :id:                | Présence         |"
 echo "|------|----------------------------|------------------|"
