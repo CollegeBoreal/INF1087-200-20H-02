@@ -190,8 +190,15 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 :bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-d4d9l
+(base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec kuron-deployment-8bf4f7f9f-22nn8 -- curl -s httpp://10.32.5.27:8080
+```
+
+```
+(base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec kuron-deployment-8bf4f7f9f-rzfd2 -- curl -s httpp://10.32.5.27:8080
+```
+
+```
+(base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec kuron-deployment-8bf4f7f9f-xm6v6 -- curl -s httpp://10.32.5.27:8080
 ```
 
 ```
@@ -200,24 +207,22 @@ Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
 ```
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
+(base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec kuron-deployment-8bf4f7f9f-22nn8 -- curl -s httpp://10.32.0.1:8080
 ```
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
+(base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec kuron-deployment-8bf4f7f9f-rzfd2 -- curl -s httpp://10.32.0.1:8080
 ```
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-xw4gz
+(base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec kuron-deployment-8bf4f7f9f-xm6v6 -- curl -s httpp://10.32.0.1:8080
 ```
 
 - [ ] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
 
 ```
-$ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-5hm4n -- /bin/bash
+(base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-22nn8 -- /bin/bash
+root@kuron-deployment-8bf4f7f9f-22nn8:/#
 ```
 
 KiB Mem:   1732772
