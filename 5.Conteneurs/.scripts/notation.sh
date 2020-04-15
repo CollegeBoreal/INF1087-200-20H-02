@@ -36,7 +36,7 @@ do
    FILE2=${id}/docker-compose.yml
    OK="| ${i} | [${id}](../${FILE}) | [:heavy_check_mark:] |"
    OK2="| ${i} | [${id}](../${FILE2}) | [:heavy_check_mark:] |"
-   KO="| ${i} | [${id}](../)         | [:x:]                |"
+   KO="| ${i} | [${id}](../${id})         | [:x:]                |"
    if [ -f "$FILE" ]; then
        echo ${OK}
    else
