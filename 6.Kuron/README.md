@@ -25,11 +25,13 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json
 
 ```
 $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
-                        --machine-type "g1-small" --image-type "COS" --disk-type "pd-standard" --disk-size "30" \
                         --num-nodes "3" --release-channel "rapid" \
-                        --no-enable-stackdriver-kubernetes --no-enable-master-authorized-networks --no-enable-basic-auth \
-                        --enable-ip-alias \                        
-                        --addons HorizontalPodAutoscaling,HttpLoadBalancing --enable-autoupgrade --enable-autorepair
+                        --machine-type "g1-small" --image-type "COS" \
+                        --disk-type "pd-standard" --disk-size "30" \
+                        --no-enable-stackdriver-kubernetes --no-enable-basic-auth \        
+                        --no-enable-master-authorized-networks \        
+                        --addons HorizontalPodAutoscaling,HttpLoadBalancing \
+                        --enable-autoupgrade --enable-autorepair --enable-ip-alias                
 ```
 
 :round_pushpin: Assurez vous d'activer votre context avec `kubectl`, vérifiez l'étoile
