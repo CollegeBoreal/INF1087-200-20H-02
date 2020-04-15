@@ -122,11 +122,12 @@ http://35.223.212.123/wp-admin/
 Pour configurer le firewall:
 - dans la cinsole google cliquer dans computer engine 
 - cocker docker-machine
+![image](fire.PNG)
 - dans l'onglet tcp ajouter le port 8080
 - puis cocher https
 ```
 
-![image](fire.PNG) | ![image](fire2.PNG)
+  ![image](fire2.PNG)
 - [✔ ] Quel port utilisé pour y accéder?
 ````
 Port tcp: 8080
