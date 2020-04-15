@@ -35,7 +35,8 @@ Ajouter la variable d'identifiants à son Environement
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
-- [ ] Créer une machine virtuelle avec docker machine
+- [x] Créer une machine virtuelle avec docker machine
+
 docker-machine create --driver google --google-project b300104524 cb-gcp-test
 
 ```
