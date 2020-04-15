@@ -23,11 +23,13 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 - [x] Vérifier que vos identifiants `cloud` sont installés
 
+```
  ~/.gcp/b300104524-38d76c1cec7c.json
 ```
 
 Ajouter la variable d'identifiants à son Environement
 
+```
  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300104524-38d76c1cec7c.json"
 ```
 
@@ -37,6 +39,7 @@ Ajouter la variable d'identifiants à son Environement
 
 - [x] Créer une machine virtuelle avec docker machine
 
+```
 $docker-machine create --driver google --google-project b300104524 cb-gcp-test
 ```
 
