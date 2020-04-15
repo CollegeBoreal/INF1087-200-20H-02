@@ -1,12 +1,12 @@
 const http = require('http');
 const os = require('os');
 
-console.log("Kubia server starting...");
+console.log("Démarrage du serveur Kuron...");
 
 var handler = function(request, response) {
-  console.log("Received request from " + request.connection.remoteAddress);
+  console.log("Requête reçue de " + request.connection.remoteAddress);
   response.writeHead(200);
-  response.end("You've hit " + os.hostname() + "\n");
+  response.end("Tu as touché " + os.hostname() + "\n");
 };
 
 var www = http.createServer(handler);
