@@ -125,7 +125,7 @@ Pour configurer le firewall:
 
 ![image](fire1.PNG)
 
-- dans l'onglet tcp ajouter le port 8080
+- dans l'onglet tcp ajouter le port80 et 8080
 - puis cocher http, https et saugevarder
 
   ![image](fire2.PNG)
