@@ -89,10 +89,10 @@ gke-kuron-default-pool-1e3feddf-p2j8   Ready    <none>   2m32s   v1.16.8-gke.8
 
 Les applications ou `pod` sont des conteneurs où tournent l'application, dans notre cas un serveur `node` nous donnant le nom du conteneur.
 
-- [x] Utilise le fichier `kuron-deployment.yml` pour déployer tes `pods`
+- [x] Utilise le fichier `kuron-deployment.yaml` pour déployer tes `pods`
 
 ```
-$ kubectl apply -f kuron-deployment.yml 
+$ kubectl apply -f kuron-deployment.yaml 
 ```
 
 - [x] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
@@ -109,10 +109,10 @@ kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
 
 Le service permet la publication des ports vers l'extérieur. Le port que nous allons utiliser et le port `8080`
 
-- [ ] Utilise le fichier `kuron-deployment-service.yml` pour ouvrir les `ports`
+- [ ] Utilise le fichier `kuron-deployment-service.yaml` pour ouvrir les `ports`
 
 ```
-$ kubectl apply -f kuron-deployment-service.yml 
+$ kubectl apply -f kuron-deployment-service.yaml 
 ```
 
 :round_pushpin: Vérifie ton service et note l'adresse IP externe et le port d'accès
