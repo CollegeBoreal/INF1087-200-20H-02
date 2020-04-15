@@ -109,17 +109,38 @@ http://35.222.127.228:8080/ phpmyadmin
 
 ### *Selectionez la mahine vertuelle puis cliquer sur Afficher les details du réseaux
 
+<img src="image01.PNG"></img>
+
+
+### *Cliquez sur Regles de pare-feu et choisissez la 1er regle sous le nom de docker-machine puis cliquer sur Modifier
+
+<img src="image02.PNG"></img>
+
+### *Pour Protocoles et ports, choisissez Protocoles et ports spécifiés et saisissez tcp: 8080,3306 dans le champ associé, où :
+
+- 8080 est le port utilisé par WordPress.
+- 3306 est le port utilisé par phpMyAdmin.
+
+<img src="image04.PNG"></img>
+
+
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
-- [ ] Que fait l'application?
+- [] Que fait l'application?
 
-- [ ] Quel est son adresse IP?
+- [x] Quel est son adresse IP?
 
-- [ ] Quel port utilisé pour y accéder?
+```
+35.222.127.228
+```
+- [x] Quel port utilisé pour y accéder?
 
+```
+Port tcp 8080 
+```
 ## :star: Autres commentaires utiles à donner
 
-- [ ] Commentaires
+- [x] Commentaires
 
 [Participation](Participation.md)
 
