@@ -37,10 +37,8 @@ Ajouter la variable d'identifiants à son Environement
 
 - [x] Créer une machine virtuelle avec docker machine
 
-docker-machine create --driver google --google-project b300104524 cb-gcp-test
-
 ```
-$ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
+$docker-machine create --driver google --google-project b300104524 cb-gcp-test
 ```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
