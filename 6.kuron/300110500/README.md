@@ -27,6 +27,7 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 ## :star: Prérequis
 
+
 - [✔ ] Compte GCP
 
 Assures toi d'avoir ton compte sur https://console.cloud.google.com/
