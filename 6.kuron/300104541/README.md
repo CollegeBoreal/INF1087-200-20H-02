@@ -169,10 +169,11 @@ kuron-deployment-service   LoadBalancer   10.32.5.27   35.192.145.202   8080:314
 - [ ] Liste tes `pods`
 
 ```
-$ kubectl get pods                                               NAME                               READY   STATUS    RESTARTS   AGE
+$ kubectl get pods
+NAME                               READY   STATUS    RESTARTS   AGE
 kuron-deployment-8bf4f7f9f-22nn8   1/1     Running   0          61m
 kuron-deployment-8bf4f7f9f-rzfd2   1/1     Running   0          61m
-kuron-deployment-8bf4f7f9f-xm6v6   1/1     Running   0          61m              
+kuron-deployment-8bf4f7f9f-xm6v6   1/1     Running   0          61m
 
 ```
 
