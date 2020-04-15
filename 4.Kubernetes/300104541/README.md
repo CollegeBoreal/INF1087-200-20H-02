@@ -299,19 +299,64 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/300108234-80946978cdc8.json"
 ```
 $ docker-machine create --driver google --google-project focal-set-273615 cb-gcp-test
 
-- [ ]  Créer son premier cluster Kubernetes avec GCP
+- [x]  Créer son premier cluster Kubernetes avec GCP
 
-<<<<<<< HEAD
+```
+C:\Program Files (x86)\Google\Cloud SDK>gcloud container clusters create kubia --num-nodes 3 --machine-type f1-micro --zone "us-central1-a"
+WARNING: Currently VPC-native is not the default mode during cluster creation. In the future, this will become the default mode and can be disabled using `--no-enable-ip-alias` flag. Use `--[no-]enable-ip-alias` flag to suppress this warning.
+WARNING: Newly created clusters and node-pools will have node auto-upgrade enabled by default. This can be disabled using the `--no-enable-autoupgrade` flag.
+WARNING: Starting with version 1.18, clusters will have shielded GKE nodes by default.
+WARNING: Your Pod address range (`--cluster-ipv4-cidr`) can accommodate at most 1008 node(s).
+This will enable the autorepair feature for nodes. Please see https://cloud.google.com/kubernetes-engine/docs/node-auto-repair for more information on node autorepairs.
+Creating cluster kubia in us-central1-a... Cluster is being health-checked (master is healthy)...done.
+Created [https://container.googleapis.com/v1/projects/focal-set-273615/zones/us-central1-a/clusters/kubia].
+To inspect the contents of your cluster, go to: https://console.cloud.google.com/kubernetes/workload_/gcloud/us-central1-a/kubia?project=focal-set-273615
+kubeconfig entry generated for kubia.
+NAME   LOCATION       MASTER_VERSION  MASTER_IP      MACHINE_TYPE  NODE_VERSION    NUM_NODES  STATUS
+kubia  us-central1-a  1.14.10-gke.27  35.184.154.61  f1-micro      1.14.10-gke.27  3          RUNNING
+
+
+Updates are available for some Cloud SDK components.  To install them,
+please run:
+  $ gcloud components update
+  
+```
+
 ## :b: kubectl Avec [GCP](Google Cloud Platform)
 
 https://www.linkedin.com/learning/l-essentiel-de-kubernetes/creer-son-premier-pod?u=56968449
 
 ### :star: Taches
 
-- [ ]  Créer son premier pod
+- [x]  Créer son premier pod
 
+```
+$ mkdir Romuald
+$ cd Romuald/
+```
+* Créer un ficher de specification dans cette exemple c'est pour lancer un serveur web
+```
+$ nano inspect.yml
+```
 
+```
+$ cat inspect.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inspect
+spec:
+  containers:
+  - name: inspect
+    image: alpine:3.10
+```
 
+* Creation du 1 er Pod en applicant les specification du fichier web.yml
+
+``` 
+$  kubectl apply -f inspect.yml
+pod/inspect created
+```
 
 ### Référence GCP
 
@@ -324,7 +369,7 @@ https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/4.Cloud/
 https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/3.Orchestration/1.Kubernetes
 
 
-=======
+
 >>>>>>> bf16a7557d1cd62ca8b27053ed722413e57281ce
 ## References
 
@@ -339,7 +384,6 @@ https://kube.academy/
 
 https://github.com/GoogleCloudPlatform/microservices-demo
 
-=======
 | [Docker In Action](https://www.manning.com/books/docker-in-action-second-edition) | [Chapitre 1](https://livebook.manning.com/book/kubernetes-in-action/chapter-1) |
 >>>>>>> bf16a7557d1cd62ca8b27053ed722413e57281ce
 
