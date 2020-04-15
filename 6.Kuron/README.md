@@ -160,7 +160,7 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 
 :warning: Remarque le nom du pod retourné change et n'est pas forcément le nom du pod
 
-:bangbang:
+:bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
 
 ```
 $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
