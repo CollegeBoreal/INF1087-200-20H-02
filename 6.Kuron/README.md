@@ -53,7 +53,7 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
                         --enable-autoupgrade --enable-autorepair --enable-ip-alias                
 ```
 
-<img src="images/kuron-cluster.png" width="1155" height="283" > </img>
+<img src="images/Kuron-cluster.png" width=1155 height=283></img>
 
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifiez l'étoile
 
