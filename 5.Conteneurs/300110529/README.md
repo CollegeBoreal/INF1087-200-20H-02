@@ -6,18 +6,18 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
+- [✔] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ ] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
+- [✔] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
       * incluant le fichier `README.md` 
 
 
 `$ cp ./README.md `:id:` `
 
-- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [✔] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Créer une machine virtuelle dans le cloud
 
