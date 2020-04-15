@@ -42,7 +42,7 @@ $ eval $(docker-machine env cb-romeo)
 ```
 $ docker-machine active
 cb-romeo
-```
+
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
@@ -78,7 +78,7 @@ Creating 5conteneurs_db_1 ... done
 Creating 5conteneurs_pma_1 ... done
 Creating 5conteneurs_wp_1  ... done
 Creating 5conteneurs_wpcli_1 ... done
-
+```
 ```
 - Initialiser WordPress
 
