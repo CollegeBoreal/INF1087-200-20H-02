@@ -53,6 +53,20 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
                         --enable-autoupgrade --enable-autorepair --enable-ip-alias                
 ```
 
+:round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifiez l'étoile
+
+```
+$ kubectl config get-contexts
+CURRENT   NAME                          CLUSTER                       AUTHINFO                        NAMESPACE
+*         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
+```
+
+:round_pushpin: Visualise quelques informations sur ta grappe
+
+```
+$ kubectl cluster-info                 
+```
+
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
 - [ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
