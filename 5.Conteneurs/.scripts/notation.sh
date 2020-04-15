@@ -22,7 +22,7 @@ echo "| :x:                | Projet inexistant             |"
 
 
 echo " "
-echo "## Fichier Dump SQL"
+echo "## Fichier .env pour docker-compose"
 echo " "
 echo "|:hash:| Boréal :id:                | Présence         |"
 echo "|------|----------------------------|------------------|"
