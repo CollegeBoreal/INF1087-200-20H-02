@@ -7,11 +7,11 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [x ] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
+- [x] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ x] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
+- [x] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
 
       * incluant le fichier `README.md` 
 
@@ -91,29 +91,57 @@ http://104.198.19.69/wp-admin/
 
 ```
 http://104.198.19.69:8080
-```
 
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
-- [ ] Décrire la configuration du `firewall`
+- [x] Décrire la configuration du `firewall`
+
+### *Selectionez la mahine vertuelle puis cliquer sur Afficher les details du réseaux
+
+![image](images5.PNG)
+
+### *Cliquez sur Regles de pare-feu et choisissez la 1er regle sous le nom de docker-machine puis cliquer sur Modifier 
+
+![image](images4.PNG)
+
+### *Pour Protocoles et ports, choisissez Protocoles et ports spécifiés et saisissez tcp: 8080,3306 dans le champ associé, où :
+
+- 8080 est le port utilisé par WordPress.
+- 3306 est le port utilisé par phpMyAdmin.
+
+![image](images3.PNG)
+
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
+ 
 
-- [ ] Que fait l'application?
+- [x] Que fait l'application?
 
-- [ ] Quel est son adresse IP?
+```
+Un site web WordPress sous nom de "Tech Tutoriels", Mon 1er tutoreil sera sur les étapes à suivre pour installer et configurer Samba sur Ubuntu
+```
 
-- [ ] Quel port utilisé pour y accéder?
+- [x] Quel est son adresse IP?
+
+```
+34.67.12.74
+```
+
+- [x] Quel port utilisé pour y accéder?
+
+```
+Port tcp 8080 
+```
 
 ## :star: Autres commentaires utiles à donner
 
-- [ ] Commentaires
+- [X] Commentaires
 
 [Participation](Participation.md)
 
 # Références
 
 https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/2.VM/1.Docker
->>>>>>> bf16a7557d1cd62ca8b27053ed722413e57281ce
+
