@@ -8,7 +8,7 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 - [ ] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
 
-`$ mkdir ` :id:
+`$ mkdir `300104541` `
 
 - [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
 
@@ -17,16 +17,16 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
       * incluant le répertoire `.src` 
 
 
-`$ cp ./README.md `:id:` `
+`$ cp ./README.md `300104541` `
 
-`$ cp -r .src `:id:` `
+`$ cp -r .src `300104541` `
 
-- [ ] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
 
 
 ## :star: Prérequis
 
-- [ ] Compte GCP
+- [x] Compte GCP
 
 Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 
@@ -35,22 +35,32 @@ Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 Assures toi d'avoir positionner tes identifiants `google`
 
 ```
-$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json"
+$env:GOOGLE_APPLICATION_CREDENTIALS="$env:USERPROFILE\.gcp\/300104541-80946978cdc8.json"
 ```
 
 ## :a: Créer sa grappe `kuron`
 
-- [ ] Crée ta grappe `kuron` avec 3 VM (noeuds)
+- [x] Crée ta grappe `kuron` avec 3 VM (noeuds)
 
 ```
-$ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
-                        --num-nodes "3" --release-channel "rapid" \
-                        --machine-type "g1-small" --image-type "COS" \
-                        --disk-type "pd-standard" --disk-size "30" \
-                        --no-enable-stackdriver-kubernetes --no-enable-basic-auth \
-                        --no-enable-master-authorized-networks \
-                        --addons HorizontalPodAutoscaling,HttpLoadBalancing \
-                        --enable-autoupgrade --enable-autorepair --enable-ip-alias                
+gcloud beta container clusters create "kuron" --zone "us-central1-a" `
+>>                         --num-nodes "3" --release-channel "rapid" `
+>>                         --machine-type "g1-small" --image-type "COS" `
+>>                         --disk-type "pd-standard" --disk-size "30" `
+>>                         --no-enable-stackdriver-kubernetes --no-enable-basic-auth `
+>>                         --no-enable-master-authorized-networks `
+>>                         --addons HorizontalPodAutoscaling,HttpLoadBalancing `
+>>                         --enable-autoupgrade --enable-autorepair --enable-ip-alias
+WARNING: Starting with version 1.18, clusters will have shielded GKE nodes by default.
+WARNING: The Pod address range limits the maximum size of the cluster. Please refer to https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr to learn how to optimize IP address allocation.
+This will enable the autorepair feature for nodes. Please see https://cloud.google.com/kubernetes-engine/docs/node-auto-repair for more information on node autorepairs.
+Creating cluster kuron in us-central1-a... Cluster is being health-checked (master is healthy)...done.
+Created [https://container.googleapis.com/v1beta1/projects/focal-set-273615/zones/us-central1-a/clusters/kuron].
+To inspect the contents of your cluster, go to: https://console.cloud.google.com/kubernetes/workload_/gcloud/us-central1-a/kuron?project=focal-set-273615
+kubeconfig entry generated for kuron.
+NAME   LOCATION       MASTER_VERSION  MASTER_IP     MACHINE_TYPE  NODE_VERSION  NUM_NODES  STATUS
+kuron  us-central1-a  1.16.8-gke.8    34.71.217.85  g1-small      1.16.8-gke.8  3          RUNNING
+           
 ```
 
 ![image](images/Kuron-cluster.png)
@@ -59,20 +69,28 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
 
 ```
 $ kubectl config get-contexts
-CURRENT   NAME                          CLUSTER                       AUTHINFO                        NAMESPACE
-*         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
+CURRENT   NAME                                       CLUSTER                                    AUTHINFO                                   NAMESPACE
+          gke_focal-set-273615_us-central1-a_kubia   gke_focal-set-273615_us-central1-a_kubia   gke_focal-set-273615_us-central1-a_kubia
+*         gke_focal-set-273615_us-central1-a_kuron   gke_focal-set-273615_us-central1-a_kuron   gke_focal-set-273615_us-central1-a_kuron  
 ```
 
 * Changes de contexte si ce n'est pas le cas, exemple
 
 ```
 $ kubectl config set-context gke_pid_us-central1-a_kuron
+Context "gke_pid_us-central1-a_kuron" created.
 ```
 
 :round_pushpin: Visualise quelques informations sur ta grappe
 
 ```
-$ kubectl cluster-info                 
+$ kubectl cluster-info 
+Kubernetes master is running at https://34.71.217.85
+GLBCDefaultBackend is running at https://34.71.217.85/api/v1/namespaces/kube-system/services/default-http-backend:http/proxy
+KubeDNS is running at https://34.71.217.85/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+Metrics-server is running at https://34.71.217.85/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
 
 - [ ] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
@@ -80,9 +98,9 @@ $ kubectl cluster-info
 ```
 % kubectl get nodes
 NAME                                   STATUS   ROLES    AGE     VERSION
-gke-kuron-default-pool-1e3feddf-8s94   Ready    <none>   2m32s   v1.16.8-gke.8
-gke-kuron-default-pool-1e3feddf-c4tn   Ready    <none>   2m32s   v1.16.8-gke.8
-gke-kuron-default-pool-1e3feddf-p2j8   Ready    <none>   2m32s   v1.16.8-gke.8
+gke-kuron-default-pool-4bea9e21-5ssx   Ready    <none>   4m38s   v1.16.8-gke.8
+gke-kuron-default-pool-4bea9e21-jkjc   Ready    <none>   4m38s   v1.16.8-gke.8
+gke-kuron-default-pool-4bea9e21-x2r5   Ready    <none>   4m38s   v1.16.8-gke.8
 ```
 
 ## :b: Déploie ton application `kuron`
@@ -97,16 +115,19 @@ Les applications ou `pod` sont des conteneurs où tournent l'application, dans n
 
 ```
 $ kubectl apply -f kuron-deployment.yaml 
+(base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl apply -f kuron-deployment-service.yaml
+service/kuron-deployment-service created
 ```
 
 - [ ] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
 
 ```
-$ kubectl get pods                                                              
+$ kubectl get pods  
 NAME                               READY   STATUS    RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
+kuron-deployment-8bf4f7f9f-22nn8   1/1     Running   0          61m
+kuron-deployment-8bf4f7f9f-rzfd2   1/1     Running   0          61m
+kuron-deployment-8bf4f7f9f-xm6v6   1/1     Running   0          61m
+
 ```
 
 ## :ab: Déploie le service `kuron-deployment-service`
@@ -123,14 +144,14 @@ $ kubectl apply -f kuron-deployment-service.yaml
 
 ```
 $ kubectl get services                                                          
-NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)          AGE
-kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP          25m
-kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
+NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP   PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1    <none>        443/TCP          78m
+kuron-deployment-service   LoadBalancer   10.32.5.27   <pending>     8080:31441/TCP   23s
 ```
 
 - [ ] Publie ton site Internet avec les informations du service
 
-http://34.70.183.28:8080
+http://104.198.29.69:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
