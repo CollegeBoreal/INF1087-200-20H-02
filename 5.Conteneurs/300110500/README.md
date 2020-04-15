@@ -110,6 +110,7 @@ Les fonctionnalités de WordPress lui permettent de creer et gérer differents t
 site vitrine, site de vente en ligne, site applicatif, blogs, ou encore portfolio.
 ```
 - [✔ ] Quel est son adresse IP?
+ip address 35.223.212.123
 
 http://35.223.212.123/wp-admin/
 
