@@ -37,8 +37,6 @@ Ajouter la variable d'identifiants à son Environement
 
 - [x] Créer une machine virtuelle avec docker machine
 
-
-```
 $docker-machine create --driver google --google-project b300104524 cb-gcp-test
 ```
 
