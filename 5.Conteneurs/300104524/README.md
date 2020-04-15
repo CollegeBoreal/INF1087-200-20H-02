@@ -73,6 +73,9 @@ To see how to connect your Docker Client to the Docker Engine running on this vi
 ```
 $ eval $(docker-machine env cb-gcp-test)
 ```
+
+
+<img src="image07.PNG"></img>
 ```
 $ docker-machine active
 ```
