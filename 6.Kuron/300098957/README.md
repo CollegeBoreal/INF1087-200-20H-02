@@ -87,6 +87,10 @@ gke-kuron-default-pool-1e3feddf-p2j8   Ready    <none>   2m32s   v1.16.8-gke.8
 
 ## :b: Déploie ton application `kuron`
 
+https://hub.docker.com/r/collegeboreal/kuron
+
+Nous allons utiliser l'image `collegeboreal/kuron` pour créer notre application. Tu as un lien ci-dessus pour plus de détail pour construire l'image.
+
 Les applications ou `pod` sont des conteneurs où tournent l'application, dans notre cas un serveur `node` nous donnant le nom du conteneur.
 
 - [x] Utilise le fichier `kuron-deployment.yaml` pour déployer tes `pods`
