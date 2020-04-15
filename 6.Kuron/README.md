@@ -2,20 +2,24 @@
 
 Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GCP, Azure]
 
-:closed_book: Copiez le `README.md` dans votre répertoire et cocher les sections `- [x]` au fur et à mesure de votre progression.
+:closed_book: Copiez le `README.md` et le répertoire `.src` dans votre répertoire et cocher les sections `- [x]` au fur et à mesure de votre progression.
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `5.Conteneurs` Créer un répertoire avec comme nom, votre :id:
+- [ ] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ ] Copier le fichier se trouvant dans le repretoire `.` dans votre répertoire
+- [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire
 
       * incluant le fichier `README.md` 
 
+      * incluant le répertoire `.src` 
+
 
 `$ cp ./README.md `:id:` `
+
+`$ cp -r .src `:id:` `
 
 - [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
