@@ -195,6 +195,17 @@ $ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-5hm4n -- /bin/bash
 
 KiB Mem:   1732772
 
+
+## :x: Après la fin du cours, supprime ta grappe (attendre la note finale)
+
+1. soit par la console `Google`
+
+1. soit par la commande
+```
+$ gcloud container clusters delete kuron --zone "us-central1-a"
+111
+
+
 [Participation](Participation.md)
 
 # Références
