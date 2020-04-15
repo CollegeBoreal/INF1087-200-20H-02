@@ -75,11 +75,23 @@ $ kubectl config set-context gke_pid_us-central1-a_kuron
 $ kubectl cluster-info                 
 ```
 
-## :b: Créer une application de votre choix (docker ou docker compose)
+## :b: Déploie ton application `kuron`
 
-- [ ] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
+- [ ] Utilise le fichier `kuron-deployment.yml` pour déployer tes `pods`
 
-- [ ] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+```
+$ kubectl apply -f kuron-deployment.yml 
+```
+
+- [ ] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
+
+```
+$ kubectl get pods --show-labels
+NAME                               READY   STATUS    RESTARTS   AGE    LABELS
+kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
+kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
+kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          110s   app=kuron,pod-template-hash=8bf4f7f9f
+```
 
 ## :ab: Vérifier que l'application marche
 
