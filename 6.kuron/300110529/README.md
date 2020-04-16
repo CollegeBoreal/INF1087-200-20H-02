@@ -158,8 +158,8 @@ kuron-deployment-8bf4f7f9f-6bbkA   1/1     Running   0          10m
 
 * Note le nom de tes trois `pods` ou conteneurs,
 ```
-kuron-deployment-8bf4f7f9f-53XuN
-kuron-deployment-8bf4f7f9f-7zM5t
+kuron-deployment-8bf4f7f9f-53xun
+kuron-deployment-8bf4f7f9f-7zm5t
 kuron-deployment-8bf4f7f9f-6bbkA
 ````
 
@@ -173,18 +173,15 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 :bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-53XuN -- curl -s http://10.32.2.123:8080
-Tu as touché kuron-deployment-8bf4f7f9f-53XuN
+$ kubectl exec kuron-deployment-8bf4f7f9f-53xun -- curl -s http://10.32.2.123:8080
+Tu as touché kuron-deployment-8bf4f7f9f-53xun
 ```
 
 - [X] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
 
 ```
-$ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-53XuN -- /bin/bash
+$ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-53xun -- /bin/bash
 ```
-<img src="k3.JPG"></img>
-
-
 
 ## :x: Après la fin du cours, supprime ta grappe (attendre la note finale)
 
