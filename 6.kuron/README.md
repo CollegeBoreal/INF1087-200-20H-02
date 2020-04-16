@@ -28,7 +28,7 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 - [ ] Compte GCP
 
-Assures toi d'avoir ton compte sur https://console.cloud.google.com/
+Assures toi d'avoir ton compte sur [GCP](https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/4.Cloud/2.Public/4.GCP)
 
 - [ ] Identifiants GCP 
 
