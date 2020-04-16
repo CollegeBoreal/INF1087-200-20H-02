@@ -61,7 +61,7 @@ http://35.223.221.113/wp-admin
 
 ![image](Image/VM1.PNG)
 
-![image](Image/VM5.PNG)
+![image](Image/VM6.PNG)
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
