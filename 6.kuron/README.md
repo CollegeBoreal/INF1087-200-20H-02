@@ -154,7 +154,7 @@ kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237
 
 - [ ] Publie ton site Internet avec les informations du service
 
-http://34.70.183.28:8080
+http://34.71.18.253:8080/
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
