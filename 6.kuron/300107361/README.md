@@ -233,7 +233,7 @@ exit
 ```
 
 
-KiB Mem:   1732772
+`KiB Mem:   1732772`
 
 
 ## :x: Après la fin du cours, supprime ta grappe (attendre la note finale)
@@ -252,8 +252,6 @@ Deleting cluster kuron...done.
 Deleted [https://container.googleapis.com/v1/projects/b300107361-274400/zones/us-central1-a/clusters/kuron].
 ```
 
-
-# [Participation](Participation.md)
 
 # Références
 
