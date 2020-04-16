@@ -211,9 +211,8 @@ Tu as touché kuron-deployment-8bf4f7f9f-rzfd2
 
 ```
 (base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-22nn8 -- /bin/bash
-root@kuron-deployment-8bf4f7f9f-22nn8:/#
+root@kuron-deployment-8bf4f7f9f-22nn8:/# top
 ```
-
 KiB Mem:   1732772
 
 
