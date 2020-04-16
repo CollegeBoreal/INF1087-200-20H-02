@@ -119,7 +119,8 @@ service/kuron-deployment-service created
 
 ```
 :round_pushpin: Vérifie ton service et note l'adresse IP externe et le port d'accès
-```
+
+$ kubectl get services
 
 ```
 
@@ -138,15 +139,13 @@ http://35.239.3.96:8080
 
 - [X] Liste ton `service`
 
-```
-
 $ kubectl get services   
 
 ![image](photo/Kuron5.PNG)
 
 ```
 
-* Note l'adresse IP locale de ton cluster, dans ce cas `...` 
+* Note l'adresse IP locale de ton cluster, dans ce cas `10.32.2.123` 
 
 - [X] Liste tes `pods`
 
