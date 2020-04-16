@@ -139,7 +139,7 @@ kubernetes                 ClusterIP      10.32.0.1     <none>           443/TCP
 kuron-deployment-service   LoadBalancer   10.32.13.96   35.239.109.144   8080:30332/TCP   79m
 ```
 
-* Note l'adresse IP locale de ton cluster, dans ce cas `10.32.13.64` 
+* Note l'adresse IP locale de ton cluster, dans ce cas `35.239.109.144` 
 
 - [x] Liste tes `pods`
 
