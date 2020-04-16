@@ -106,9 +106,9 @@ deployment.apps/kuron-deployment created
 ```
 $ kubectl get pods
 NAME                               READY   STATUS    RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-53xun   1/1     Running   0          5m
-kuron-deployment-8bf4f7f9f-7zm5t   1/1     Running   0          5m
-kuron-deployment-8bf4f7f9f-6bbkA   1/1     Running   0          5m
+kuron-deployment-8bf4f7f9f-53xun   1/1     Running   0          30m
+kuron-deployment-8bf4f7f9f-7zm5t   1/1     Running   0          30m
+kuron-deployment-8bf4f7f9f-6bbkA   1/1     Running   0          30m
 ```
 
 ## :ab: Déploie le service `kuron-deployment-service`
@@ -154,9 +154,9 @@ kuron-deployment-service   LoadBalancer   10.32.2.123   104.198.191.224   8080:3
 ```
 $ kubectl get pods 
 NAME                               READY   STATUS    RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-53xun   1/1     Running   0          10m
-kuron-deployment-8bf4f7f9f-7zm5t   1/1     Running   0          10m
-kuron-deployment-8bf4f7f9f-6bbkA   1/1     Running   0          10m
+kuron-deployment-8bf4f7f9f-53xun   1/1     Running   0          35m
+kuron-deployment-8bf4f7f9f-7zm5t   1/1     Running   0          35m
+kuron-deployment-8bf4f7f9f-6bbkA   1/1     Running   0          35m
 
 ```
 
