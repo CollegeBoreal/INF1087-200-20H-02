@@ -59,7 +59,7 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
  ![](image/allowfirl.png )
  
  
- ## :o get firewall port 
+ ## :o: get firewall port 
  
  ![](image/fir.png)
 
