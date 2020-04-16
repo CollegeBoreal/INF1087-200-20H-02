@@ -61,10 +61,15 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 tcp://34.66.6.203
 
 - [✔] Quel port utilisé pour y accéder?
-
+```
 tcp://34.66.6.203:2376
+```
+```
 8080
+```
+```
 3306
+```
 
 ## :star: Autres commentaires utiles à donner
 
