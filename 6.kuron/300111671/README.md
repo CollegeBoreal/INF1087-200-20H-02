@@ -122,6 +122,7 @@ gke-kuron-default-pool-8f9f121d-cnh9   Ready    <none>   19m   v1.16.8-gke.8
 
 https://hub.docker.com/r/collegeboreal/kuron
 
+![image](Captu.PNG)
 Nous allons utiliser l'image `collegeboreal/kuron` pour créer notre application. Tu as un lien ci-dessus pour plus de détail pour construire l'image.
 
 Les applications ou `pod` sont des conteneurs où tournent l'application, dans notre cas un serveur `node` nous donnant le nom du conteneur.
