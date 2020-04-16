@@ -190,6 +190,7 @@ kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
 kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
 kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
 ```
+![image](t9.PNG)
 
 * Note le nom de tes trois `pods` ou conteneurs, i.e. `kuron-deployment-8bf4f7f9f-5hm4n`, `kuron-deployment-8bf4f7f9f-d4d9l`
 
@@ -226,12 +227,14 @@ Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
 $ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
 Tu as touché kuron-deployment-8bf4f7f9f-xw4gz
 ```
+![image](t7.PNG)
 
 - [ ] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
 
 ```
 $ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-5hm4n -- /bin/bash
 ```
+![image](t8.PNG)
 
 KiB Mem:   1732772
 
