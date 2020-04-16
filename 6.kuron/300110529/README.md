@@ -45,11 +45,23 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110529-427726472c87.json
 - [X] Crée ta grappe `kuron` avec 3 VM (noeuds)
 
 * avec Powershell
+```
+gcloud beta container clusters create "kuron" --zone "us-central1-a" `
+                        --num-nodes "3" --release-channel "rapid" `
+                        --machine-type "g1-small" --image-type "COS" `
+                        --disk-type "pd-standard" --disk-size "30" `
+                        --no-enable-stackdriver-kubernetes --no-enable-basic-auth `
+                        --no-enable-master-authorized-networks `
+                        --addons HorizontalPodAutoscaling,HttpLoadBalancing `
+                        --enable-autoupgrade --enable-autorepair --enable-ip-alias
+```
 
 ![image](photo/Kuron.PNG)
 
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
-
+```
+kubectl config get-contexts
+```
 ![image](photo/kuron1.PNG)
 
 * Changes de contexte si ce n'est pas le cas, exemple
