@@ -69,7 +69,7 @@ kuron  us-central1-a  1.16.8-gke.8    34.69.41.100  g1-small      1.16.8-gke.8  
 
 
 
-![images](cluster2.JPG)
+![images](cluster.JPG)
 
 
 
