@@ -198,7 +198,9 @@ $ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-pw5nq -- /bin/bash
 ```
 root@kuron-deployment-8bf4f7f9f-pw5nq:/# Top
 ```
+
 <img src="kuron13.PNG"></img>
+
 
 ## :x: Après la fin du cours, supprime ta grappe (attendre la note finale)
 
