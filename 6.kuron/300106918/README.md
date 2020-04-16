@@ -134,10 +134,11 @@ $ kubectl get pods
       
 - [ ] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
 ```
-$ winpty kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-68v8k -- /bin/bash
+$  winpty kubectl exec --stdin  --tty kuron-deployment-8bf4f7f9f-gkxgh -- bash
+
 ```
 
-KiB Mem:   1732772
+![](image/pods.png)
 
 
 ## :x: Après la fin du cours, supprime ta grappe (attendre la note finale)
