@@ -71,7 +71,7 @@ $ kubectl cluster-info
 - [X] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
 
 ```
-% kubectl get nodes
+kubectl get nodes
 NAME                                   STATUS   ROLES    AGE     VERSION
 gke-kuron-default-pool-87718f92-pw96   Ready    <none>   6m13s   v1.16.8-gke.8
 gke-kuron-default-pool-87718f92-qt15   Ready    <none>   6m13s   v1.16.8-gke.8
