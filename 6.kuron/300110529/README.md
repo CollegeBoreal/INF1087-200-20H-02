@@ -138,12 +138,66 @@ http://35.239.3.96:8080
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
 - [X] Liste ton `service`
-
+```
 $ kubectl get services   
-
+```
 ![image](photo/Kuron5.PNG)
+ 
+ * Note l'adresse IP locale de ton cluster, dans ce cas `10.32.2.123` 
+
+- [X] Liste tes `pods`
+
+```
+$ kubectl get pods 
+NAME                               READY   STATUS    RESTARTS   AGE
+kuron-deployment-8bf4f7f9f-5n5m9   1/1     Running   0          7m6s
+kuron-deployment-8bf4f7f9f-766bp   1/1     Running   0          7m6s
+kuron-deployment-8bf4f7f9f-cdfpv   1/1     Running   0          7m6s
 
 ```
 
-* Note l'adresse IP locale de ton cluster, dans ce cas `10.32.2.123` 
+* Note le nom de tes trois `pods` ou conteneurs,
+```
+kuron-deployment-8bf4f7f9f-5n5m9
+kuron-deployment-8bf4f7f9f-766bp
+kuron-deployment-8bf4f7f9f-cdfpv
+````
 
+
+- [X] Tapes les commandes ci-dessous en changeant le nom des pods et l'adresse IP locale.
+
+Le programme javascript qui tourne dans les pods récupère le nom du conteneur dans ce cas le nom du pod.
+
+:warning: Remarque le nom du pod retourné change et n'est pas forcément le nom du pod
+
+:bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
+
+```
+$ kubectl exec kuron-deployment-8bf4f7f9f-5n5m9 -- curl -s http://10.32.4.98:8080
+Tu as touché kuron-deployment-8bf4f7f9f-5n5m9
+```
+
+- [X] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
+
+```
+$ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-5n5m9 -- /bin/bash
+```
+<img src="k3.JPG"></img>
+
+
+
+## :x: Après la fin du cours, supprime ta grappe (attendre la note finale)
+
+1. soit par la console [`Google`](https://console.cloud.google.com/)
+
+1. soit par la commande
+```
+$ gcloud container clusters delete kuron --zone "us-central1-a"
+```
+
+
+# Références
+
+https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/2.VM/1.Docker
+
+https://github.com/CollegeBoreal/INF1087-200-20H-02/tree/master/K.Kubernetes
