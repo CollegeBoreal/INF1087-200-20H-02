@@ -126,7 +126,7 @@ $ kubectl get services
 
 - [x] Publie ton site Internet avec les informations du service
 
-http://10.32.13.96:8080
+http://35.239.109.144:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
@@ -139,7 +139,7 @@ kubernetes                 ClusterIP      10.32.0.1     <none>           443/TCP
 kuron-deployment-service   LoadBalancer   10.32.13.96   35.239.109.144   8080:30332/TCP   79m
 ```
 
-* Note l'adresse IP locale de ton cluster, dans ce cas `35.239.109.144` 
+* Note l'adresse IP locale de ton cluster, dans ce cas `10.32.13.96` 
 
 - [x] Liste tes `pods`
 
