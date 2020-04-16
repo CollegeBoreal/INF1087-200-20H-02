@@ -41,6 +41,17 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 - [✔] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
+- Installer WordPress
+```
+$ docker-compose up --detach
+```
+- Initialiser WordPress
+
+Administrer le site Wordpress
+
+http://35.223.221.113/wp-admin
+
+
 ## :ab: Vérifier que l'application marche
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
