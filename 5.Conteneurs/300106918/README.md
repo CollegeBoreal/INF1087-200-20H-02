@@ -72,7 +72,7 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
             http://34.66.40.184/wp-admin/ 
  '''
  
-  ![](image/wrodpress1.png  )
+  ![](image/wro2.png  )
 
 
 
