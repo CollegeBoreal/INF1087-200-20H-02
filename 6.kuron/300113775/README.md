@@ -67,9 +67,9 @@ kuron  us-central1-a  1.16.8-gke.8    34.69.41.100  g1-small      1.16.8-gke.8  
                           
 ```
 
+![images](cluster.png)
 
 
-![images](cluster.PNG)
 
 
 
@@ -77,7 +77,6 @@ kuron  us-central1-a  1.16.8-gke.8    34.69.41.100  g1-small      1.16.8-gke.8  
 
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
-```
 ```
 
 (base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl config get-contexts
