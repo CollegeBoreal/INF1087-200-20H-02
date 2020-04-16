@@ -141,9 +141,7 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 ```
 ![](image/curon07.png)
 
-
-   
-   ![](image/curon07.png)
+   ![](image/curon08.png)
    
    
    
