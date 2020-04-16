@@ -60,7 +60,7 @@ il s'agit d'un blog sur WordPress
 ```
 Quel est son adresse IP?
 ```
-tcp://34.66.6.203
+34.66.6.203
 ```
 Quel port utilisé pour y accéder?
 ```
