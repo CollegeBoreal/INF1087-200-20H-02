@@ -143,7 +143,7 @@ kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
 kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
 kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
 ```
-
+![image](t4.PNG)
 ## :ab: Déploie le service `kuron-deployment-service`
 
 Le service permet la publication des ports vers l'extérieur. Le port que nous allons utiliser et le port `8080`
