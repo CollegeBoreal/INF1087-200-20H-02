@@ -32,7 +32,7 @@ Assures toi d'avoir ton compte sur [GCP](https://github.com/CollegeBoreal/Tutori
 
 - [ ] Identifiants GCP 
 
-Assures toi d'avoir positionner tes identifiants `google`
+Assures toi d'avoir positionner tes [identifiants `google`](https://github.com/CollegeBoreal/Tutoriels/tree/master/2.Virtualisation/4.Cloud/2.Public/4.GCP#three-configuration-api-env)
 
 * avec Powershell
 
