@@ -101,7 +101,7 @@ $ kubectl apply -f kuron-deployment-service.yaml
 ```
 - [ ] Publie ton site Internet avec les informations du service
 
-http://10.32.13.153:8080
+http://10.80.6.91:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
