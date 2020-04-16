@@ -31,6 +31,8 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 
 ```
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
+
+![image](VM.png)
 ```
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
