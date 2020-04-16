@@ -130,6 +130,7 @@ Le service permet la publication des ports vers l'extérieur. Le port que nous a
 
 ```
 $ kubectl apply -f kuron-deployment-service.yaml 
+service/kuron-deployment-service created
 ```
 
 :round_pushpin: Vérifie ton service et note l'adresse IP externe et le port d'accès
