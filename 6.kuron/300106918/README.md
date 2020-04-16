@@ -59,15 +59,10 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
 ![](image/corun05.png)
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
-```
-
-
-```
 
 $ kubectl config get-contexts
 
 ![](image/curon02.png)
-
 
 ```
 :round_pushpin: Visualise quelques informations sur ta grappe
@@ -77,7 +72,6 @@ $ kubectl cluster-info
 
 ![](image/curon03.png)
 ```
-
 - [ ] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
 
 ```
@@ -88,7 +82,6 @@ $ kubectl cluster-info
 
 $ kubectl apply -f kuron-deployment.yaml 
 ```
-
 - [ ] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
 
 ![](image/curon06.png)
@@ -105,9 +98,7 @@ $ kubectl apply -f kuron-deployment-service.yaml
 
 :round_pushpin: Vérifie ton service et note l'adresse IP externe et le port d'accès
 
-
 ```
-
 - [ ] Publie ton site Internet avec les informations du service
 
 http://10.32.13.153:8080
@@ -124,8 +115,7 @@ $ kubectl get services
 
 - [ ] Liste tes `pods`
 
-```
-                                                         
+```                                                     
 * Note le nom de tes trois `pods` ou conteneurs, i.e. `kuron-deployment-8bf4f7f9f-5hm4n`, `kuron-deployment-8bf4f7f9f-d4d9l`
 - [ ] Tapes les commandes ci-dessous en changeant le nom des pods et l'adresse IP locale.
 
@@ -141,10 +131,8 @@ $ kubectl get pods
 
    ![](image/curon08.png)
    
-   
-   
+      
 - [ ] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
-
 ```
 $ winpty kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-68v8k -- /bin/bash
 ```
