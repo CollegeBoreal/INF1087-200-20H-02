@@ -142,7 +142,7 @@ http://35.239.3.96:8080
 
 $ kubectl get services   
 
-![image](photo/Kuron4.PNG)
+![image](photo/Kuron5.PNG)
 
 ```
 
