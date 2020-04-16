@@ -50,10 +50,7 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110529-427726472c87.json
 
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
-```
-$ kubectl config get-contexts
- *        
-```
+![image](photo/kuron1.PNG)
 
 * Changes de contexte si ce n'est pas le cas, exemple
 
