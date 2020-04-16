@@ -120,18 +120,17 @@ Le service permet la publication des ports vers l'extérieur. Le port que nous a
 ```
 $ kubectl apply -f kuron-deployment-service.yaml 
 service/kuron-deployment-service created
-
 ```
 
+```
 $ kubectl get services
 NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)          AGE
 kubernetes                 ClusterIP      10.32.0.1     <none>        443/TCP          52m
 kuron-deployment-service   LoadBalancer   10.32.2.123   35.239.3.96   8080:30512/TCP   104s
-
 ```
 
 - [X] Publie ton site Internet avec les informations du service
-```
+
 
 http://35.239.3.96:8080
 
