@@ -42,10 +42,10 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 - [✔] La commande `docker`, `docker-compose` utilisée pour lancer l'application
 
-- Installer WordPress
 ```
 $ docker-compose up --detach
 ```
+
 - Initialiser WordPress
 
 Administrer le site Wordpress
