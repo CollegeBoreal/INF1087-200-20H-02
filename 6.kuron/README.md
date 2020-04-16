@@ -1,5 +1,7 @@
 # :six: Kuron (prononcer Couronne)
 
+[Participation](.scripts/Participation.md)
+
 Ce laboratoire permettra de créer une grappe sur le cloud public [GCP]. 
 
 :closed_book: Copiez le `README.md` et le répertoire `.src` dans votre répertoire :id: et cocher les sections `- [x]` au fur et à mesure de votre progression.
