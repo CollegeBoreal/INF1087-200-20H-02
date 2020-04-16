@@ -37,7 +37,7 @@ Assures toi d'avoir positionner tes identifiants `google`
 *avec gitbash
 
 ```
-$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/.json"
+$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110529-427726472c87.json"
 ```
 
 ## :a: Créer sa grappe `kuron`
