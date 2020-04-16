@@ -125,11 +125,8 @@ $ kubectl get services
 - [ ] Liste tes `pods`
 
 ```
-$ kubectl get pods                                                              
-
+                                                         
 * Note le nom de tes trois `pods` ou conteneurs, i.e. `kuron-deployment-8bf4f7f9f-5hm4n`, `kuron-deployment-8bf4f7f9f-d4d9l`
-
-
 - [ ] Tapes les commandes ci-dessous en changeant le nom des pods et l'adresse IP locale.
 
 Le programme javascript qui tourne dans les pods récupère le nom du conteneur dans ce cas le nom du pod.
@@ -138,8 +135,9 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 
 :bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
 
+$ kubectl get pods 
 ```
-![](image/curon07.png)
+![](image/curon06.png)
 
    ![](image/curon08.png)
    
