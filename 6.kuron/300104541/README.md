@@ -204,9 +204,6 @@ Tu as touché kuron-deployment-8bf4f7f9f-22nn8
 (base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec kuron-deployment-8bf4f7f9f-22nn8 -- curl -s http://10.32.5.27:8080
 Tu as touché kuron-deployment-8bf4f7f9f-rzfd2
 ```
-(base) PS C:\Users\Amichia\Developer\INF1087-200-20H-02\6.kuron\300104541> kubectl exec kuron-deployment-8bf4f7f9f-22nn8 -- curl -s http://10.32.5.27:8080
-Tu as touché kuron-deployment-8bf4f7f9f-rzfd2
-```
 
 
 
