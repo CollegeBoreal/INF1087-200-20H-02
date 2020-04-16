@@ -79,11 +79,6 @@ please run:
 
 ![image](Kuron-cluster.png)
 
-* Changes de contexte
-
-```
-$ kubectl config set-context gke_pid_us-central1-a_kuron
-```
 
 switch au context `gke_excellent-bolt-272914_us-central1-a_kuron`
 ```
@@ -94,17 +89,15 @@ Switched to context "gke_excellent-bolt-272914_us-central1-a_kuron".
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
 ```
- > kubectl config get-contexts
+> kubectl config get-contexts
 CURRENT   NAME                                            CLUSTER                                         AUTHINFO                                        NAMESPACE
-          gke_excellent-bolt-272914_us-central1-a_kubia   gke_excellent-bolt-272914_us-central1-a_kubia   gke_excellent-bolt-272914_us-central1-a_kubia
-*         gke_excellent-bolt-272914_us-central1-a_kuron   gke_excellent-bolt-272914_us-central1-a_kuron   gke_excellent-bolt-272914_us-central1-a_kuron
-          gke_pid_us-central1-a_kuron                         
+*         gke_excellent-bolt-272914_us-central1-a_kuron   gke_excellent-bolt-272914_us-central1-a_kuron   gke_excellent-bolt-272914_us-central1-a_kuron                         
 ```
 
 :round_pushpin: Visualise quelques informations sur ta grappe
 
 ```
-> kubectl cluster-info 
+> kubectl cluster-info
 
 Kubernetes master is running at https://34.68.35.154
 GLBCDefaultBackend is running at https://34.68.35.154/api/v1/namespaces/kube-system/services/default-http-backend:http/proxy
