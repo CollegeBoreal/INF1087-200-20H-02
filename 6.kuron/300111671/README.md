@@ -71,7 +71,7 @@ kuron  us-central1-a  1.16.8-gke.8    104.154.17.137  g1-small      1.16.8-gke.8
 
 
 
-![image](Kuron-cluster.png)
+![image](Capt.PNG)
 
 * Changes de contexte
 
