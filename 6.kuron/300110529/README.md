@@ -124,8 +124,8 @@ service/kuron-deployment-service created
 
 ```
 $ kubectl get services
-NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)              AGE
-kubernetes                 ClusterIP      10.32.0.1     <none>        443/TCP              52m
+NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP       PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1     <none>            443/TCP          52m
 kuron-deployment-service   LoadBalancer   10.32.2.123   104.198.191.224   8080:30512/TCP   104s
 ```
 
@@ -141,8 +141,8 @@ http://104.198.191.224:8080
 ```
 
 $ kubectl get services   
-NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)              AGE
-kubernetes                 ClusterIP      10.32.0.1     <none>        443/TCP              52m
+NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP       PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1     <none>            443/TCP          52m
 kuron-deployment-service   LoadBalancer   10.32.2.123   104.198.191.224   8080:30512/TCP   104s
 
 ```
