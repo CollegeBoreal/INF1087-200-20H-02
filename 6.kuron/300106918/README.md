@@ -68,51 +68,30 @@ $ kubectl config get-contexts
 
 ![](image/curon02.png)
 
-* Changes de contexte si ce n'est pas le cas, exemple
 
-
-$ kubectl config set-context gke_pid_us-central1-a_kuron
 ```
-
 :round_pushpin: Visualise quelques informations sur ta grappe
 
 ```
-$ kubectl cluster-info                 
+$ kubectl cluster-info  
+
+![](image/curon03.png)
 ```
 
 - [ ] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
 
 ```
 % kubectl get nodes
-NAME                                   STATUS   ROLES    AGE     VERSION
-gke-kuron-default-pool-1e3feddf-8s94   Ready    <none>   2m32s   v1.16.8-gke.8
-gke-kuron-default-pool-1e3feddf-c4tn   Ready    <none>   2m32s   v1.16.8-gke.8
-gke-kuron-default-pool-1e3feddf-p2j8   Ready    <none>   2m32s   v1.16.8-gke.8
+
+![](image/curon04.png)
 ```
 
-## :b: Déploie ton application `kuron`
-
-https://hub.docker.com/r/collegeboreal/kuron
-
-Nous allons utiliser l'image `collegeboreal/kuron` pour créer notre application. Tu as un lien ci-dessus pour plus de détail pour construire l'image.
-
-Les applications ou `pod` sont des conteneurs où tournent l'application, dans notre cas un serveur `node` nous donnant le nom du conteneur.
-
-- [ ] Utilise le fichier `kuron-deployment.yaml` pour déployer tes `pods`
-
-```
 $ kubectl apply -f kuron-deployment.yaml 
 ```
 
 - [ ] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
 
-```
-$ kubectl get pods                                                              
-NAME                               READY   STATUS    RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
-```
+![](image/curon06.png)
 
 ## :ab: Déploie le service `kuron-deployment-service`
 
@@ -126,16 +105,12 @@ $ kubectl apply -f kuron-deployment-service.yaml
 
 :round_pushpin: Vérifie ton service et note l'adresse IP externe et le port d'accès
 
-```
-$ kubectl get services                                                          
-NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)          AGE
-kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP          25m
-kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
+
 ```
 
 - [ ] Publie ton site Internet avec les informations du service
 
-http://34.70.183.28:8080
+http://10.32.13.153:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
@@ -143,10 +118,7 @@ http://34.70.183.28:8080
 
 ```
 $ kubectl get services                                                          
-NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)          AGE
-kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP          25m
-kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
-```
+![](image/curon07.png)
 
 * Note l'adresse IP locale de ton cluster, dans ce cas `10.32.3.1` 
 
@@ -154,11 +126,6 @@ kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237
 
 ```
 $ kubectl get pods                                                              
-NAME                               READY   STATUS    RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-5hm4n   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-d4d9l   1/1     Running   0          20m
-kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
-```
 
 * Note le nom de tes trois `pods` ou conteneurs, i.e. `kuron-deployment-8bf4f7f9f-5hm4n`, `kuron-deployment-8bf4f7f9f-d4d9l`
 
@@ -172,34 +139,18 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 :bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-d4d9l
-```
+![](image/curon07.png)
 
-```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
-```
 
-```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
-```
-
-```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-5hm4n
-```
-
-```
-$ kubectl exec kuron-deployment-8bf4f7f9f-5hm4n -- curl -s http://10.32.3.1:8080
-Tu as touché kuron-deployment-8bf4f7f9f-xw4gz
-```
-
+   
+   ![](image/curon07.png)
+   
+   
+   
 - [ ] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
 
 ```
-$ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-5hm4n -- /bin/bash
+$ winpty kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-68v8k -- /bin/bash
 ```
 
 KiB Mem:   1732772
