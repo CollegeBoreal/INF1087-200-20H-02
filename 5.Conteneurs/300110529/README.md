@@ -34,7 +34,6 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 ```
 
 ![image](Image/VM.PNG)
-![image](Image/VM9.PNG)
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
@@ -59,7 +58,7 @@ http://35.223.221.113/wp-admin
 
 - [✔] Décrire la configuration du `firewall`
 
-![image](Image/VM7.PNG)
+![image](Image/VM9.PNG)
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
