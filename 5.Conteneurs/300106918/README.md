@@ -69,6 +69,11 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
  
   ![](image/wrodpress1.png  )
 
+
+
+http://34.66.40.184:8080/index.php
+
+![](image/php.png)
 - [x] Quel port utilisé pour y accéder?
 
 ## :star: Autres commentaires utiles à donner
