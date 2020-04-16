@@ -46,7 +46,7 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/.json"
 
 * avec Powershell
 
-![image](Image/Kuron.PNG)
+![image](photo/Kuron.PNG)
 
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
