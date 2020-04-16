@@ -109,7 +109,7 @@ http://10.32.13.153:8080
 
 ```
 $ kubectl get services                                                          
-![](image/curon07.png)
+![](image/pods.png)
 
 * Note l'adresse IP locale de ton cluster, dans ce cas `10.32.3.1` 
 
