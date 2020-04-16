@@ -89,6 +89,7 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
 ![image](images/Kuron-cluster.png)
 
 ![image](t10.PNG)
+
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
 ```
@@ -110,7 +111,8 @@ $ kubectl config set-context gke_pid_us-central1-a_kuron
 $ kubectl cluster-info     
 ```
 ![image](t2.PNG)
-- [ ] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
+
+- [ ✔ ] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
 
 ```
 % kubectl get nodes
@@ -129,13 +131,13 @@ Nous allons utiliser l'image `collegeboreal/kuron` pour créer notre application
 
 Les applications ou `pod` sont des conteneurs où tournent l'application, dans notre cas un serveur `node` nous donnant le nom du conteneur.
 
-- [ ] Utilise le fichier `kuron-deployment.yaml` pour déployer tes `pods`
+- [ ✔ ] Utilise le fichier `kuron-deployment.yaml` pour déployer tes `pods`
 
 ```
 $ kubectl apply -f kuron-deployment.yaml 
 ```
 
-- [ ] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
+- [ ✔ ] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
 
 ```
 $ kubectl get pods                                                              
@@ -149,7 +151,7 @@ kuron-deployment-8bf4f7f9f-xw4gz   1/1     Running   0          20m
 
 Le service permet la publication des ports vers l'extérieur. Le port que nous allons utiliser et le port `8080`
 
-- [ ] Utilise le fichier `kuron-deployment-service.yaml` pour ouvrir les `ports`
+- [✔  ] Utilise le fichier `kuron-deployment-service.yaml` pour ouvrir les `ports`
 
 ```
 $ kubectl apply -f kuron-deployment-service.yaml 
@@ -164,13 +166,13 @@ kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP   
 kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
 ```
 
-- [ ] Publie ton site Internet avec les informations du service
+- [ ✔ ] Publie ton site Internet avec les informations du service
 
-http://34.70.183.28:8080
+http://34.70.156.160:8080
 
 ## :o: Teste ton application en prouvant que tes `pods` tournent sur un service redondant
 
-- [ ] Liste ton `service`
+- [ ✔ ] Liste ton `service`
 
 ```
 $ kubectl get services                                                          
@@ -182,7 +184,7 @@ kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237
 
 * Note l'adresse IP locale de ton cluster, dans ce cas `10.32.3.1` 
 
-- [ ] Liste tes `pods`
+- [ ✔ ] Liste tes `pods`
 
 ```
 $ kubectl get pods                                                              
