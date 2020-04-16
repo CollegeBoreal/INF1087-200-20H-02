@@ -143,7 +143,7 @@ $ kubectl get services
 ```
 ![image](photo/Kuron5.PNG)
  
- * Note l'adresse IP locale de ton cluster, dans ce cas `35.239.3.96` 
+ * Note l'adresse IP locale de ton cluster, dans ce cas `10.32.2.123` 
 
 - [X] Liste tes `pods`
 
@@ -173,7 +173,7 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 :bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
 
 ```
-$ kubectl exec kuron-deployment-8bf4f7f9f-53xun -- curl -s http://35.239.3.96:8080
+$ kubectl exec kuron-deployment-8bf4f7f9f-53xun -- curl -s http://10.32.2.123:8080
 Tu as touché kuron-deployment-8bf4f7f9f-53xun
 ```
 
