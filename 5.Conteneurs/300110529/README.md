@@ -56,7 +56,7 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 Que fait l'application?
 ```
-
+il s'agit d'un blog sur WordPress
 ```
 Quel est son adresse IP?
 ```
