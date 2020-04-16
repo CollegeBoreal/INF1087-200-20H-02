@@ -80,9 +80,10 @@ please run:
 ![image](Kuron-cluster.png)
 
 
-switch au context `gke_excellent-bolt-272914_us-central1-a_kuron`
+* switch au context `gke_excellent-bolt-272914_us-central1-a_kuron`
 ```
 > kubectl config use-context gke_excellent-bolt-272914_us-central1-a_kuron
+
 Switched to context "gke_excellent-bolt-272914_us-central1-a_kuron".
 ```
 
