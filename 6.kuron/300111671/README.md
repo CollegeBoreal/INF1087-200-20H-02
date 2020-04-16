@@ -37,7 +37,7 @@ Assures toi d'avoir positionner tes identifiants `google`
 * avec Powershell
 
 ```
-PS > $env:GOOGLE_APPLICATION_CREDENTIALS="C:\Users\User\.gcp\b300108234-de32988388af.json"
+PS >  $env:GOOGLE_APPLICATION_CREDENTIALS="$env:USERPROFILE\.gcp/Abbas671-43ce05e958a4.json"
 ```
 
 ## :a: Créer sa grappe `kuron`
