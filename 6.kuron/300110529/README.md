@@ -105,7 +105,10 @@ deployment.apps/kuron-deployment created
 
 ```
 $ kubectl get pods
-
+NAME                               READY   STATUS    RESTARTS   AGE
+kuron-deployment-8bf4f7f9f-53xun   1/1     Running   0          5m
+kuron-deployment-8bf4f7f9f-7zm5t   1/1     Running   0          5m
+kuron-deployment-8bf4f7f9f-6bbkA   1/1     Running   0          5m
 ```
 
 ## :ab: Déploie le service `kuron-deployment-service`
