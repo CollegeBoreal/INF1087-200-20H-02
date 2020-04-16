@@ -60,13 +60,17 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
 ```
+
+
+```
+
 $ kubectl config get-contexts
 
 ![](image/curon02.png)
 
 * Changes de contexte si ce n'est pas le cas, exemple
 
-```
+
 $ kubectl config set-context gke_pid_us-central1-a_kuron
 ```
 
