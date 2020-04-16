@@ -6,11 +6,11 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
+- ☑ Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
+- ☑ Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
 
       * incluant le fichier `README.md` 
 
@@ -21,16 +21,16 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 `$ cp -r .src `:id:` `
 
-- [ ] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
+- ☑ Soumets ton répertoire de travail vers github `(git add, commit, push)` 
 
 
 ## :star: Prérequis
 
-- [ ] Compte GCP
+-  Compte GCP
 
 Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 
-- [ ] Identifiants GCP 
+- ☑ Identifiants GCP 
 
 Assures toi d'avoir positionner tes identifiants `google`
 
@@ -40,7 +40,7 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json
 
 ## :a: Créer sa grappe `kuron`
 
-- [ ] Crée ta grappe `kuron` avec 3 VM (noeuds)
+- ☑ Crée ta grappe `kuron` avec 3 VM (noeuds)
 
 ```
 $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
