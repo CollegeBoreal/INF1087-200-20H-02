@@ -190,19 +190,24 @@ Le programme javascript qui tourne dans les pods récupère le nom du conteneur 
 
 :bangbang: Respecte le séparateur de commande `--` devant la commande `curl`
 
-```(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
+```
+(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
 Tu as touché kuron-deployment-8bf4f7f9f-f87ss
 ```
-```(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
+```
+(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
 Tu as touché kuron-deployment-8bf4f7f9f-f87ss
 ```
-```(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
+```
+(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
 Tu as touché kuron-deployment-8bf4f7f9f-f87ss
 ```
-```(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
+```
+(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
 Tu as touché kuron-deployment-8bf4f7f9f-f87ss
 ```
-```(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
+```
+(base) C:\Users\Armand\Developer\infrastructure\6.kuron\300113775>kubectl exec kuron-deployment-8bf4f7f9f-dmqbt -- curl -s http://10.32.13.175:8080
 Tu as touché kuron-deployment-8bf4f7f9f-f87ss
 ```
 
