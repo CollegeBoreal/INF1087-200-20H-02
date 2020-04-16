@@ -6,11 +6,11 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [ ] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
+- [x] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre :id:
 
 `$ mkdir ` :id:
 
-- [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
+- [x] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
 
       * incluant le fichier `README.md` 
 
@@ -21,23 +21,23 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 `$ cp -r .src `:id:` `
 
-- [ ] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
+- [x] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
 
 
 ## :star: Prérequis
 
-- [ ] Compte GCP
+- [x] Compte GCP
 
 Assures toi d'avoir ton compte sur https://console.cloud.google.com/
 
-- [ ] Identifiants GCP 
+- [x] Identifiants GCP 
 
 Assures toi d'avoir positionner tes identifiants `google`
 
 ```
-$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json"
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300106918-193e1309da77.json"
 ```
-
+ ![](image/corun00.png)
 ## :a: Créer sa grappe `kuron`
 
 - [ ] Crée ta grappe `kuron` avec 3 VM (noeuds)
@@ -53,15 +53,16 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
                         --enable-autoupgrade --enable-autorepair --enable-ip-alias                
 ```
 
-![image](images/Kuron-cluster.png)
+![](image/corun01.png)
 
+
+![](image/corun05.png)
 :round_pushpin: Assures toi d'activer ton context avec `kubectl`, vérifie l'étoile
 
 ```
 $ kubectl config get-contexts
-CURRENT   NAME                          CLUSTER                       AUTHINFO                        NAMESPACE
-*         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
-```
+
+![](image/curon02.png)
 
 * Changes de contexte si ce n'est pas le cas, exemple
 
