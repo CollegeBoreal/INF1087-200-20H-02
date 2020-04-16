@@ -50,7 +50,7 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 ![image](Image/VM1.PNG)
 
-![image](Image/VM3.PNG)
+![image](Image/VM5.PNG)
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
