@@ -103,11 +103,12 @@ deployment.apps/kuron-deployment created
 - [X] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
 
 ```
-$ kubectl get pods  
-NAME                               READY   STATUS              RESTARTS   AGE
-kuron-deployment-8bf4f7f9f-5n5m9   0/1     ContainerCreating   0          15s
-kuron-deployment-8bf4f7f9f-766bp   0/1     ContainerCreating   0          15s
-kuron-deployment-8bf4f7f9f-cdfpv   0/1     ContainerCreating   0          15s
+$ kubectl get pods
+
+$ kubectl get services
+NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)          AGE
+kubernetes                 ClusterIP      10.32.0.1     <none>        443/TCP          52m
+kuron-deployment-service   LoadBalancer   10.32.2.123   35.239.3.96   8080:30512/TCP   104s
 
 ```
 
