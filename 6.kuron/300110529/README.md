@@ -118,11 +118,6 @@ $ kubectl apply -f kuron-deployment-service.yaml
 service/kuron-deployment-service created
 
 ```
-:round_pushpin: Vérifie ton service et note l'adresse IP externe et le port d'accès
-
-$ kubectl get services
-
-```
 
 $ kubectl get services
 NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)          AGE
