@@ -93,19 +93,22 @@ $ gcloud beta container clusters create "kuron" --zone "us-central1-a" \
 ```
 $ kubectl config get-contexts
 CURRENT   NAME                          CLUSTER                       AUTHINFO                        NAMESPACE
-*         gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   
+*    gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron   gke_pid_us-central1-a_kuron  
+![image](t1.PNG)
 ```
 
 * Changes de contexte si ce n'est pas le cas, exemple
 
 ```
 $ kubectl config set-context gke_pid_us-central1-a_kuron
+
 ```
 
 :round_pushpin: Visualise quelques informations sur ta grappe
 
 ```
-$ kubectl cluster-info                 
+$ kubectl cluster-info     
+![image](t2.PNG)
 ```
 
 - [ ] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
