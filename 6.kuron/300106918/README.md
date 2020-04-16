@@ -129,7 +129,7 @@ $ kubectl get pods
 ```
 ![](image/curon06.png)
 
-   ![](image/curon08.png)
+   ![](image/NOUIP.png)
    
       
 - [ ] Finalement, aller dans un pod (conteneur) et donner la taille mémoire du pod avec la commande `top`
