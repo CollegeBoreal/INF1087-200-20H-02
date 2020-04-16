@@ -27,7 +27,9 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
-- [X] Créer une machine virtuelle avec docker machine
+- [x] Créer une machine virtuelle avec docker machine
+
+![](image/cb-test.png)
 
 ```
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
