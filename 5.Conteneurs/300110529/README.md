@@ -65,7 +65,7 @@ http://35.223.221.113/wp-admin
 
 Que fait l'application?
 ```
-il s'agit d'un blog sur WordPress
+Permet de proceder a l'instalation de WordPress
 ```
 Quel est son adresse IP?
 ```
