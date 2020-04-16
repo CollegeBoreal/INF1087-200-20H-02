@@ -86,7 +86,7 @@ $ kubectl cluster-info
 
 https://hub.docker.com/r/collegeboreal/kuron
 
-Nous allons utiliser l'image `collegeboreal/kuron` pour créer notre application. Tu as un lien ci-dessus pour plus de détail pour construire l'image.
+Nous allons utiliser l'image `collegeboreal/kuron` pour créer notre application.Tu as un lien ci-dessus pour plus de détail pour construire l'image.
 
 Les applications ou `pod` sont des conteneurs où tournent l'application, dans notre cas un serveur `node` nous donnant le nom du conteneur.
 
