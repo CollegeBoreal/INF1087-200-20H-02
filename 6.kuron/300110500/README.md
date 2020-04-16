@@ -177,6 +177,7 @@ NAME                       TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)   
 kubernetes                 ClusterIP      10.32.0.1    <none>         443/TCP          25m
 kuron-deployment-service   LoadBalancer   10.32.3.1    34.70.183.28   8080:30237/TCP   11m
 ```
+![image](t5.PNG)
 
 * Note l'adresse IP locale de ton cluster, dans ce cas `10.32.3.1` 
 
