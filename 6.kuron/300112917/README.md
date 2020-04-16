@@ -57,7 +57,9 @@ PS > gcloud beta container clusters create "kuron" --zone "us-central1-a" `
                         --enable-autoupgrade --enable-autorepair --enable-ip-alias                
 ```
 
-<img src="kuron1.PNG"></img>
+<img src="Kuron1.PNG"></img>
+
+
 
 <img src="kuron2.PNG"></img>
 
