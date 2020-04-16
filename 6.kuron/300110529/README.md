@@ -74,11 +74,12 @@ Context "gke_pid_us-central1-a_kuron" created.
 :round_pushpin: Visualise quelques informations sur ta grappe
 
 ```
-$ kubectl cluster-info                 
+$ kubectl cluster-info
+Kubernetes master is running at https://35.223.160.150
+GLBCDefaultBackend is running at https://35.223.160.150/api/v1/namespaces/kube-system/services/default-http-backend:http/proxy
+KubeDNS is running at https://35.223.160.150/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+Metrics-server is running at https://35.223.160.150/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
 ```
-
-
-
 
 - [X] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
 
