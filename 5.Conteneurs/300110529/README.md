@@ -60,11 +60,11 @@ il s'agit d'un blog sur WordPress
 ```
 Quel est son adresse IP?
 ```
-34.66.6.203
+35.223.221.113   
 ```
 Quel port utilisé pour y accéder?
 ```
-tcp://34.66.6.203:2376
+35.223.221.113:2376   
 ```
 ```
 8080
