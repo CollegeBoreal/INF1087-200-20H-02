@@ -54,13 +54,15 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
-- [✔] Que fait l'application?
+Que fait l'application?
+```
 
-- [✔] Quel est son adresse IP?
-
+```
+Quel est son adresse IP?
+```
 tcp://34.66.6.203
-
-- [✔] Quel port utilisé pour y accéder?
+```
+Quel port utilisé pour y accéder?
 ```
 tcp://34.66.6.203:2376
 ```
