@@ -25,10 +25,14 @@ PS > docker-compose up --detach
 :three: Initialiser WordPress
 
 http://10.13.2.86/wp-admin
+
+![](image/wrd22.png)
       
 :pushpin: Visualiser MySQL avec PHPMyAdmin
 
 http://10.13.2.86:8080/index.php
+
+![](image/php2.png)
 
 ## :m: CB-HYPERV2
 
