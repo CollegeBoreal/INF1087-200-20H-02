@@ -34,6 +34,7 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 ```
 
 ![image](Image/VM.PNG)
+![image](Image/VM8.PNG)
 
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
