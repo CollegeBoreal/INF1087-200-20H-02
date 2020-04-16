@@ -139,9 +139,12 @@ http://35.239.3.96:8080
 - [X] Liste ton `service`
 
 ```
+
 $ kubectl get services   
-```
+
 ![image](photo/Kuron4.PNG)
+
+```
 
 * Note l'adresse IP locale de ton cluster, dans ce cas `...` 
 
