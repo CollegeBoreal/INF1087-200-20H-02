@@ -121,9 +121,10 @@ http://35.193.104.208:8080
 
 - [x] Que fait l'application?
 
-```
 
-```
+Delux fournit des nouvelles sur le divertissement, des critiques de films, des prix, des festivals de films, box-office et de     l’information sur les conférences de l’industrie du divertissement.
+
+
 
 - [x] Quel est son adresse IP?
 

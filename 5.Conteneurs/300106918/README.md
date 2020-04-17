@@ -27,7 +27,9 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 |--------|----------|-------------|----------|---------|
 | Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...    |
 
-- [X] Créer une machine virtuelle avec docker machine
+- [x] Créer une machine virtuelle avec docker machine
+
+![](image/cb-test.png)
 
 ```
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
@@ -55,6 +57,11 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
                                
  '''
  ![](image/allowfirl.png )
+ 
+ 
+ ## :o: get firewall port 
+ 
+ ![](image/fir.png)
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
@@ -65,8 +72,13 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
             http://34.66.40.184/wp-admin/ 
  '''
  
-  ![](image/wrodpress1.png  )
+  ![](image/wro2.png  )
 
+
+
+http://34.66.40.184:8080/index.php
+
+![](image/php.png)
 - [x] Quel port utilisé pour y accéder?
 
 ## :star: Autres commentaires utiles à donner

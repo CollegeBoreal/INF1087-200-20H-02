@@ -33,11 +33,25 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [GC
 $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 ```
 
+![image](Image/VM.PNG)
+![image](Image/VM8.PNG)
+
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
 - [✔] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
 
 - [✔] La commande `docker`, `docker-compose` utilisée pour lancer l'application
+
+```
+$ docker-compose up --detach
+```
+
+- Initialiser WordPress
+
+Administrer le site Wordpress
+
+http://35.223.221.113/wp-admin
+
 
 ## :ab: Vérifier que l'application marche
 
@@ -45,13 +59,28 @@ $ docker-machine --driver <un driver cloud> <option> ma-machine-virtuelle
 
 - [✔] Décrire la configuration du `firewall`
 
+![image](Image/VM9.PNG)
+
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
-- [ ] Que fait l'application?
-
-- [ ] Quel est son adresse IP?
-
-- [ ] Quel port utilisé pour y accéder?
+Que fait l'application?
+```
+Permet de proceder a l'instalation de WordPress
+```
+Quel est son adresse IP?
+```
+35.223.221.113   
+```
+Quel port utilisé pour y accéder?
+```
+35.223.221.113:2376   
+```
+```
+8080
+```
+```
+3306
+```
 
 ## :star: Autres commentaires utiles à donner
 
