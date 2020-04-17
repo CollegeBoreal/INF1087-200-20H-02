@@ -122,6 +122,6 @@ Le CMS WordPress permet à la fois de gagner du temps de développement au nivea
 
 http://35.222.156.96
 
-- 😃 [✔ ] Quel port utilisé pour y accéder?
+-  [✔ ] Quel port utilisé pour y accéder?
 
 8080  
