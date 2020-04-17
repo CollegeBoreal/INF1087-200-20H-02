@@ -97,6 +97,8 @@ $ docker-compose up --detach
 
 http://34.66.26.103/wp-admin
 
+<img src="Capture44.PNG"></img>
+
 📌 Visualiser MySQL avec PHPMyAdmin
 
 http://34.66.26.103:8080
