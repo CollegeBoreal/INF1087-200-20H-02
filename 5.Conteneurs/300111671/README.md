@@ -129,7 +129,7 @@ Delux fournit des nouvelles sur le divertissement, des critiques de films, des p
 - [x] Quel est son adresse IP?
 
 ```
-35.193.104.208
+34.66.26.103
 ```
 
 - [x] Quel port utilisé pour y accéder?
