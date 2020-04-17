@@ -58,10 +58,17 @@ $ docker-machine --driver <un driver cloud>(token ) ma-machine-virtuelle (widby)
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
 - [X] Que fait l'application?
+l'application utilise Wordrepess qui est un systeme de gestion de contenu (CMS=Content management System , en anglais ) avec des themes en PHP qui vous permettra d'appliquer ces themes pour creer des sites internet avec une base de données PHP
 
 - [x] Quel est son adresse IP?
+Myphp: http://157.245.12.0:8080/
 
-- [X] Quel port utilisé pour y accéder?
+WordPress: http://157.245.12.0/wp-admin
+
+ Quel port utilisé pour y accéder?
+Myphp: 8080
+
+WordPress:
 
 ## :star: Autres commentaires utiles à donner
 
