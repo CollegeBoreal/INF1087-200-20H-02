@@ -1,4 +1,4 @@
-# Participation au 17-04-2020 06:26 UTC
+# Participation au 17-04-2020 06:57 UTC
  
 ## Légende
  
@@ -22,9 +22,9 @@
 | 9 | [300111766](../300111766/README.md) | [:heavy_check_mark:] |
 | 10 | [300112017](../300112017/README.md) | [:heavy_check_mark:] |
 | 11 | [300112917](../300112917/README.md) | [:heavy_check_mark:] |
-| 12 | [300113775](../300113775/README.md) | [:x:] |
+| 12 | [300113775](../300113775/README.md) | [:heavy_check_mark:] |
  
-# Participation au 17-04-2020 06:26 UTC
+# Participation au 17-04-2020 06:57 UTC
  
 ## Légende
  
