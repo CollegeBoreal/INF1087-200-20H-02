@@ -35,10 +35,10 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [Di
 $ docker-machine --driver <un driver cloud>(token ) ma-machine-virtuelle (widby)
 ```
 
-![image](ocean1.png)
+![image](ocean1.PNG)
 
 ### token
-![image](ocean11.png)
+![image](ocean11.PNG)
 
 ### Digital Ocean
 ## :b: Créer une application de votre choix (docker ou docker compose)
@@ -53,7 +53,7 @@ $ docker-machine --driver <un driver cloud>(token ) ma-machine-virtuelle (widby)
 
 - [X] Décrire la configuration du `firewall`
 
-![image](ocean44.png)
+![image](ocean44.PNG)
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
