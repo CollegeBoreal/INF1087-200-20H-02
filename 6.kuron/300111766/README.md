@@ -69,7 +69,7 @@ PS > gcloud beta container clusters create "kuron" --zone "us-central1-a" `
 $ kubectl config get-contexts
  
 ```
-<img src="kuron3.PNG"></img>
+<img src="k3.PNG"></img>
 
 
 * Changes de contexte si ce n'est pas le cas, exemple
