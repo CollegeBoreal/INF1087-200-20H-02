@@ -96,11 +96,11 @@ $ docker-compose up --detach
 
 📌 Administrer le site Wordpress
 
-http://34.66.26.103/wp-admin
+http://35.193.104.208/wp-admin
 
 📌 Visualiser MySQL avec PHPMyAdmin
 
-http://34.66.26.103:8088
+http://35.193.104.208:8088
 
 
 ## :ab: Vérifier que l'application marche
