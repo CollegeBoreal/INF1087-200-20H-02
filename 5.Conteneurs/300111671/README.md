@@ -40,17 +40,17 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/myVM-ad426b5f8268.json"  "
 - [x] Créer une machine virtuelle avec docker machine
 
 ```
- docker-machine create --driver google --google-project myvm-273714 cb-gcp-abbas
+  docker-machine create --driver google --google-project myvm-273714 cb-gcp-delux
 Running pre-create checks...
-(cb-gcp-abbas) Check that the project exists
-(cb-gcp-abbas) Check if the instance already exists
+(cb-gcp-delux) Check that the project exists
+(cb-gcp-delux) Check if the instance already exists
 Creating machine...
-(cb-gcp-abbas) Generating SSH Key
-(cb-gcp-abbas) Creating host...
-(cb-gcp-abbas) Opening firewall ports
-(cb-gcp-abbas) Creating instance
-(cb-gcp-abbas) Waiting for Instance
-(cb-gcp-abbas) Uploading SSH Key
+(cb-gcp-delux) Generating SSH Key
+(cb-gcp-delux) Creating host...
+(cb-gcp-delux) Opening firewall ports
+(cb-gcp-delux) Creating instance
+(cb-gcp-delux) Waiting for Instance
+(cb-gcp-delux) Uploading SSH Key
 Waiting for machine to be running, this may take a few minutes...
 Detecting operating system of created instance...
 Waiting for SSH to be available...
@@ -62,13 +62,12 @@ Copying certs to the remote machine...
 Setting Docker configuration on the remote daemon...
 Checking connection to Docker...
 Docker is up and running!
-To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe env cb-gcp-abbas
-
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env cb-gcp-delux
 ```
 - Pour activer la machine :
 
 ```
-$  eval $(docker-machine env cb-gcp-abbas)
+$  eval $(docker-machine env cb-gcp-delux)
 ```
 ```
 $ docker-machine active
@@ -96,11 +95,11 @@ $ docker-compose up --detach
 
 📌 Administrer le site Wordpress
 
-http://35.238.241.48/wp-admin
+http://34.66.26.103/wp-admin
 
 📌 Visualiser MySQL avec PHPMyAdmin
 
-http://35.238.241.48:8080
+http://34.66.26.103:8080
 
 
 ## :ab: Vérifier que l'application marche
@@ -129,7 +128,7 @@ Delux fournit des nouvelles sur le divertissement, des critiques de films, des p
 - [x] Quel est son adresse IP?
 
 ```
-35.238.241.48
+34.66.26.103
 ```
 
 - [x] Quel port utilisé pour y accéder?
