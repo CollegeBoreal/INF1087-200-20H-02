@@ -111,7 +111,7 @@ http://10.80.6.91:8080
 $ kubectl get services                                                          
 ![](image/serv.png)
 
-* Note l'adresse IP locale de ton cluster, dans ce cas `10.32.3.1` 
+* Note l'adresse IP locale de ton cluster, dans ce cas `10.80.6.91` 
 
 - [ ] Liste tes `pods`
 
