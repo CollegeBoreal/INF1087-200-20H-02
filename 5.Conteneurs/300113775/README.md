@@ -19,22 +19,28 @@ Ce laboratoire permettra de créer une machine virtuelle sur un cloud public [Di
 
 `$ cp ./README.md `:id:` `
 
-- [ ] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
+- [X] Soumettre votre répertoire de travail vers github `(git add, commit, push)` 
 
 ## :a: Créer une machine virtuelle dans le cloud
 
-- [ ] Vérifier que vos identifiants `cloud` sont installés
+- [X] Vérifier que vos identifiants `cloud` sont installés
 
 | Cloud  |  Google  | Azure       | AWS      |  Digital OCEAN |
 |--------|----------|-------------|----------|---------       |
-| Config | `~/.gcp` | `~/.azure`  | `~/.aws` |  ...   .ssh    |
+| Config | `~/.gcp` | `~/.azure`  | `~/.aws` |        .ssh    |
 
-- [ ] Créer une machine virtuelle avec docker machine
+- [X] Créer une machine virtuelle avec docker machine
 
 ```
 $ docker-machine --driver <un driver cloud>(token ) ma-machine-virtuelle (widby)
 ```
 
+![image](ocean1.png)
+
+### token
+![image](ocean11.png)
+
+### Digital Ocean
 ## :b: Créer une application de votre choix (docker ou docker compose)
 
 - [X] Copie du fichier de configuration (i.e. Dockerfile, docker-compose.yml)
@@ -45,7 +51,9 @@ $ docker-machine --driver <un driver cloud>(token ) ma-machine-virtuelle (widby)
 
 :bulb: Faites attention au `firewall` de chaque nuage. Chaque nuage a sa propre configuration
 
-- [ ] Décrire la configuration du `firewall`
+- [X] Décrire la configuration du `firewall`
+
+![image](ocean44.png)
 
 ## :o: Décriver votre application et donner les accés pour la vérification 
 
