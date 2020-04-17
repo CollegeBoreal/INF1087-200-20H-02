@@ -96,11 +96,11 @@ $ docker-compose up --detach
 
 📌 Administrer le site Wordpress
 
-http://34.66.26.103/wp-admin
+http://35.238.241.48/wp-admin
 
 📌 Visualiser MySQL avec PHPMyAdmin
 
-http://34.66.26.103:8080
+http://35.238.241.48:8080
 
 
 ## :ab: Vérifier que l'application marche
@@ -129,7 +129,7 @@ Delux fournit des nouvelles sur le divertissement, des critiques de films, des p
 - [x] Quel est son adresse IP?
 
 ```
-34.66.26.103
+35.238.241.48
 ```
 
 - [x] Quel port utilisé pour y accéder?
