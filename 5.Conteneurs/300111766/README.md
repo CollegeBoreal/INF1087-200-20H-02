@@ -101,7 +101,7 @@ Creating 300111766_wpcli_1 ... done
 
 📌 Administrer votre site Wordpress
 
-http://35.222.156.96/wp-admin/
+http://104.198.130.232/wp-admin/
 
 ## :ab: Vérifier que l'application marche
 
