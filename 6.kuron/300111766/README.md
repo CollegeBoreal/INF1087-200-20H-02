@@ -140,7 +140,7 @@ $ kubectl get services
 
 ```
 
-<img src="kuron9.PNG"></img>
+<img src="kub7.PNG"></img>
 
 
 - [X] Publie ton site Internet avec les informations du service
@@ -156,7 +156,7 @@ $ kubectl get services
 
 ```
 
-<img src="kuron9.PNG"></img>
+<img src="kub7.PNG"></img>
 
 * Note l'adresse IP locale de ton cluster, dans ce cas `10.32.13.172' 
 
@@ -167,7 +167,7 @@ $ kubectl get pods
 
 ```
 
-<img src="kuron10.PNG"></img>
+<img src="kub2.PNG"></img>
 
 * Note le nom de tes trois `pods` ou conteneurs, i.e. `kuron-deployment-8bf4f7f9f-5hm4n`, `kuron-deployment-8bf4f7f9f-d4d9l`
 
