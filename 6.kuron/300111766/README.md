@@ -185,7 +185,7 @@ $ kubectl exec kuron-deployment-8bf4f7f9f-pw5nq -- curl -s http://10.32.11.229:8
 Tu as touché kuron-deployment-8bf4f7f9f-w62nz
 ```
 
-<img src="kuron11.PNG"></img>
+<img src="kub8.PNG"></img>
 
 
 
@@ -201,7 +201,7 @@ $ kubectl exec --stdin --tty  kuron-deployment-8bf4f7f9f-pw5nq -- /bin/bash
 root@kuron-deployment-8bf4f7f9f-pw5nq:/# Top
 ```
 
-<img src="Kuron13.PNG"></img>
+<img src="kub9.PNG"></img>
 
 
 ## :x: Après la fin du cours, supprime ta grappe (attendre la note finale)
