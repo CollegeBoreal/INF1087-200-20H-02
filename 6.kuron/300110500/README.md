@@ -46,13 +46,13 @@ Assures toi d'avoir positionner tes identifiants `google`
 * avec Powershell
 
 ```
-PS > $env:GOOGLE_APPLICATION_CREDENTIALS="$env:USERPROFILE\.gcp\b300098957-a2662a9bd338.json"
+PS > $env: export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json`
 ```
 
 avec gitbash
 
 ```
-$ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300098957-a2662a9bd338.json"
+$  export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcp/b300110500-54dd5d2a1258.json`
 ```
 
 ## :a: Créer sa grappe `kuron`
