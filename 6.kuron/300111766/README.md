@@ -120,7 +120,7 @@ $ kubectl apply -f kuron-deployment.yaml
 $ kubectl get pods                                                              
 
 ```
-<img src="kuron7.PNG"></img>
+<img src="kub11.PNG"></img>
 
 
 ## :ab: Déploie le service `kuron-deployment-service`
