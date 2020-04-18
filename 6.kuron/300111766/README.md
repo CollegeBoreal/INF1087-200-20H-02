@@ -8,7 +8,7 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 - [X] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre 300111766
 
-`$ mkdir ` 300112917
+`$ mkdir ` 300111766
 
 - [ ] Copier les fichiers se trouvant dans le répertoire `.` dans votre répertoire :id:
 
