@@ -234,7 +234,7 @@ $ gcloud container clusters delete kuron --zone "us-central1-a"
 ```
 
 
-# [Participation](Participation.md)
+# [Participation](.scripts/Participation.md)
 
 # Références
 
