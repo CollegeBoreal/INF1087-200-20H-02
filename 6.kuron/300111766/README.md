@@ -6,7 +6,7 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
 
 ## :o: Sur votre PC, créer votre répertoire de travail dans `git bash`
 
-- [X] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre 300112917
+- [X] Dans le répertoire `6.Kuron` Créer un répertoire avec comme nom, votre 300111766
 
 `$ mkdir ` 300112917
 
@@ -17,9 +17,9 @@ Ce laboratoire permettra de créer une grappe sur le cloud public [GCP].
       * incluant le répertoire `.src` 
 
 
-`$ cp ./README.md `300112917` `
+`$ cp ./README.md `300111766` `
 
-`$ cp -r .src/* `300112917` `
+`$ cp -r .src/* `300111766` `
 
 - [X] Soumets ton répertoire de travail vers github `(git add, commit, push)` 
 
@@ -76,9 +76,9 @@ $ kubectl config get-contexts
 
 ```
 $ kubectl config set-context gke_pid_us-central1-a_kuron
+Context "gke_pid_us-central1-a_kuron" modified.
 ```
 
-<img src="kuron4.PNG"></img>
 
 :round_pushpin: Visualise quelques informations sur ta grappe
 
@@ -86,7 +86,7 @@ $ kubectl config set-context gke_pid_us-central1-a_kuron
 $ kubectl cluster-info                 
 ```
 
-<img src="kuron5.PNG"></img>
+<img src="kub1.PNG"></img>
 
 
 - [X] Vérifie que tes :three: `noeuds` (VMs) soient dans un état `Ready`
@@ -96,7 +96,7 @@ $ kubectl cluster-info
 
 ```
 
-<img src="kuron6.PNG"></img>
+<img src="kub2.PNG"></img>
 
 
 ## :b: Déploie ton application `kuron`
@@ -112,7 +112,7 @@ Les applications ou `pod` sont des conteneurs où tournent l'application, dans n
 ```
 $ kubectl apply -f kuron-deployment.yaml 
 ```
-<img src="kuron8.PNG"></img>
+<img src="kub6.PNG"></img>
 
 - [X] Vérifie que tes :three: `pods` soient dans un état de tourner `running`
 
