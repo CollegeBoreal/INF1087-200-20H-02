@@ -9,7 +9,7 @@ https://github.com/canonical/multipass/issues/567#issuecomment-702801046
 
 That would actually be netplan trickery. Create /etc/netplan/90-static.yaml with something like the following:
 
-```
+```yaml
 network:
     ethernets:
         enp5s0:
