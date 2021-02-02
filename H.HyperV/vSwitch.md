@@ -59,3 +59,11 @@ Ethernet 2                QLogic BCM5709C Gigabit Ethernet ...#48       7 Discon
 Ethernet                  QLogic BCM5709C Gigabit Ethernet ...#47       6 Up           F4-CE-46-B7-21-E4         1 Gbps
 vEthernet (Primary Vir... Hyper-V Virtual Ethernet Adapter             10 Up           F4-CE-46-B7-21-E4         1 Gbps
 ```
+
+```
+PS> Get-VMSwitch * | Format-Table Name
+
+Name
+----
+Primary Virtual Switch
+```
