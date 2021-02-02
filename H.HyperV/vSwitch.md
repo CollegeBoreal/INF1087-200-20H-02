@@ -29,3 +29,33 @@ vEthernet (nat)           Hyper-V Virtual Ethernet Adapter             12 Up    
 PS> $net = Get-NetAdapter -Name 'Ethernet'
 PS> New-VMSwitch -Name "Primary Virtual Switch" -AllowManagementOS $True -NetAdapterName $net.Name
 ```
+
+-- :two:
+
+```
+PS> Get-NetAdapter
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Ethernet 2                QLogic BCM5709C Gigabit Ethernet ...#48       7 Disconnected F4-CE-46-B7-21-E6          0 bps
+Ethernet                  QLogic BCM5709C Gigabit Ethernet ...#47       6 Up           F4-CE-46-B7-21-E4         1 Gbps
+```
+
+```
+PS> $net = Get-NetAdapter -Name 'Ethernet'
+PS> New-VMSwitch -Name "Primary Virtual Switch" -AllowManagementOS $True -NetAdapterName $net.Name
+
+Name                   SwitchType NetAdapterInterfaceDescription
+----                   ---------- ------------------------------
+Primary Virtual Switch External   QLogic BCM5709C Gigabit Ethernet (NDIS VBD Client)
+```
+
+```
+PS> Get-NetAdapter
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Ethernet 2                QLogic BCM5709C Gigabit Ethernet ...#48       7 Disconnected F4-CE-46-B7-21-E6          0 bps
+Ethernet                  QLogic BCM5709C Gigabit Ethernet ...#47       6 Up           F4-CE-46-B7-21-E4         1 Gbps
+vEthernet (Primary Vir... Hyper-V Virtual Ethernet Adapter             10 Up           F4-CE-46-B7-21-E4         1 Gbps
+```
